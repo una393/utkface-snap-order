@@ -1,0 +1,48 @@
+onnx 参考输出: {'bilinear_glu_s0_N1.onnx': 0.33336702, 'gelu_s0_N1.onnx': 0.34674299, 'relu_qat_s0_N1.onnx': 0.37035269, 'relu_qat_s0_N20.onnx': 0.28114173}
+C:\Users\24399\Desktop\paper-utkface\models\net.py:47: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.temporal = nn.TransformerEncoder(enc, layers)
+utk-bilinear_glu-after_snap-s0-1793007087     ema=0.33336693048477173 live=0.33102482557296753
+utk-bilinear_glu-after_snap-s1-1793019985     ema=0.3355972170829773 live=0.32867372035980225
+utk-bilinear_glu-after_snap-s2-1793025512     ema=0.31521904468536377 live=0.3128640949726105
+utk-gelu-after_snap-s0-1793003829             ema=0.3467433452606201 live=0.3504127264022827
+utk-gelu-after_snap-s1-1793017618             ema=0.3788973093032837 live=0.37729448080062866
+utk-gelu-after_snap-s2-1793021035             ema=0.2792629301548004 live=0.3188250660896301
+utk-relu_qat-after_snap-s0-1793005531         ema=0.3703530728816986 live=0.3544173836708069
+utk-relu_qat-after_snap-s0-1793029658         ema=0.3458862900733948 live=0.35158663988113403
+utk-relu_qat-after_snap-s0-1793033217         ema=0.28114160895347595 live=0.24771864712238312
+utk-relu_qat-after_snap-s1-1793018836         ema=0.3594011068344116 live=0.35698580741882324
+utk-relu_qat-after_snap-s1-1793038259         ema=0.23188413679599762 live=0.2300657033920288
+utk-relu_qat-after_snap-s2-1793023654         ema=0.3318531811237335 live=0.3248519003391266
+utk-relu_qat-after_snap-s2-1793040741         ema=0.24369904398918152 live=0.22138136625289917
+utk-relu_qat-before_snap-s0-1793009776        ema=0.359057754278183 live=0.36260750889778137
+utk-relu_qat-before_snap-s0-1793028380        ema=0.37105128169059753 live=0.35742896795272827
+utk-relu_qat-before_snap-s0-1793032011        ema=0.276612788438797 live=0.25692272186279297
+utk-relu_qat-before_snap-s1-1793037047        ema=0.23628751933574677 live=0.25797516107559204
+utk-relu_qat-before_snap-s2-1793039497        ema=0.24198567867279053 live=0.2674078643321991
+utk-relu_qat-none-s0-1793011336               ema=0.05676630139350891 live=0.3711489737033844
+utk-relu_qat-none-s0-1793027163               ema=0.05676630139350891 live=0.3427184820175171
+utk-relu_qat-none-s0-1793030915               ema=0.05676630139350891 live=0.26521822810173035
+
+### 最佳匹配（|onnx - net| 最小）
+
+bilinear_glu_s0_N1.onnx  onnx=0.33336702
+   |diff|=8.94e-08  utk-bilinear_glu-after_snap-s0-1793007087  weights=ema  net=0.33336693
+   |diff|=1.51e-03  utk-relu_qat-after_snap-s2-1793023654  weights=ema  net=0.33185318
+   |diff|=2.23e-03  utk-bilinear_glu-after_snap-s1-1793019985  weights=ema  net=0.33559722
+
+gelu_s0_N1.onnx  onnx=0.34674299
+   |diff|=3.58e-07  utk-gelu-after_snap-s0-1793003829  weights=ema  net=0.34674335
+   |diff|=8.57e-04  utk-relu_qat-after_snap-s0-1793029658  weights=ema  net=0.34588629
+   |diff|=3.67e-03  utk-gelu-after_snap-s0-1793003829  weights=live  net=0.35041273
+
+relu_qat_s0_N1.onnx  onnx=0.37035269
+   |diff|=3.87e-07  utk-relu_qat-after_snap-s0-1793005531  weights=ema  net=0.37035307
+   |diff|=6.99e-04  utk-relu_qat-before_snap-s0-1793028380  weights=ema  net=0.37105128
+   |diff|=7.96e-04  utk-relu_qat-none-s0-1793011336  weights=live  net=0.37114897
+
+relu_qat_s0_N20.onnx  onnx=0.28114173
+   |diff|=1.19e-07  utk-relu_qat-after_snap-s0-1793033217  weights=ema  net=0.28114161
+   |diff|=1.88e-03  utk-gelu-after_snap-s2-1793021035  weights=ema  net=0.27926293
+   |diff|=4.53e-03  utk-relu_qat-before_snap-s0-1793032011  weights=ema  net=0.27661279
+
+wrote npu_quant/out/export_provenance.json

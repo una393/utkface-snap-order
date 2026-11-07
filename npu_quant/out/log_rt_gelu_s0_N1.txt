@@ -1,0 +1,13 @@
+[fail] 66: 
+========= Model Input Info =========
+Model name: [ gelu_s0_N1 ]
+
+[2026-10-27 10:18:51.787] [critical] write addr 0x717b83a672b0 error: -1
+[2026-10-27 10:18:51.787] [critical] trapped at ../../hbsim/qemu/lib/Qemu/Pl320.cpp, line 167
+unix-abstract:ipctrl-socket-share-id-17-pid-68923 RPC failed: failed to connect to all addresses
+qemu-system-riscv64: terminating on signal 1 from pid 68904 ()
+qemu-system-riscv64: waitpid: Interrupted system call
+
+gelu_s0_N1: n_ok=199/200 MAE=0.079295 RMSE=0.110835 max=0.685422
+wrote /work/npu_quant/out/mae_runtime_gelu_s0_N1.json
+exit=0

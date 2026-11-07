@@ -1,0 +1,72 @@
+###### A: faulthandler ######
+Model Domain:             None
+Model Version:            None
+Graph Input:
+    ..._images          : shape=[1, 1, 3, 224, 224], dtype=FLOAT32
+Graph Output:
+    age                 : shape=[1, 1], dtype=FLOAT32
+2026-10-27 08:47:34,701 [92mINFO[0m The input model's opset version is 18, try to convert to opset version of 19.
+2026-10-27 08:47:34,822 [92mINFO[0m End to prepare the onnx model.
+2026-10-27 08:47:34,956 [92mINFO[0m Saving model to: /work/npu_quant/out/relu_qat_s0_N1/relu_qat_s0_N1_original_float_model.onnx.
+2026-10-27 08:47:34,958 [92mINFO[0m Start to optimize the onnx model.
+Fatal Python error: Segmentation fault
+
+Current thread 0x00007375168d01c0 (most recent call first):
+  File "/usr/local/lib/python3.10/dist-packages/onnxruntime/capi/onnxruntime_inference_collection.py", line 491 in _create_inference_session
+  File "/usr/local/lib/python3.10/dist-packages/onnxruntime/capi/onnxruntime_inference_collection.py", line 419 in __init__
+  File "/usr/local/lib/python3.10/dist-packages/hmct/executor/ort2.py", line 45 in create_session
+  File "/usr/local/lib/python3.10/dist-packages/hmct/executor/ort.py", line 243 in inference
+  File "/usr/local/lib/python3.10/dist-packages/hmct/common/modifier/passes/constant_folding.py", line 305 in _fold_other_node
+  File "/usr/local/lib/python3.10/dist-packages/hmct/common/modifier/passes/constant_folding.py", line 147 in _fold_const
+  File "/usr/local/lib/python3.10/dist-packages/hmct/common/modifier/passes/constant_folding.py", line 100 in run_impl
+  File "/usr/local/lib/python3.10/dist-packages/hmct/common/modifier/passes/pass_base.py", line 36 in __call__
+  File "/usr/local/lib/python3.10/dist-packages/hmct/common/modifier/passes/pass_base.py", line 105 in run_passes
+  File "/usr/local/lib/python3.10/dist-packages/hmct/converter/optimizer/optimize.py", line 34 in optimize
+  File "/usr/local/lib/python3.10/dist-packages/hmct/builder/model_builder.py", line 355 in optimize
+  File "/usr/local/lib/python3.10/dist-packages/hmct/builder/model_builder.py", line 466 in build
+  File "/usr/local/lib/python3.10/dist-packages/hmct/builder/build.py", line 280 in build_model
+  File "/usr/local/lib/python3.10/dist-packages/horizon_tc_ui/compile/ptq_model_builder.py", line 229 in build_model
+  File "/usr/local/lib/python3.10/dist-packages/horizon_tc_ui/utils/wrap_utils.py", line 49 in wrapper
+  File "/usr/local/lib/python3.10/dist-packages/horizon_tc_ui/compile/ptq_model_builder.py", line 241 in build
+  File "/usr/local/lib/python3.10/dist-packages/horizon_tc_ui/hb_compile.py", line 64 in ptq_model_build
+  File "/usr/local/lib/python3.10/dist-packages/horizon_tc_ui/hb_compile.py", line 218 in onnx_config_mode
+  File "/usr/local/lib/python3.10/dist-packages/horizon_tc_ui/hb_compile.py", line 305 in main
+  File "/usr/local/lib/python3.10/dist-packages/horizon_tc_ui/utils/tool_utils.py", line 148 in __decorator
+  File "/usr/local/lib/python3.10/dist-packages/click/core.py", line 610 in invoke
+  File "/usr/local/lib/python3.10/dist-packages/click/core.py", line 1066 in invoke
+  File "/usr/local/lib/python3.10/dist-packages/click/core.py", line 782 in main
+  File "/usr/local/lib/python3.10/dist-packages/click/core.py", line 829 in __call__
+  File "/usr/local/bin/hb_compile", line 8 in <module>
+
+Extension modules: google.protobuf.pyext._message, numpy.core._multiarray_umath, numpy.core._multiarray_tests, numpy.linalg._umath_linalg, numpy.fft._pocketfft_internal, numpy.random._common, numpy.random.bit_generator, numpy.random._bounded_integers, numpy.random._mt19937, numpy.random.mtrand, numpy.random._philox, numpy.random._pcg64, numpy.random._sfc64, numpy.random._generator, PIL._imaging, scipy._lib._ccallback_c, scipy.ndimage._nd_image, scipy.special._ufuncs_cxx, scipy.special._ufuncs, scipy.special._specfun, scipy.special._comb, scipy.linalg._fblas, scipy.linalg._flapack, scipy.linalg._cythonized_array_utils, scipy.linalg._flinalg, scipy.linalg._solve_toeplitz, scipy.linalg._matfuncs_sqrtm_triu, scipy.linalg.cython_lapack, scipy.linalg.cython_blas, scipy.linalg._matfuncs_expm, scipy.linalg._decomp_update, scipy.sparse._sparsetools, scipy.sparse._csparsetools, scipy.sparse.linalg._isolve._iterative, scipy.sparse.linalg._dsolve._superlu, scipy.sparse.linalg._eigen.arpack._arpack, scipy.sparse.csgraph._tools, scipy.sparse.csgraph._shortest_path, scipy.sparse.csgraph._traversal, scipy.sparse.csgraph._min_spanning_tree, scipy.sparse.csgraph._flow, scipy.sparse.csgraph._matching, scipy.sparse.csgraph._reordering, scipy.special._ellip_harm_2, _ni_label, scipy.ndimage._ni_label, skimage._shared.geometry, scipy.spatial._ckdtree, scipy._lib.messagestream, scipy.spatial._qhull, scipy.spatial._voronoi, scipy.spatial._distance_wrap, scipy.spatial._hausdorff, scipy.spatial.transform._rotation, skimage.draw._draw, skimage.transform._hough_transform, scipy.interpolate._fitpack, scipy.interpolate.dfitpack, scipy.interpolate._bspl, scipy.interpolate._ppoly, scipy.interpolate.interpnd, scipy.interpolate._rbfinterp_pythran, scipy._lib._uarray._uarray, skimage.transform._warps_cy, skimage.measure._find_contours_cy, skimage.measure._marching_cubes_lewiner_cy, skimage.measure._marching_cubes_classic_cy, skimage.measure._moments_cy, scipy.signal._sigtools, scipy.signal._max_len_seq_inner, scipy.signal._upfirdn_apply, scipy.signal._spline, scipy.optimize._minpack2, scipy.optimize._group_columns, scipy.optimize._trlib._trlib, numpy.linalg.lapack_lite, scipy.optimize._lbfgsb, _moduleTNC, scipy.optimize._moduleTNC, scipy.optimize._cobyla, scipy.optimize._slsqp, scipy.optimize._minpack, scipy.optimize._lsq.givens_elimination, scipy.optimize._zeros, scipy.optimize.__nnls, scipy.optimize._highs.cython.src._highs_wrapper, scipy.optimize._highs._highs_wrapper, scipy.optimize._highs.cython.src._highs_constants, scipy.optimize._highs._highs_constants, scipy.linalg._interpolative, scipy.optimize._bglu_dense, scipy.optimize._lsap, scipy.optimize._direct, scipy.integrate._odepack, scipy.integrate._quadpack, scipy.integrate._vode, scipy.integrate._dop, scipy.integrate._lsoda, scipy.signal._sosfilt, scipy.signal._spectral, scipy.special.cython_special, scipy.stats._stats, beta_ufunc, scipy.stats._boost.beta_ufunc, binom_ufunc, scipy.stats._boost.binom_ufunc, nbinom_ufunc, scipy.stats._boost.nbinom_ufunc, hypergeom_ufunc, scipy.stats._boost.hypergeom_ufunc, ncf_ufunc, scipy.stats._boost.ncf_ufunc, scipy.stats._biasedurn, scipy.stats._levy_stable.levyst, scipy.stats._hypotests_pythran, scipy.stats._statlib, scipy.stats._mvn, scipy.stats._sobol, scipy.stats._qmc_cy, scipy.stats._unuran.unuran_wrapper, scipy.signal._peak_finding_utils, skimage.measure._pnpoly, skimage.measure._ccomp, skimage.transform._radon_transform, _cffi_backend, numba.core.typeconv._typeconv, numba._helperlib, numba._dynfunc, numba._dispatcher, numba.core.runtime._nrt_python, numba.np.ufunc._internal, numba.experimental.jitclass._box, torch._C, torch._C._dynamo.autograd_compiler, torch._C._dynamo.eval_frame, torch._C._dynamo.guards, torch._C._dynamo.utils, torch._C._fft, torch._C._linalg, torch._C._nested, torch._C._nn, torch._C._sparse, torch._C._special, matplotlib._c_internal_utils, matplotlib._path, kiwisolver._cext, matplotlib._image (total: 147)
+###### B: skip optimize ######
+2026-10-27 08:47:57,243 [93mWARNING[0m Please note that the parameter 'cal_data_type' has been deprecated. Please switch the calibration dataset to npy.
+2026-10-27 08:47:57,244 [93mWARNING[0m The suffix of the calibration dir name is not the same as the value float32 specified by the parameter cal_data_type, the parameter specification will prevail
+2026-10-27 08:47:57,245 [93mWARNING[0m The input node sequence_images's input_source is not be specified, it will be specified as None by default
+2026-10-27 08:47:57,246 [92mINFO[0m The parameter compile_mode is specified as latency, the balance_factor will be specified as 100.
+2026-10-27 08:47:57,247 [92mINFO[0m End verifying yaml
+2026-10-27 08:47:57,252 [92mINFO[0m Processing calibration set data for input[sequence_images]
+2026-10-27 08:47:57,644 [92mINFO[0m *******************************************
+2026-10-27 08:47:57,645 [92mINFO[0m First calibration picture name: /work/npu_quant/calib/0000.npy
+2026-10-27 08:47:57,660 [92mINFO[0m First calibration picture md5: fdf2ad7ac694aa30a681526841fd11be
+2026-10-27 08:47:57,661 [92mINFO[0m *******************************************
+2026-10-27 08:47:58,777 [92mINFO[0m Finished. data num: 100
+2026-10-27 08:47:58,815 [92mINFO[0m Start to Horizon NN Model Convert.
+2026-10-27 08:47:58,926 [92mINFO[0m The specified model compilation architecture: nash-m.
+2026-10-27 08:47:58,927 [92mINFO[0m Loading horizon_nn debug methods: set().
+2026-10-27 08:47:58,929 [92mINFO[0m The specified model compilation optimization parameters: [].
+2026-10-27 08:47:58,930 [92mINFO[0m Start to prepare the onnx model.
+2026-10-27 08:47:58,941 [92mINFO[0m Input ONNX Model Information:
+IR Version:               8
+Opset Version:            ['ai.onnx v18', 'horizon v1']
+Model Producer:           pytorch v2.12.0
+Model Domain:             None
+Model Version:            None
+Graph Input:
+    ..._images          : shape=[1, 1, 3, 224, 224], dtype=FLOAT32
+Graph Output:
+    age                 : shape=[1, 1], dtype=FLOAT32
+2026-10-27 08:47:58,943 [92mINFO[0m The input model's opset version is 18, try to convert to opset version of 19.
+2026-10-27 08:47:59,076 [92mINFO[0m End to prepare the onnx model.
+2026-10-27 08:47:59,183 [92mINFO[0m Saving model to: /work/npu_quant/out/relu_qat_s0_N1/relu_qat_s0_N1_original_float_model.onnx.
+2026-10-27 08:47:59,185 [92mINFO[0m Start to optimize the onnx model.

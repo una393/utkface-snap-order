@@ -1,0 +1,43 @@
+2026-10-27 08:46:19,206 [92mINFO[0m The log will be stored in /work/hb_compile.log
+2026-10-27 08:46:19,209 [92mINFO[0m Start hb_compile...
+2026-10-27 08:46:19,211 [92mINFO[0m hbdk version: 4.7.5
+2026-10-27 08:46:19,212 [92mINFO[0m hmct version: 2.6.5
+2026-10-27 08:46:19,213 [92mINFO[0m hb_compile version: 3.5.3
+2026-10-27 08:46:19,214 [92mINFO[0m Start verifying yaml
+2026-10-27 08:46:19,377 [92mINFO[0m Using the onnx model file: /work/npu_quant/onnx/relu_qat_s0_N1.onnx
+2026-10-27 08:46:19,381 [92mINFO[0m Model has 1 inputs according to model file
+2026-10-27 08:46:19,385 [92mINFO[0m The working_dir does not exist. Create working_dir: /work/npu_quant/out/relu_qat_s0_N1
+2026-10-27 08:46:19,394 [92mINFO[0m Input shape [1, 1, 3, 224, 224] has length: 5, make sure it is a featuremap input
+2026-10-27 08:46:19,396 [93mWARNING[0m The input_type_train is featuremap, the input_layout_train will not take effect
+2026-10-27 08:46:19,398 [93mWARNING[0m Please note that the parameter norm_type has been deprecated and will be determined by the specification of the mean/scale/std parameters
+2026-10-27 08:46:19,402 [93mWARNING[0m Please note that the parameter 'cal_data_type' has been deprecated. Please switch the calibration dataset to npy.
+2026-10-27 08:46:19,404 [93mWARNING[0m The suffix of the calibration dir name is not the same as the value float32 specified by the parameter cal_data_type, the parameter specification will prevail
+2026-10-27 08:46:19,405 [93mWARNING[0m The input node sequence_images's input_source is not be specified, it will be specified as None by default
+2026-10-27 08:46:19,407 [92mINFO[0m The parameter compile_mode is specified as latency, the balance_factor will be specified as 100.
+2026-10-27 08:46:19,409 [92mINFO[0m End verifying yaml
+2026-10-27 08:46:19,414 [92mINFO[0m Processing calibration set data for input[sequence_images]
+2026-10-27 08:46:19,731 [92mINFO[0m *******************************************
+2026-10-27 08:46:19,732 [92mINFO[0m First calibration picture name: /work/npu_quant/calib/0000.npy
+2026-10-27 08:46:19,741 [92mINFO[0m First calibration picture md5: fdf2ad7ac694aa30a681526841fd11be
+2026-10-27 08:46:19,742 [92mINFO[0m *******************************************
+2026-10-27 08:46:23,188 [92mINFO[0m Finished. data num: 100
+2026-10-27 08:46:23,227 [92mINFO[0m Start to Horizon NN Model Convert.
+2026-10-27 08:46:23,337 [92mINFO[0m The specified model compilation architecture: nash-m.
+2026-10-27 08:46:23,339 [92mINFO[0m Loading horizon_nn debug methods: set().
+2026-10-27 08:46:23,340 [92mINFO[0m The specified model compilation optimization parameters: [].
+2026-10-27 08:46:23,341 [92mINFO[0m Start to prepare the onnx model.
+2026-10-27 08:46:23,353 [92mINFO[0m Input ONNX Model Information:
+IR Version:               8
+Opset Version:            ['ai.onnx v18', 'horizon v1']
+Model Producer:           pytorch v2.12.0
+Model Domain:             None
+Model Version:            None
+Graph Input:
+    ..._images          : shape=[1, 1, 3, 224, 224], dtype=FLOAT32
+Graph Output:
+    age                 : shape=[1, 1], dtype=FLOAT32
+2026-10-27 08:46:23,356 [92mINFO[0m The input model's opset version is 18, try to convert to opset version of 19.
+2026-10-27 08:46:23,477 [92mINFO[0m End to prepare the onnx model.
+2026-10-27 08:46:23,623 [92mINFO[0m Saving model to: /work/npu_quant/out/relu_qat_s0_N1/relu_qat_s0_N1_original_float_model.onnx.
+2026-10-27 08:46:23,626 [92mINFO[0m Start to optimize the onnx model.
+exit=139 elapsed=30s

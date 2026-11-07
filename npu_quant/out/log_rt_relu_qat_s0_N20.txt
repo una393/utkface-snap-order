@@ -1,0 +1,13 @@
+[fail] 146: 
+========= Model Input Info =========
+Model name: [ relu_qat_s0_N20 ]
+
+[2026-10-27 10:21:36.705] [critical] write addr 0x7fb53c4672b0 error: -1
+[2026-10-27 10:21:36.705] [critical] trapped at ../../hbsim/qemu/lib/Qemu/Pl320.cpp, line 167
+unix-abstract:ipctrl-socket-share-id-17-pid-154451 RPC failed: failed to connect to all addresses
+qemu-system-riscv64: terminating on signal 1 from pid 154415 ()
+qemu-system-riscv64: waitpid: Interrupted system call
+
+relu_qat_s0_N20: n_ok=199/200 MAE=0.063871 RMSE=0.098340 max=0.772387
+wrote /work/npu_quant/out/mae_runtime_relu_qat_s0_N20.json
+exit=0
