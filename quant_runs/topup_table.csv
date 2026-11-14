@@ -1,0 +1,9 @@
+contrast,basis,unit,seeds_early,est_early,signs_early,seeds_final,est_final,signs_final,change,p_final
+interval 1 against projection off (contrast a),"held-out 1,556",run,0-2 (n = 3),0.018687,3/3 positive,0-7 (n = 8),0.018457,8/8 positive,-0.000231,6.44e-10
+interval 20 against projection off (contrast b),"held-out 1,556",run,0-2 (n = 3),0.004619,3/3 positive,0-7 (n = 8),0.004723,8/8 positive,0.000104,8.77e-07
+ema_after against live at interval 20 (contrast c),"held-out 1,556",run,0-2 (n = 3),-0.00173,0/3 positive,0-7 (n = 8),-0.001377,0/8 positive,0.000352,0.000112
+ema_before against ema_after at interval 20 (contrast d),"held-out 1,556",run,0-2 (n = 3),8.1e-05,2/3 positive,0-7 (n = 8),2.9e-05,5/8 positive,-5.2e-05,0.813
+STE against in-place overwriting,"held-out 1,556",run,0-2 (n = 3),-0.018307,0/3 positive,0-7 (n = 8),-0.018441,0/8 positive,-0.000134,2.05e-09
+STE against projection off,"held-out 1,556",run,0-2 (n = 3),0.000328,2/3 positive,0-7 (n = 8),-9.7e-05,4/8 positive,-0.000424,0.76
+"interval 1 against projection off, 60-epoch budget","held-out 1,556",run,0-2 (n = 3),0.014006,3/3 positive,0-7 (n = 8),0.013801,8/8 positive,-0.000205,1.14e-08
+"interval 1 against projection off, 30x learning rate","held-out 1,556",run,0-2 (n = 3),0.006591,3/3 positive,0-7 (n = 8),0.005466,6/8 positive,-0.001125,0.0806

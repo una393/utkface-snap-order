@@ -1,0 +1,17 @@
+run,dataset,subset,arch,head,mode,N,split_seed,seed,n,mae_p32,mae_8,mae_6,mae_4,source
+utk-relu_qat-after_snap-resnet-s0-1793683907,utkface,heldout,resnet,relu_qat,after_snap,20,0,0,1556,0.069958,0.069943,,,computed
+utk-relu_qat-after_snap-resnet-s1-1793688935,utkface,heldout,resnet,relu_qat,after_snap,20,1,1,1556,0.071778,0.071809,,,computed
+utk-relu_qat-after_snap-resnet-s2-1793692983,utkface,heldout,resnet,relu_qat,after_snap,20,2,2,1556,0.068918,0.068797,,,computed
+utk-relu_qat-after_snap-resnet-s3-1793697240,utkface,heldout,resnet,relu_qat,after_snap,20,3,3,1556,0.068018,0.069102,,,computed
+utk-relu_qat-after_snap-resnet-s4-1793701273,utkface,heldout,resnet,relu_qat,after_snap,20,4,4,1556,0.071502,0.07153,,,computed
+utk-relu_qat-after_snap-resnet-s5-1793710737,utkface,heldout,resnet,relu_qat,after_snap,20,5,5,1556,0.070793,0.070905,,,computed
+utk-relu_qat-after_snap-resnet-s6-1793715088,utkface,heldout,resnet,relu_qat,after_snap,20,6,6,1556,0.068664,0.069132,,,computed
+utk-relu_qat-after_snap-resnet-s7-1793718747,utkface,heldout,resnet,relu_qat,after_snap,20,7,7,1556,0.070409,0.070703,,,computed
+utk-relu_qat-none-resnet-s0-1793681578,utkface,heldout,resnet,relu_qat,none,20,0,0,1556,0.071247,0.071245,,,computed
+utk-relu_qat-none-resnet-s1-1793686385,utkface,heldout,resnet,relu_qat,none,20,1,1,1556,0.072791,0.073125,,,computed
+utk-relu_qat-none-resnet-s2-1793691360,utkface,heldout,resnet,relu_qat,none,20,2,2,1556,0.06857,0.06815,,,computed
+utk-relu_qat-none-resnet-s3-1793694806,utkface,heldout,resnet,relu_qat,none,20,3,3,1556,0.068409,0.068638,,,computed
+utk-relu_qat-none-resnet-s4-1793699368,utkface,heldout,resnet,relu_qat,none,20,4,4,1556,0.069925,0.069892,,,computed
+utk-relu_qat-none-resnet-s5-1793703342,utkface,heldout,resnet,relu_qat,none,20,5,5,1556,0.071194,0.071362,,,computed
+utk-relu_qat-none-resnet-s6-1793713260,utkface,heldout,resnet,relu_qat,none,20,6,6,1556,0.069032,0.068923,,,computed
+utk-relu_qat-none-resnet-s7-1793716918,utkface,heldout,resnet,relu_qat,none,20,7,7,1556,0.070657,0.070575,,,computed

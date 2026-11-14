@@ -1,0 +1,68 @@
+{
+  "meta": {
+    "script": "scripts/round20_mde.py",
+    "formula": "MDE = (t(0.975,df) + t(0.80,df)) * SE, SE = sigma_d / sqrt(n)",
+    "n_seeds": 8,
+    "df": 7,
+    "inputs": [
+      "quant_runs/dual_basis_report.json",
+      "quant_runs/runlevel2_stats.json"
+    ]
+  },
+  "bases": {
+    "first400": {
+      "d": 0.0001749999999999998,
+      "se": 0.0002749999999999991,
+      "df": 7,
+      "alpha": 0.05,
+      "t_crit_two_sided": 2.3646242515927844,
+      "t_crit_one_sided": 1.894578605061305,
+      "t_power": 0.8960296443135946,
+      "mde_80pct": 0.0008966798213742512,
+      "critical_margin": 0.0006960091163918569,
+      "power_at_margin": {
+        "0.0005": -0.05875890595167976,
+        "0.0010": 0.8749171360246484,
+        "0.0016": 0.9942775113063946,
+        "0.0020": 0.9989675764125198
+      },
+      "sigma_d": 0.0007778174593051998,
+      "n": 8
+    },
+    "heldout1556": {
+      "d": 2.8874999999999387e-05,
+      "se": 0.00011753957350307871,
+      "df": 7,
+      "alpha": 0.05,
+      "t_crit_two_sided": 2.3646242515927844,
+      "t_crit_one_sided": 1.894578605061305,
+      "t_power": 0.8960296443135946,
+      "mde_80pct": 0.0003832558682659878,
+      "critical_margin": 0.00025156296120696297,
+      "power_at_margin": {
+        "0.0005": 0.9496074242193794,
+        "0.0010": 0.9996994004701842,
+        "0.0016": 0.9999925420295297,
+        "0.0020": 0.999998669665724
+      },
+      "sigma_d": 0.0003324521179272064,
+      "n": 8
+    }
+  },
+  "runlevel_tost": {
+    "source": "quant_runs/runlevel2_stats.json:tost_d",
+    "note": "runlevel2_stats 的 tost_d 记录逐 margin 的双单侧 p 值",
+    "raw_keys": [
+      "contrast",
+      "df",
+      "margins",
+      "mde80",
+      "mde80_formula",
+      "mean",
+      "se_run",
+      "t80_df7",
+      "t975_df7",
+      "zero_baseline"
+    ]
+  }
+}

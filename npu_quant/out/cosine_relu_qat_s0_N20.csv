@@ -1,0 +1,287 @@
+node,type,cos_min,cos_n,thresholds
+/backbone/s3/b8/conv2/bn/act/Relu,Relu,0.933407,1,[[]]
+/backbone/s3/b8/conv2/conv/Conv,Conv,0.938074,1,[[1.323456]]
+/backbone/s3/b7/conv3/conv/Conv,Conv,0.943655,1,[[1.17999]]
+/backbone/s3/b7/se/Mul,Mul,0.951052,1,"[[7.792834], [0.995926]]"
+/backbone/s3/b8/se/Mul,Mul,0.95106,1,"[[7.760951], [0.995926]]"
+/backbone/s3/b6/conv3/conv/Conv,Conv,0.951377,1,[[1.135901]]
+/backbone/s3/b8/conv3/conv/Conv,Conv,0.951781,1,[[1.099343]]
+/backbone/s3/b7/conv1/bn/act/Relu,Relu,0.953424,1,[[]]
+/backbone/s3/b8/conv1/bn/act/Relu,Relu,0.953748,1,[[]]
+/backbone/s3/b6/se/Mul,Mul,0.954605,1,"[[6.990808], [0.995926]]"
+/backbone/s3/b7/conv2/conv/Conv,Conv,0.954657,1,[[1.361801]]
+/backbone/s3/b7/conv2/bn/act/Relu,Relu,0.956024,1,[[]]
+/backbone/s3/b1/conv1/bn/act/Relu,Relu,0.957063,1,[[]]
+/backbone/s3/b5/conv3/conv/Conv,Conv,0.957176,1,[[0.935032]]
+/backbone/s3/b6/conv1/bn/act/Relu,Relu,0.959942,1,[[]]
+/backbone/s3/b5/conv2/conv/Conv,Conv,0.960356,1,[[1.504991]]
+/backbone/s3/b5/conv1/bn/act/Relu,Relu,0.960728,1,[[]]
+/backbone/s3/b5/se/Mul,Mul,0.961342,1,"[[7.316338], [0.995926]]"
+/backbone/s3/b5/conv2/bn/act/Relu,Relu,0.961475,1,[[]]
+/backbone/s3/b1/conv3/conv/Conv,Conv,0.961514,1,[[1.616039]]
+/backbone/s1/b1/conv3/conv/Conv,Conv,0.961527,1,[[2.875416]]
+/backbone/s1/b1/conv2/conv/Conv,Conv,0.961528,1,[[5.814191]]
+/backbone/s3/b4/se/Mul,Mul,0.962027,1,"[[5.577075], [0.995926]]"
+/backbone/s3/b6/conv2/conv/Conv,Conv,0.965471,1,[[1.690042]]
+/backbone/s3/b4/conv3/conv/Conv,Conv,0.96589,1,[[0.993202]]
+/backbone/s3/b1/conv2/conv/Conv,Conv,0.966399,1,[[2.212295]]
+/backbone/s3/b8/Add,Add,0.967281,1,"[[], [4.32815]]"
+/backbone/s3/b6/conv2/bn/act/Relu,Relu,0.967284,1,[[]]
+/backbone/s3/b4/conv2/bn/act/Relu,Relu,0.967869,1,[[]]
+/backbone/s2/b1/conv2/conv/Conv,Conv,0.967924,1,[[3.703005]]
+/backbone/s3/b3/se/Mul,Mul,0.968117,1,"[[5.335977], [0.995926]]"
+/backbone/s2/b3/conv3/conv/Conv,Conv,0.968668,1,[[1.268132]]
+/backbone/s1/b1/conv2/bn/act/Relu,Relu,0.96889,1,[[]]
+/backbone/s3/b3/conv3/conv/Conv,Conv,0.969148,1,[[0.914613]]
+/backbone/s3/b1/conv2/bn/act/Relu,Relu,0.969541,1,[[]]
+/fpn/lat.1/Conv,Conv,0.969702,1,[[4.525706]]
+/backbone/s3/b2/se/Mul,Mul,0.970228,1,"[[4.954477], [0.995926]]"
+/backbone/s3/b1/Add,Add,0.970486,1,"[[3.478903], []]"
+/backbone/s3/b4/conv1/bn/act/Relu,Relu,0.970507,1,[[]]
+/backbone/s3/b8/conv1/conv/Conv,Conv,0.970585,1,[[4.32815]]
+/backbone/s3/b7/Add,Add,0.970946,1,"[[], [4.283592]]"
+/backbone/s3/b4/conv2/conv/Conv,Conv,0.971125,1,[[1.766049]]
+/backbone/s2/b1/conv3/conv/Conv,Conv,0.971734,1,[[2.003783]]
+/backbone/s3/b8/act3/Relu,Relu,0.972487,1,[[]]
+/backbone/s3/b7/conv1/conv/Conv,Conv,0.972798,1,[[4.283592]]
+/backbone/s2/b2/conv3/conv/Conv,Conv,0.972902,1,[[1.067961]]
+/backbone/s2/b3/se/Mul,Mul,0.972971,1,"[[6.715941], [0.995926]]"
+/backbone/s3/b3/conv2/bn/act/Relu,Relu,0.973233,1,[[]]
+/backbone/s3/b6/Add,Add,0.973567,1,"[[], [4.454768]]"
+/backbone/s1/b1/Add,Add,0.973633,1,"[[4.538095], []]"
+/backbone/s3/b1/se/Mul,Mul,0.974038,1,"[[7.048688], [0.995926]]"
+/fpn/norm/InstanceNormalization_mul1,Mul,0.9746,1,"[[3.083679], [3.083679]]"
+/backbone/s2/b3/conv1/conv/Conv,Conv,0.97465,1,[[5.48787]]
+/backbone/s3/b1/conv1/conv/Conv,Conv,0.974835,1,[[6.695081]]
+/backbone/s3/b5/Add,Add,0.97506,1,"[[], [4.218892]]"
+/backbone/s2/b3/conv1/bn/act/Relu,Relu,0.975125,1,[[]]
+/backbone/s3/b7/act3/Relu,Relu,0.975276,1,[[]]
+/backbone/s3/b5/conv1/conv/Conv,Conv,0.975585,1,[[4.218892]]
+/backbone/s3/b2/conv3/conv/Conv,Conv,0.975637,1,[[0.927932]]
+/backbone/s2/b3/conv2/conv/Conv,Conv,0.975641,1,[[2.146977]]
+/backbone/s3/b6/conv1/conv/Conv,Conv,0.975893,1,[[4.454768]]
+/backbone/s3/b2/conv2/bn/act/Relu,Relu,0.976063,1,[[]]
+/backbone/s3/b1/act3/Relu,Relu,0.976339,1,[[]]
+/backbone/s3/b2/Add,Add,0.97634,1,"[[], [4.262576]]"
+/backbone/s2/b2/se/Mul,Mul,0.976386,1,"[[4.493213], [0.995926]]"
+/backbone/s3/b4/Add,Add,0.976454,1,"[[], [4.18564]]"
+/backbone/s3/b3/Add,Add,0.976514,1,"[[], [4.28208]]"
+/backbone/s3/b3/conv1/bn/act/Relu,Relu,0.976556,1,[[]]
+/backbone/s2/b3/conv2/bn/act/Relu,Relu,0.97663,1,[[]]
+/backbone/s3/b3/conv1/conv/Conv,Conv,0.977093,1,[[4.28208]]
+/backbone/s3/b6/act3/Relu,Relu,0.977125,1,[[]]
+/backbone/s3/b4/conv1/conv/Conv,Conv,0.9772,1,[[4.18564]]
+/backbone/s2/b1/conv1/conv/Conv,Conv,0.977681,1,[[6.466272]]
+/backbone/s3/b3/conv2/conv/Conv,Conv,0.977959,1,[[1.475935]]
+/backbone/s1/b1/se/Mul,Mul,0.97832,1,"[[6.396909], [0.995926]]"
+/backbone/s3/b5/act3/Relu,Relu,0.978338,1,[[]]
+/fpn/norm/Add,Add,0.97904,1,"[[5.770622], [0.002954]]"
+/fpn/norm/Mul,Mul,0.979041,1,"[[5.774746], [1.005254]]"
+/fpn/Resize,Resize,0.979045,1,"[[2.031975], [], []]"
+/fpn/norm/InstanceNormalization_mul3,Mul,0.979052,1,"[[5.774746], [0.991699]]"
+/fpn/norm/InstanceNormalization_add2,Add,0.979052,1,"[[5.774746], [1.0]]"
+/fpn/norm/Reshape_1,Reshape,0.979052,1,"[[5.774746], []]"
+/fpn/norm/InstanceNormalization_mul2,Mul,0.979053,1,"[[3.083679], [2.558428]]"
+/backbone/s3/b4/act3/Relu,Relu,0.979158,1,[[]]
+/backbone/s3/b2/act3/Relu,Relu,0.979171,1,[[]]
+/backbone/s3/b3/act3/Relu,Relu,0.979227,1,[[]]
+/backbone/s2/b1/conv2/bn/act/Relu,Relu,0.979401,1,[[]]
+/fpn/norm/InstanceNormalization_sub1,Sub,0.979753,1,"[[2.782215], [0.15526]]"
+/backbone/s3/b2/conv2/conv/Conv,Conv,0.980216,1,[[1.698074]]
+/fpn/Add,Add,0.980374,1,"[[], [2.031975]]"
+/fpn/norm/Reshape,Reshape,0.980374,1,"[[2.782215], []]"
+/backbone/s3/b2/conv1/conv/Conv,Conv,0.980398,1,[[4.262576]]
+/backbone/s2/b2/conv2/conv/Conv,Conv,0.980617,1,[[2.290208]]
+/backbone/s2/b1/conv1/bn/act/Relu,Relu,0.98149,1,[[]]
+/backbone/s3/b1/downsample/conv/Conv,Conv,0.981665,1,[[6.695081]]
+/backbone/s2/b1/se/Mul,Mul,0.981785,1,"[[5.244582], [0.995926]]"
+/backbone/s2/b3/Add,Add,0.982049,1,"[[], [5.48787]]"
+/backbone/s3/b2/conv1/bn/act/Relu,Relu,0.982841,1,[[]]
+/backbone/s2/b2/Add,Add,0.982951,1,"[[], [5.107134]]"
+/backbone/s2/b1/Add,Add,0.98296,1,"[[4.206945], []]"
+/backbone/s2/b2/conv2/bn/act/Relu,Relu,0.983476,1,[[]]
+/backbone/s2/b3/act3/Relu,Relu,0.983913,1,[[]]
+/fpn/lat.0/Conv,Conv,0.983986,1,[[6.695081]]
+/backbone/s1/b1/act3/Relu,Relu,0.984398,1,[[]]
+/backbone/s2/b2/conv1/conv/Conv,Conv,0.984921,1,[[5.107134]]
+/backbone/s2/b2/act3/Relu,Relu,0.985016,1,[[]]
+/backbone/s2/b1/act3/Relu,Relu,0.985741,1,[[]]
+/pool/AveragePool,AveragePool,0.986236,1,[[5.771236]]
+/Reshape_1,Reshape,0.986236,1,"[[5.771236], []]"
+/backbone/s2/b2/conv1/bn/act/Relu,Relu,0.987159,1,[[]]
+/backbone/s3/b8/se/ReduceMean,ReduceMean,0.987333,1,"[[7.760951], []]"
+/backbone/s2/b1/se/fc1/Conv,Conv,0.990377,1,[[1.52819]]
+/backbone/s3/b1/se/act/Relu,Relu,0.990837,1,[[]]
+/backbone/s3/b1/se/fc1/Conv,Conv,0.990902,1,[[1.045532]]
+/backbone/s3/b7/se/ReduceMean,ReduceMean,0.992257,1,"[[7.792834], []]"
+/backbone/s3/b4/se/ReduceMean,ReduceMean,0.992715,1,"[[5.577075], []]"
+/backbone/s3/b5/se/ReduceMean,ReduceMean,0.992785,1,"[[7.316338], []]"
+/backbone/s2/b1/downsample/conv/Conv,Conv,0.993001,1,[[6.466272]]
+/backbone/s2/b1/se/act/Relu,Relu,0.993464,1,[[]]
+/backbone/s2/b1/se/fc2/Conv,Conv,0.993744,1,[[1.645358]]
+/backbone/s3/b8/se/act/Relu,Relu,0.993752,1,[[]]
+/backbone/s3/b8/se/fc1/Conv,Conv,0.993962,1,[[2.142012]]
+/backbone/s3/b7/se/act/Relu,Relu,0.994934,1,[[]]
+/backbone/s3/b7/se/fc1/Conv,Conv,0.995088,1,[[1.963182]]
+/backbone/s3/b1/se/ReduceMean,ReduceMean,0.995425,1,"[[7.048688], []]"
+/backbone/s3/b5/se/fc1/Conv,Conv,0.995483,1,[[1.490988]]
+/backbone/s3/b5/se/act/Relu,Relu,0.995631,1,[[]]
+/backbone/s3/b4/se/act/Relu,Relu,0.995744,1,[[]]
+/backbone/s3/b4/se/fc1/Conv,Conv,0.995859,1,[[1.661502]]
+/backbone/s3/b1/se/fc2/Conv,Conv,0.996057,1,[[2.050942]]
+/backbone/s2/b3/se/fc1/Conv,Conv,0.996104,1,[[1.221931]]
+/backbone/s1/b1/se/act/Relu,Relu,0.996118,1,[[]]
+/backbone/s2/b3/se/act/Relu,Relu,0.996223,1,[[]]
+/backbone/s2/b1/se/ReduceMean,ReduceMean,0.996441,1,"[[5.244582], []]"
+/backbone/s1/b1/se/fc1/Conv,Conv,0.99659,1,[[0.901474]]
+/backbone/s2/b3/se/ReduceMean,ReduceMean,0.996646,1,"[[6.715941], []]"
+/backbone/s1/b1/conv1/bn/act/Relu,Relu,0.996815,1,[[]]
+/backbone/s1/b1/conv1/conv/Conv,Conv,0.996921,1,[[6.511839]]
+/backbone/s3/b3/se/ReduceMean,ReduceMean,0.996922,1,"[[5.335977], []]"
+/backbone/s1/b1/se/fc2/Conv,Conv,0.997043,1,[[1.89958]]
+/backbone/s3/b6/se/ReduceMean,ReduceMean,0.997184,1,"[[6.990808], []]"
+/backbone/s3/b7/se/fc2/Conv,Conv,0.997208,1,[[3.253007]]
+/temporal/layers.0/norm1/LayerNormalization_mul1,Mul,0.997211,1,"[[1.936782], [1.936782]]"
+/backbone/s1/b1/se/ReduceMean,ReduceMean,0.997612,1,"[[6.396909], []]"
+/backbone/s3/b2/se/ReduceMean,ReduceMean,0.99771,1,"[[4.954477], []]"
+/ReduceMean,ReduceMean,0.997962,1,"[[5.771236], []]"
+/frame_token/Gemm_transpose_in_reshape,Reshape,0.997962,1,"[[2.741494], []]"
+/fpn/norm/InstanceNormalization_mean1,ReduceMean,0.998012,1,"[[2.782215], []]"
+/backbone/s2/b3/se/fc2/Conv,Conv,0.998083,1,[[1.911569]]
+/temporal/layers.0/self_attn/MatMul_2,MatMul,0.998125,1,"[[1.0], [3.174362]]"
+/temporal/layers.0/self_attn/Gemm_transpose_in_reshape,Reshape,0.998125,1,"[[2.652884], []]"
+/temporal/layers.0/self_attn/Gather_2,Gather,0.99816,1,"[[3.174362], []]"
+/temporal/layers.0/self_attn/Reshape_8,Reshape,0.99816,1,"[[3.174362], []]"
+/temporal/layers.0/norm1/LayerNormalization_add,Add,0.998165,1,"[[3.516219], [0.004084]]"
+/temporal/layers.0/self_attn/MatMul_transpose_in_reshape,Reshape,0.998165,1,"[[3.518059], []]"
+/temporal/layers.0/norm1/LayerNormalization_mul3,Mul,0.998222,1,"[[3.523612], [1.002761]]"
+/temporal/layers.0/norm1/LayerNormalization_sub1,Sub,0.998223,1,"[[2.004492], [0.071886]]"
+/temporal/layers.0/norm1/LayerNormalization_mul2,Mul,0.998223,1,"[[1.936782], [1.967218]]"
+/frame_token/Gemm,Conv,0.998226,1,[[2.741494]]
+/Add_/Add_output_0_Reshape,Reshape,0.998226,1,"[[2.004492], []]"
+/backbone/s3/b4/se/fc2/Conv,Conv,0.998235,1,[[2.506257]]
+/backbone/s3/b8/se/fc2/Conv,Conv,0.998347,1,[[3.394473]]
+/backbone/s3/b6/se/act/Relu,Relu,0.99838,1,[[]]
+/backbone/s3/b6/se/fc1/Conv,Conv,0.99843,1,[[1.459772]]
+/temporal/layers.0/self_attn/MatMul,Conv,0.998649,1,[[3.518059]]
+/temporal/layers.0/self_attn/Squeeze,Reshape,0.998649,1,"[[3.174362], []]"
+/backbone/s3/b5/se/fc2/Conv,Conv,0.998652,1,[[2.205443]]
+/temporal/layers.0/self_attn/Mul,Mul,0.998767,1,"[[3.174362], [0.416958]]"
+/temporal/layers.0/self_attn/Mul_/temporal/layers.0/self_attn/Mul_output_0_Reshape,Reshape,0.998767,1,"[[1.334655], []]"
+/temporal/layers.0/self_attn/Gather,Gather,0.998796,1,"[[3.174362], []]"
+/temporal/layers.0/self_attn/Mul_1,Mul,0.998856,1,"[[3.174362], [0.416958]]"
+/temporal/layers.0/self_attn/Mul_1_/temporal/layers.0/self_attn/Mul_1_output_0_Transpose_reshape,Reshape,0.998856,1,"[[1.199407], []]"
+/temporal/layers.0/self_attn/Gather_1,Gather,0.998884,1,"[[3.174362], []]"
+/temporal/layers.0/Relu,Relu,0.998946,1,[[]]
+/backbone/s3/b3/se/fc2/Conv,Conv,0.998981,1,[[1.749785]]
+/temporal/layers.0/self_attn/Gemm,Conv,0.999009,1,[[2.652884]]
+/temporal/layers.0/norm2/LayerNormalization_mul1,Mul,0.999013,1,"[[3.79284], [3.79284]]"
+/backbone/stem/bn/act/Relu,Relu,0.999017,1,[[]]
+/temporal/layers.0/norm2/LayerNormalization_add,Add,0.999055,1,"[[3.609476], [0.005543]]"
+/temporal/layers.0/linear1/MatMul_transpose_in_reshape,Reshape,0.999055,1,"[[3.501817], []]"
+/temporal/layers.0/norm2/LayerNormalization_mul3,Mul,0.999061,1,"[[3.615365], [0.999682]]"
+/temporal/layers.0/norm2/LayerNormalization_sub1,Sub,0.999063,1,"[[3.815315], [0.128703]]"
+/temporal/layers.0/norm2/LayerNormalization_mul2,Mul,0.999063,1,"[[3.79284], [1.059257]]"
+/temporal/layers.0/Add,Add,0.999066,1,"[[2.004492], []]"
+/temporal/layers.0/Add_/temporal/layers.0/Add_output_0_Reshape,Reshape,0.999066,1,"[[3.815315], []]"
+/backbone/s3/b2/se/fc2/Conv,Conv,0.999083,1,[[0.98436]]
+/temporal/layers.0/linear1/MatMul,Conv,0.999145,1,[[3.501817]]
+/backbone/s3/b7/se/gate/Sigmoid,Sigmoid,0.999166,1,[[5.49897]]
+/backbone/s3/b3/se/act/Relu,Relu,0.999288,1,[[]]
+/backbone/s3/b3/se/fc1/Conv,Conv,0.999294,1,[[1.372087]]
+/backbone/s3/b6/se/fc2/Conv,Conv,0.999321,1,[[2.295031]]
+/backbone/s1/b1/downsample/conv/Conv,Conv,0.999331,1,[[6.511839]]
+/backbone/s2/b2/se/ReduceMean,ReduceMean,0.999388,1,"[[4.493213], []]"
+/backbone/s3/b1/se/gate/Sigmoid,Sigmoid,0.999417,1,[[5.49897]]
+/temporal/layers.1/Relu,Relu,0.999418,1,[[]]
+/temporal/layers.1/self_attn/MatMul_2,MatMul,0.999421,1,"[[1.0], [2.957728]]"
+/temporal/layers.1/self_attn/Gemm_transpose_in_reshape,Reshape,0.999421,1,"[[2.296108], []]"
+/temporal/layers.1/self_attn/Gather_2,Gather,0.999446,1,"[[2.957728], []]"
+/temporal/layers.1/self_attn/Reshape_8,Reshape,0.999446,1,"[[2.957728], []]"
+/backbone/s3/b8/se/gate/Sigmoid,Sigmoid,0.999447,1,[[5.49897]]
+/backbone/s3/b2/se/act/Relu,Relu,0.999452,1,[[]]
+/backbone/s3/b2/se/fc1/Conv,Conv,0.999462,1,[[1.006604]]
+/temporal/layers.1/norm1/LayerNormalization_add,Add,0.9995,1,"[[3.55195], [0.004562]]"
+/temporal/layers.1/self_attn/MatMul_transpose_in_reshape,Reshape,0.9995,1,"[[3.551361], []]"
+/temporal/layers.1/norm1/LayerNormalization_mul3,Mul,0.999502,1,"[[3.562474], [1.001522]]"
+/temporal/layers.1/norm1/LayerNormalization_sub1,Sub,0.999503,1,"[[5.175078], [0.181703]]"
+/temporal/layers.1/norm1/LayerNormalization_mul2,Mul,0.999503,1,"[[5.224515], [0.759134]]"
+/temporal/layers.0/Add_1,Add,0.999505,1,"[[3.815315], []]"
+/temporal/layers.0/Add_1_/temporal/layers.0/Add_1_output_0_Reshape,Reshape,0.999505,1,"[[5.175078], []]"
+/temporal/layers.1/self_attn/Mul,Mul,0.999538,1,"[[2.957728], [0.416958]]"
+/temporal/layers.1/self_attn/Mul_/temporal/layers.1/self_attn/Mul_output_0_Reshape,Reshape,0.999538,1,"[[1.139867], []]"
+/temporal/layers.1/linear1/MatMul,Conv,0.999539,1,[[3.518299]]
+/temporal/layers.1/norm2/LayerNormalization_add,Add,0.999549,1,"[[3.518944], [0.006866]]"
+/temporal/layers.1/linear1/MatMul_transpose_in_reshape,Reshape,0.999549,1,"[[3.518299], []]"
+/temporal/layers.1/self_attn/Gather,Gather,0.999559,1,"[[2.957728], []]"
+/temporal/layers.1/self_attn/MatMul,Conv,0.999564,1,[[3.551361]]
+/temporal/layers.1/self_attn/Squeeze,Reshape,0.999564,1,"[[2.957728], []]"
+/temporal/layers.1/norm1/LayerNormalization_mul1,Mul,0.999577,1,"[[5.224515], [5.224515]]"
+/backbone/s3/b4/se/gate/Sigmoid,Sigmoid,0.999593,1,[[5.49897]]
+/backbone/s2/b2/se/fc2/Conv,Conv,0.999602,1,[[1.575802]]
+/temporal/layers.1/norm2/LayerNormalization_mul3,Mul,0.999602,1,"[[3.525557], [1.001979]]"
+/temporal/layers.1/norm2/LayerNormalization_sub1,Sub,0.999603,1,"[[7.055604], [0.237421]]"
+/temporal/layers.1/norm2/LayerNormalization_mul2,Mul,0.999603,1,"[[6.974567], [0.566028]]"
+/temporal/layers.1/Add,Add,0.999606,1,"[[5.175078], []]"
+/temporal/layers.1/Add_/temporal/layers.1/Add_output_0_Reshape,Reshape,0.999606,1,"[[7.055604], []]"
+/temporal/layers.1/self_attn/Mul_1,Mul,0.999634,1,"[[2.957728], [0.416958]]"
+/temporal/layers.1/self_attn/Mul_1_/temporal/layers.1/self_attn/Mul_1_output_0_Transpose_reshape,Reshape,0.999634,1,"[[1.243571], []]"
+/temporal/layers.1/self_attn/Gather_1,Gather,0.999647,1,"[[2.957728], []]"
+/temporal/layers.1/self_attn/Gemm,Conv,0.999673,1,[[2.296108]]
+/backbone/s3/b5/se/gate/Sigmoid,Sigmoid,0.999677,1,[[5.49897]]
+/temporal/layers.1/norm2/LayerNormalization_mul1,Mul,0.999693,1,"[[6.974567], [6.974567]]"
+/temporal/layers.1/Add_1,Add,0.999703,1,"[[7.055604], []]"
+/temporal/layers.1/Add_1_/temporal/layers.1/Add_1_output_0_Reshape,Reshape,0.999703,1,"[[8.648234], []]"
+/Gather,Gather,0.999703,1,"[[8.648234], []]"
+/head/net/net.0/Gemm_transpose_in_reshape,Reshape,0.999703,1,"[[8.648234], []]"
+/backbone/s2/b1/se/gate/Sigmoid,Sigmoid,0.999745,1,[[5.49897]]
+/backbone/s2/b3/se/gate/Sigmoid,Sigmoid,0.99977,1,[[5.49897]]
+/temporal/layers.0/linear2/MatMul,Conv,0.999801,1,[[2.515041]]
+/head/net/net.1/Pow,Pow,0.999821,1,"[[6.801874], []]"
+/backbone/s2/b2/se/act/Relu,Relu,0.999822,1,[[]]
+/fpn/norm/InstanceNormalization_mean2,ReduceMean,0.999849,1,"[[3.803584], []]"
+/head/net/net.2/Relu,Relu,0.999864,1,[[2.446361]]
+/backbone/s2/b2/se/fc1/Conv,Conv,0.99987,1,[[0.945369]]
+/backbone/s3/b6/se/gate/Sigmoid,Sigmoid,0.999885,1,[[5.49897]]
+/temporal/layers.1/linear2/MatMul,Conv,0.999899,1,[[2.505221]]
+/head/net/net.1/Mul_1,Mul,0.999899,1,"[[2.442918], [1.003428]]"
+/head/net/net.1/Mul,Mul,0.999907,1,"[[6.801874], [0.413436]]"
+/backbone/s1/b1/se/gate/Sigmoid,Sigmoid,0.999912,1,[[5.49897]]
+/head/net/net.0/Gemm,Conv,0.999918,1,[[8.648234]]
+/backbone/stem/conv/Conv,Conv,0.999932,1,[[2.632145]]
+/fpn/norm/InstanceNormalization_reciprocal,HzRsqrt,0.999953,1,[[0.378593]]
+/backbone/s3/b3/se/gate/Sigmoid,Sigmoid,0.999959,1,[[5.49897]]
+/backbone/s2/b2/se/gate/Sigmoid,Sigmoid,0.999967,1,[[5.49897]]
+/backbone/s3/b2/se/gate/Sigmoid,Sigmoid,0.999967,1,[[5.49897]]
+/temporal/layers.0/self_attn/MatMul_1,MatMul,0.999971,1,"[[1.334655], [1.199407]]"
+/temporal/layers.0/self_attn/Softmax_reducemax_FROM_QUANTIZED_SOFTMAX,ReduceMax,0.999971,1,"[[14.401339], []]"
+/temporal/layers.1/self_attn/MatMul_1,MatMul,0.999986,1,"[[1.139867], [1.243571]]"
+/temporal/layers.1/self_attn/Softmax_reducemax_FROM_QUANTIZED_SOFTMAX,ReduceMax,0.999986,1,"[[10.476478], []]"
+/Reshape,Reshape,0.999988,1,"[[2.632145], []]"
+/temporal/layers.0/norm1/LayerNormalization_mean1,ReduceMean,1.0,1,"[[2.004492], []]"
+/temporal/layers.0/norm1/LayerNormalization_mean2,ReduceMean,1.0,1,"[[3.054473], []]"
+/temporal/layers.0/norm1/LayerNormalization_hzrsqrt,HzRsqrt,1.0,1,[[0.377143]]
+/temporal/layers.0/self_attn/Softmax_sub_FROM_QUANTIZED_SOFTMAX,Sub,1.0,1,"[[14.401339], [14.401339]]"
+/temporal/layers.0/self_attn/Softmax_exp_FROM_QUANTIZED_SOFTMAX,Exp,1.0,1,[[11.090324]]
+/temporal/layers.0/self_attn/Softmax_reducesum_FROM_QUANTIZED_SOFTMAX,ReduceSum,1.0,1,"[[1.0], []]"
+/temporal/layers.0/self_attn/Softmax_reciprocal_FROM_QUANTIZED_SOFTMAX,Reciprocal,1.0,1,[[0.991699]]
+/temporal/layers.0/self_attn/Softmax_mul_FROM_QUANTIZED_SOFTMAX,Mul,1.0,1,"[[1.0], [1.0]]"
+/temporal/layers.0/norm2/LayerNormalization_mean1,ReduceMean,1.0,1,"[[3.815315], []]"
+/temporal/layers.0/norm2/LayerNormalization_mean2,ReduceMean,1.0,1,"[[12.092743], []]"
+/temporal/layers.0/norm2/LayerNormalization_hzrsqrt,HzRsqrt,1.0,1,[[1.138936]]
+/temporal/layers.1/norm1/LayerNormalization_mean1,ReduceMean,1.0,1,"[[5.175078], []]"
+/temporal/layers.1/norm1/LayerNormalization_mean2,ReduceMean,1.0,1,"[[27.555325], []]"
+/temporal/layers.1/norm1/LayerNormalization_hzrsqrt,HzRsqrt,1.0,1,[[2.197204]]
+/temporal/layers.1/self_attn/Softmax_sub_FROM_QUANTIZED_SOFTMAX,Sub,1.0,1,"[[10.476478], [10.476478]]"
+/temporal/layers.1/self_attn/Softmax_exp_FROM_QUANTIZED_SOFTMAX,Exp,1.0,1,[[11.090324]]
+/temporal/layers.1/self_attn/Softmax_reducesum_FROM_QUANTIZED_SOFTMAX,ReduceSum,1.0,1,"[[1.0], []]"
+/temporal/layers.1/self_attn/Softmax_reciprocal_FROM_QUANTIZED_SOFTMAX,Reciprocal,1.0,1,[[0.991699]]
+/temporal/layers.1/self_attn/Softmax_mul_FROM_QUANTIZED_SOFTMAX,Mul,1.0,1,"[[1.0], [1.0]]"
+/temporal/layers.1/norm2/LayerNormalization_mean1,ReduceMean,1.0,1,"[[7.055604], []]"
+/temporal/layers.1/norm2/LayerNormalization_mean2,ReduceMean,1.0,1,"[[48.636459], []]"
+/temporal/layers.1/norm2/LayerNormalization_hzrsqrt,HzRsqrt,1.0,1,[[3.995049]]
+/head/net/net.1/ReduceMean,ReduceMean,1.0,1,"[[46.472168], []]"
+/head/net/net.1/Div_reciprocal,HzRsqrt,1.0,1,[[8.457695]]
+/head/net/net.3/Gemm,Conv,1.0,1,[[2.446361]]
+/head/net/net.3/Gemm_reshape_output,Reshape,1.0,1,"[[], []]"
+model_output_tensor,,,0,

@@ -1,0 +1,266 @@
+{
+  "tau": 0.005,
+  "on_grid_tolerance": 0.05,
+  "rho": "relative RMS residual ||W - S(W)|| / ||W|| over all projected tensors, eq. (4)",
+  "deployment": {
+    "rounding": "rtn",
+    "scale": "recomputed"
+  },
+  "training_rule": "same",
+  "cases": [
+    {
+      "label": "live@1",
+      "run": "results/utk-relu_qat-none-s1-1793445602",
+      "key": "model_state_dict",
+      "deployment_bits": 8,
+      "training_bits": 8,
+      "tensors": 75,
+      "rho": 8.090732811187875e-09,
+      "cos_centered_min": 0.9999956488609314,
+      "on_grid_frac_min": 1.0,
+      "max_resid_steps": 1.5002064174041152e-05,
+      "clip_binds": true,
+      "worst_tensor": {
+        "name": "backbone.s3.b7.se.fc1.weight",
+        "rho": 2.3088029266205012e-08
+      },
+      "verdict": "drop-metric",
+      "reason": "the export step reproduces the tensor within tau",
+      "advice": "Report task MAE after export quantization: the fidelity score is not quotable, and Proposition 1 covers this case.",
+      "verdict_at_other_tau": {
+        "0.001": "drop-metric",
+        "0.005": "drop-metric",
+        "0.01": "drop-metric"
+      }
+    },
+    {
+      "label": "live@20",
+      "run": "results/utk-relu_qat-none-s0-1793030915",
+      "key": "model_state_dict",
+      "deployment_bits": 8,
+      "training_bits": 8,
+      "tensors": 75,
+      "rho": 3.524039284053052e-05,
+      "cos_centered_min": 0.9999964833259583,
+      "on_grid_frac_min": 0.9999218583106995,
+      "max_resid_steps": 0.07697568833827972,
+      "clip_binds": true,
+      "worst_tensor": {
+        "name": "temporal.layers.1.linear2.weight",
+        "rho": 7.951636507641524e-05
+      },
+      "verdict": "drop-metric",
+      "reason": "the export step reproduces the tensor within tau",
+      "advice": "Report task MAE after export quantization: the fidelity score is not quotable, and Proposition 1 covers this case.",
+      "verdict_at_other_tau": {
+        "0.001": "drop-metric",
+        "0.005": "drop-metric",
+        "0.01": "drop-metric"
+      }
+    },
+    {
+      "label": "ema_before@20",
+      "run": "results/utk-relu_qat-before_snap-s0-1793032011",
+      "key": "ema_state_dict",
+      "deployment_bits": 8,
+      "training_bits": 8,
+      "tensors": 75,
+      "rho": 0.003216000453808557,
+      "cos_centered_min": 0.9999755024909973,
+      "on_grid_frac_min": 0.22316406667232513,
+      "max_resid_steps": 0.500001847743988,
+      "clip_binds": true,
+      "worst_tensor": {
+        "name": "backbone.s3.b3.se.fc1.weight",
+        "rho": 0.006989955436438322
+      },
+      "verdict": "drop-metric",
+      "reason": "the export step reproduces the tensor within tau",
+      "advice": "Report task MAE after export quantization: the fidelity score is not quotable, and Proposition 1 covers this case.",
+      "verdict_at_other_tau": {
+        "0.001": "quote-with-provenance",
+        "0.005": "drop-metric",
+        "0.01": "drop-metric"
+      }
+    },
+    {
+      "label": "ema_after@20",
+      "run": "results/utk-relu_qat-after_snap-s0-1793033217",
+      "key": "ema_state_dict",
+      "deployment_bits": 8,
+      "training_bits": 8,
+      "tensors": 75,
+      "rho": 0.0034929301714765096,
+      "cos_centered_min": 0.9999766945838928,
+      "on_grid_frac_min": 0.20863281190395355,
+      "max_resid_steps": 0.5000024437904358,
+      "clip_binds": true,
+      "worst_tensor": {
+        "name": "backbone.s3.b2.conv1.conv.weight",
+        "rho": 0.005746108945459127
+      },
+      "verdict": "drop-metric",
+      "reason": "the export step reproduces the tensor within tau",
+      "advice": "Report task MAE after export quantization: the fidelity score is not quotable, and Proposition 1 covers this case.",
+      "verdict_at_other_tau": {
+        "0.001": "quote-with-provenance",
+        "0.005": "drop-metric",
+        "0.01": "drop-metric"
+      }
+    },
+    {
+      "label": "projection off",
+      "run": "results/utk-relu_qat-none-s0-1793111850",
+      "key": "model_state_dict",
+      "deployment_bits": 8,
+      "training_bits": 8,
+      "tensors": 75,
+      "rho": 0.010177383731442639,
+      "cos_centered_min": 0.9993858337402344,
+      "on_grid_frac_min": 0.09954452514648438,
+      "max_resid_steps": 0.5000030994415283,
+      "clip_binds": true,
+      "worst_tensor": {
+        "name": "backbone.s3.b3.se.fc1.weight",
+        "rho": 0.03356340527534485
+      },
+      "verdict": "quote-with-provenance",
+      "reason": "residual exceeds tau under the same rule and step",
+      "advice": "Quote the centered cosine with its interval, bit width and evaluation basis; it cannot rank models.",
+      "verdict_at_other_tau": {
+        "0.001": "quote-with-provenance",
+        "0.005": "quote-with-provenance",
+        "0.01": "quote-with-provenance"
+      }
+    },
+    {
+      "label": "4 bit export of the 8 bit projection",
+      "run": "results/utk-relu_qat-before_snap-s0-1793032011",
+      "key": "ema_state_dict",
+      "deployment_bits": 4,
+      "training_bits": 8,
+      "tensors": 75,
+      "rho": 0.17582173314758284,
+      "cos_centered_min": 0.931891918182373,
+      "on_grid_frac_min": 0.08956163376569748,
+      "max_resid_steps": 0.4999997913837433,
+      "clip_binds": true,
+      "worst_tensor": {
+        "name": "backbone.s3.b2.se.fc1.weight",
+        "rho": 0.34187543392181396
+      },
+      "verdict": "report-rho-only",
+      "reason": "the deployment quantizer differs from the training projection",
+      "advice": "Report the residual under the deployment step: a centered cosine is not comparable across steps or rules.",
+      "verdict_at_other_tau": {
+        "0.001": "report-rho-only",
+        "0.005": "report-rho-only",
+        "0.01": "report-rho-only"
+      }
+    }
+  ],
+  "shadow_sweep": {
+    "interval": 20,
+    "checkpoints": 16,
+    "rho_min": 0.002931300578615883,
+    "rho_max": 0.003692768970685823,
+    "rows": [
+      {
+        "run": "utk-relu_qat-before_snap-s0-1793032011",
+        "mode": "before_snap",
+        "seed": 0,
+        "rho": 0.003216000453808557
+      },
+      {
+        "run": "utk-relu_qat-before_snap-s1-1793461738",
+        "mode": "before_snap",
+        "seed": 1,
+        "rho": 0.0033214305843223147
+      },
+      {
+        "run": "utk-relu_qat-before_snap-s2-1793462579",
+        "mode": "before_snap",
+        "seed": 2,
+        "rho": 0.0036513994758041327
+      },
+      {
+        "run": "utk-relu_qat-before_snap-s3-1793463426",
+        "mode": "before_snap",
+        "seed": 3,
+        "rho": 0.0036475531017115246
+      },
+      {
+        "run": "utk-relu_qat-before_snap-s4-1793464281",
+        "mode": "before_snap",
+        "seed": 4,
+        "rho": 0.0034064351051674977
+      },
+      {
+        "run": "utk-relu_qat-before_snap-s5-1793465147",
+        "mode": "before_snap",
+        "seed": 5,
+        "rho": 0.003692768970685823
+      },
+      {
+        "run": "utk-relu_qat-before_snap-s6-1793466050",
+        "mode": "before_snap",
+        "seed": 6,
+        "rho": 0.0029544086890766082
+      },
+      {
+        "run": "utk-relu_qat-before_snap-s7-1793466971",
+        "mode": "before_snap",
+        "seed": 7,
+        "rho": 0.0032593903480812193
+      },
+      {
+        "run": "utk-relu_qat-after_snap-s0-1793033217",
+        "mode": "after_snap",
+        "seed": 0,
+        "rho": 0.0034929301714765096
+      },
+      {
+        "run": "utk-relu_qat-after_snap-s1-1793112917",
+        "mode": "after_snap",
+        "seed": 1,
+        "rho": 0.0033611497656808754
+      },
+      {
+        "run": "utk-relu_qat-after_snap-s2-1793113027",
+        "mode": "after_snap",
+        "seed": 2,
+        "rho": 0.0036046073267831545
+      },
+      {
+        "run": "utk-relu_qat-after_snap-s3-1793114152",
+        "mode": "after_snap",
+        "seed": 3,
+        "rho": 0.003642502007490045
+      },
+      {
+        "run": "utk-relu_qat-after_snap-s4-1793458331",
+        "mode": "after_snap",
+        "seed": 4,
+        "rho": 0.0033765415131914367
+      },
+      {
+        "run": "utk-relu_qat-after_snap-s5-1793459173",
+        "mode": "after_snap",
+        "seed": 5,
+        "rho": 0.0036670463791610704
+      },
+      {
+        "run": "utk-relu_qat-after_snap-s6-1793460031",
+        "mode": "after_snap",
+        "seed": 6,
+        "rho": 0.002931300578615883
+      },
+      {
+        "run": "utk-relu_qat-after_snap-s7-1793460887",
+        "mode": "after_snap",
+        "seed": 7,
+        "rho": 0.00356385067196512
+      }
+    ]
+  }
+}

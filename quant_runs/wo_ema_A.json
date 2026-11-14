@@ -1,0 +1,36 @@
+{
+  "name": "ema_A",
+  "weights": "live",
+  "rows": [
+    {
+      "bits": 8,
+      "cos": 1.0,
+      "cos_centered": 1.0,
+      "relL2": 0.0,
+      "mae": 0.0,
+      "maxdiff": 0.0,
+      "resid_mean": 0.0,
+      "on_grid": 1.0
+    },
+    {
+      "bits": 6,
+      "cos": 0.9963,
+      "cos_centered": 0.9843,
+      "relL2": 0.0878,
+      "mae": 0.0257,
+      "maxdiff": 0.1505,
+      "resid_mean": 0.2469,
+      "on_grid": 0.127
+    },
+    {
+      "bits": 4,
+      "cos": 0.9797,
+      "cos_centered": 0.9115,
+      "relL2": 0.2017,
+      "mae": 0.062,
+      "maxdiff": 0.2929,
+      "resid_mean": 0.2433,
+      "on_grid": 0.1081
+    }
+  ]
+}

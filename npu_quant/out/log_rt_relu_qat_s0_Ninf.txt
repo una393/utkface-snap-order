@@ -1,0 +1,3 @@
+relu_qat_s0_Ninf: n_ok=200/200 MAE=0.057684 RMSE=0.089008 max=0.555492
+wrote /work/npu_quant/out/mae_runtime_relu_qat_s0_Ninf.json
+RT_RC=0

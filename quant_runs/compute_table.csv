@@ -1,0 +1,360 @@
+family,run,dataset,arch,head,ema_mode,snap_every,quant_mode,lr,epochs,epochs_logged,sec_total,sec_per_epoch
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-after_snap-resnet-s0-1794242396,cifar10,resnet,bilinear_glu,after_snap,20,overwrite,0.003,60,60,1099.8,18.3
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-after_snap-resnet-s1-1794247304,cifar10,resnet,bilinear_glu,after_snap,20,overwrite,0.003,60,60,667.6,11.1
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-after_snap-resnet-s2-1794251440,cifar10,resnet,bilinear_glu,after_snap,20,overwrite,0.003,60,60,663.1,11.1
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-after_snap-resnet-s3-1794255544,cifar10,resnet,bilinear_glu,after_snap,20,overwrite,0.003,60,60,673.5,11.2
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-after_snap-resnet-s4-1794259671,cifar10,resnet,bilinear_glu,after_snap,20,overwrite,0.003,60,60,675.1,11.3
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-after_snap-resnet-s5-1794263791,cifar10,resnet,bilinear_glu,after_snap,20,overwrite,0.003,60,60,665.9,11.1
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-after_snap-resnet-s6-1794267898,cifar10,resnet,bilinear_glu,after_snap,20,overwrite,0.003,60,60,711.0,11.8
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-after_snap-resnet-s7-1794279626,cifar10,resnet,bilinear_glu,after_snap,20,overwrite,0.003,60,60,700.8,11.7
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-none-resnet-s0-1794239307,cifar10,resnet,bilinear_glu,none,0,overwrite,0.003,60,60,691.2,11.5
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-none-resnet-s0-1794240010,cifar10,resnet,bilinear_glu,none,1,overwrite,0.003,60,60,897.6,15.0
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-none-resnet-s0-1794240953,cifar10,resnet,bilinear_glu,none,5,overwrite,0.003,60,60,735.4,12.3
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-none-resnet-s0-1794241697,cifar10,resnet,bilinear_glu,none,20,overwrite,0.003,60,60,691.0,11.5
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-none-resnet-s0-1794294767,cifar10,resnet,bilinear_glu,none,1,overwrite,0.003,60,60,687.4,11.5
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-none-resnet-s0-1794300264,cifar10,resnet,bilinear_glu,none,0,overwrite,0.003,60,60,533.0,8.9
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-none-resnet-s1-1794244314,cifar10,resnet,bilinear_glu,none,1,overwrite,0.003,60,60,907.0,15.1
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-none-resnet-s1-1794245231,cifar10,resnet,bilinear_glu,none,5,overwrite,0.003,60,60,747.7,12.5
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-none-resnet-s1-1794245988,cifar10,resnet,bilinear_glu,none,20,overwrite,0.003,60,60,671.1,11.2
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-none-resnet-s1-1794246669,cifar10,resnet,bilinear_glu,none,0,overwrite,0.003,60,60,626.8,10.4
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-none-resnet-s1-1794295465,cifar10,resnet,bilinear_glu,none,1,overwrite,0.003,60,60,683.7,11.4
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-none-resnet-s1-1794300807,cifar10,resnet,bilinear_glu,none,0,overwrite,0.003,60,60,529.8,8.8
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-none-resnet-s2-1794248686,cifar10,resnet,bilinear_glu,none,1,overwrite,0.003,60,60,813.9,13.6
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-none-resnet-s2-1794249508,cifar10,resnet,bilinear_glu,none,5,overwrite,0.003,60,60,662.6,11.0
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-none-resnet-s2-1794250179,cifar10,resnet,bilinear_glu,none,20,overwrite,0.003,60,60,624.2,10.4
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-none-resnet-s2-1794250812,cifar10,resnet,bilinear_glu,none,0,overwrite,0.003,60,60,620.5,10.3
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-none-resnet-s2-1794296158,cifar10,resnet,bilinear_glu,none,1,overwrite,0.003,60,60,661.5,11.0
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-none-resnet-s2-1794301346,cifar10,resnet,bilinear_glu,none,0,overwrite,0.003,60,60,527.5,8.8
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-none-resnet-s3-1794252820,cifar10,resnet,bilinear_glu,none,1,overwrite,0.003,60,60,796.1,13.3
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-none-resnet-s3-1794253624,cifar10,resnet,bilinear_glu,none,5,overwrite,0.003,60,60,654.4,10.9
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-none-resnet-s3-1794254286,cifar10,resnet,bilinear_glu,none,20,overwrite,0.003,60,60,625.7,10.4
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-none-resnet-s3-1794254920,cifar10,resnet,bilinear_glu,none,0,overwrite,0.003,60,60,616.3,10.3
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-none-resnet-s3-1794296830,cifar10,resnet,bilinear_glu,none,1,overwrite,0.003,60,60,676.0,11.3
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-none-resnet-s3-1794301884,cifar10,resnet,bilinear_glu,none,0,overwrite,0.003,60,60,531.2,8.9
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-none-resnet-s4-1794256943,cifar10,resnet,bilinear_glu,none,1,overwrite,0.003,60,60,793.7,13.2
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-none-resnet-s4-1794257745,cifar10,resnet,bilinear_glu,none,5,overwrite,0.003,60,60,652.1,10.9
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-none-resnet-s4-1794258404,cifar10,resnet,bilinear_glu,none,20,overwrite,0.003,60,60,631.2,10.5
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-none-resnet-s4-1794259043,cifar10,resnet,bilinear_glu,none,0,overwrite,0.003,60,60,619.4,10.3
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-none-resnet-s4-1794297515,cifar10,resnet,bilinear_glu,none,1,overwrite,0.003,60,60,672.5,11.2
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-none-resnet-s4-1794302425,cifar10,resnet,bilinear_glu,none,0,overwrite,0.003,60,60,529.4,8.8
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-none-resnet-s5-1794261060,cifar10,resnet,bilinear_glu,none,1,overwrite,0.003,60,60,795.3,13.3
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-none-resnet-s5-1794261863,cifar10,resnet,bilinear_glu,none,5,overwrite,0.003,60,60,654.7,10.9
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-none-resnet-s5-1794262526,cifar10,resnet,bilinear_glu,none,20,overwrite,0.003,60,60,627.3,10.5
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-none-resnet-s5-1794263162,cifar10,resnet,bilinear_glu,none,0,overwrite,0.003,60,60,621.1,10.4
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-none-resnet-s5-1794298199,cifar10,resnet,bilinear_glu,none,1,overwrite,0.003,60,60,693.4,11.6
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-none-resnet-s5-1794302964,cifar10,resnet,bilinear_glu,none,0,overwrite,0.003,60,60,527.8,8.8
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-none-resnet-s6-1794265174,cifar10,resnet,bilinear_glu,none,1,overwrite,0.003,60,60,788.6,13.1
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-none-resnet-s6-1794265971,cifar10,resnet,bilinear_glu,none,5,overwrite,0.003,60,60,660.5,11.0
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-none-resnet-s6-1794266639,cifar10,resnet,bilinear_glu,none,20,overwrite,0.003,60,60,625.3,10.4
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-none-resnet-s6-1794267273,cifar10,resnet,bilinear_glu,none,0,overwrite,0.003,60,60,617.4,10.3
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-none-resnet-s6-1794298901,cifar10,resnet,bilinear_glu,none,1,overwrite,0.003,60,60,674.7,11.2
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-none-resnet-s6-1794303502,cifar10,resnet,bilinear_glu,none,0,overwrite,0.003,60,60,527.1,8.8
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-none-resnet-s7-1794276551,cifar10,resnet,bilinear_glu,none,1,overwrite,0.003,60,60,929.6,15.5
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-none-resnet-s7-1794277491,cifar10,resnet,bilinear_glu,none,5,overwrite,0.003,60,60,738.4,12.3
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-none-resnet-s7-1794278237,cifar10,resnet,bilinear_glu,none,20,overwrite,0.003,60,60,679.2,11.3
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-none-resnet-s7-1794278927,cifar10,resnet,bilinear_glu,none,0,overwrite,0.003,60,60,690.5,11.5
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-none-resnet-s7-1794299587,cifar10,resnet,bilinear_glu,none,1,overwrite,0.003,60,60,668.0,11.1
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-none-resnet-s7-1794304038,cifar10,resnet,bilinear_glu,none,0,overwrite,0.003,60,60,529.3,8.8
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-none-ste-resnet-s0-1794243505,cifar10,resnet,bilinear_glu,none,1,ste,0.003,60,60,794.1,13.2
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-none-ste-resnet-s1-1794247980,cifar10,resnet,bilinear_glu,none,1,ste,0.003,60,60,698.1,11.6
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-none-ste-resnet-s2-1794252111,cifar10,resnet,bilinear_glu,none,1,ste,0.003,60,60,700.4,11.7
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-none-ste-resnet-s3-1794256226,cifar10,resnet,bilinear_glu,none,1,ste,0.003,60,60,709.1,11.8
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-none-ste-resnet-s4-1794260355,cifar10,resnet,bilinear_glu,none,1,ste,0.003,60,60,697.3,11.6
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-none-ste-resnet-s5-1794264466,cifar10,resnet,bilinear_glu,none,1,ste,0.003,60,60,700.3,11.7
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-none-ste-resnet-s6-1794268617,cifar10,resnet,bilinear_glu,none,1,ste,0.003,60,60,710.6,11.8
+CIFAR-10 arm (60 ep),cifar-bilinear_glu-none-ste-resnet-s7-1794280337,cifar10,resnet,bilinear_glu,none,1,ste,0.003,60,60,788.2,13.1
+dataset axis (KonIQ-10k),koniq-relu_qat-after_snap-s0-1793597444,koniq,net,relu_qat,after_snap,1,overwrite,0.001,20,20,646.5,32.3
+dataset axis (KonIQ-10k),koniq-relu_qat-after_snap-s0-1793598162,koniq,net,relu_qat,after_snap,0,overwrite,0.001,20,20,487.5,24.4
+dataset axis (KonIQ-10k),koniq-relu_qat-after_snap-s1-1793384003,koniq,net,relu_qat,after_snap,1,overwrite,0.001,20,20,720.6,36.0
+dataset axis (KonIQ-10k),koniq-relu_qat-after_snap-s1-1793384795,koniq,net,relu_qat,after_snap,0,overwrite,0.001,20,20,407.2,20.4
+dataset axis (KonIQ-10k),koniq-relu_qat-after_snap-s2-1793386545,koniq,net,relu_qat,after_snap,1,overwrite,0.001,20,20,689.2,34.5
+dataset axis (KonIQ-10k),koniq-relu_qat-after_snap-s2-1793387306,koniq,net,relu_qat,after_snap,0,overwrite,0.001,20,20,510.7,25.5
+dataset axis (KonIQ-10k),koniq-relu_qat-after_snap-s3-1793600039,koniq,net,relu_qat,after_snap,1,overwrite,0.001,20,20,685.3,34.3
+dataset axis (KonIQ-10k),koniq-relu_qat-after_snap-s3-1793600796,koniq,net,relu_qat,after_snap,0,overwrite,0.001,20,20,505.4,25.3
+dataset axis (KonIQ-10k),koniq-relu_qat-after_snap-s4-1793602500,koniq,net,relu_qat,after_snap,1,overwrite,0.001,20,20,677.9,33.9
+dataset axis (KonIQ-10k),koniq-relu_qat-after_snap-s4-1793603249,koniq,net,relu_qat,after_snap,0,overwrite,0.001,20,20,575.9,28.8
+dataset axis (KonIQ-10k),koniq-relu_qat-after_snap-s5-1793605313,koniq,net,relu_qat,after_snap,1,overwrite,0.001,20,20,636.9,31.8
+dataset axis (KonIQ-10k),koniq-relu_qat-after_snap-s5-1793606022,koniq,net,relu_qat,after_snap,0,overwrite,0.001,20,20,434.0,21.7
+dataset axis (KonIQ-10k),koniq-relu_qat-after_snap-s6-1793607740,koniq,net,relu_qat,after_snap,1,overwrite,0.001,20,20,729.2,36.5
+dataset axis (KonIQ-10k),koniq-relu_qat-after_snap-s6-1793608542,koniq,net,relu_qat,after_snap,0,overwrite,0.001,20,20,532.7,26.6
+dataset axis (KonIQ-10k),koniq-relu_qat-after_snap-s7-1793610496,koniq,net,relu_qat,after_snap,1,overwrite,0.001,20,20,649.7,32.5
+dataset axis (KonIQ-10k),koniq-relu_qat-after_snap-s7-1793611218,koniq,net,relu_qat,after_snap,0,overwrite,0.001,20,20,429.4,21.5
+dataset axis (KonIQ-10k),koniq-relu_qat-none-s0-1793596143,koniq,net,relu_qat,none,1,overwrite,0.001,20,20,770.6,38.5
+dataset axis (KonIQ-10k),koniq-relu_qat-none-s0-1793596990,koniq,net,relu_qat,none,0,overwrite,0.001,20,20,382.1,19.1
+dataset axis (KonIQ-10k),koniq-relu_qat-none-s1-1793382898,koniq,net,relu_qat,none,1,overwrite,0.001,20,20,463.2,23.2
+dataset axis (KonIQ-10k),koniq-relu_qat-none-s1-1793383432,koniq,net,relu_qat,none,0,overwrite,0.001,20,20,499.7,25.0
+dataset axis (KonIQ-10k),koniq-relu_qat-none-s2-1793385275,koniq,net,relu_qat,none,1,overwrite,0.001,20,20,643.8,32.2
+dataset axis (KonIQ-10k),koniq-relu_qat-none-s2-1793385990,koniq,net,relu_qat,none,0,overwrite,0.001,20,20,484.6,24.2
+dataset axis (KonIQ-10k),koniq-relu_qat-none-s3-1793598720,koniq,net,relu_qat,none,1,overwrite,0.001,20,20,689.3,34.5
+dataset axis (KonIQ-10k),koniq-relu_qat-none-s3-1793599481,koniq,net,relu_qat,none,0,overwrite,0.001,20,20,483.8,24.2
+dataset axis (KonIQ-10k),koniq-relu_qat-none-s4-1793601373,koniq,net,relu_qat,none,1,overwrite,0.001,20,20,563.9,28.2
+dataset axis (KonIQ-10k),koniq-relu_qat-none-s4-1793602009,koniq,net,relu_qat,none,0,overwrite,0.001,20,20,420.5,21.0
+dataset axis (KonIQ-10k),koniq-relu_qat-none-s5-1793603947,koniq,net,relu_qat,none,1,overwrite,0.001,20,20,730.4,36.5
+dataset axis (KonIQ-10k),koniq-relu_qat-none-s5-1793604750,koniq,net,relu_qat,none,0,overwrite,0.001,20,20,492.0,24.6
+dataset axis (KonIQ-10k),koniq-relu_qat-none-s6-1793606528,koniq,net,relu_qat,none,1,overwrite,0.001,20,20,576.7,28.8
+dataset axis (KonIQ-10k),koniq-relu_qat-none-s6-1793607176,koniq,net,relu_qat,none,0,overwrite,0.001,20,20,493.6,24.7
+dataset axis (KonIQ-10k),koniq-relu_qat-none-s7-1793609146,koniq,net,relu_qat,none,1,overwrite,0.001,20,20,728.8,36.4
+dataset axis (KonIQ-10k),koniq-relu_qat-none-s7-1793609947,koniq,net,relu_qat,none,0,overwrite,0.001,20,20,477.7,23.9
+head controls (GELU / GLU),utk-bilinear_glu-none-s0-1793526779,utkface,net,bilinear_glu,none,1,overwrite,0.0001,20,20,1791.2,89.6
+head controls (GELU / GLU),utk-gelu-none-s0-1793526777,utkface,net,gelu,none,1,overwrite,0.0001,20,20,1792.5,89.6
+learning-rate control (lr 1e-3),utk-relu_qat-after_snap-resnet-s0-1793597829,utkface,resnet,relu_qat,after_snap,1,overwrite,0.001,20,20,785.4,39.3
+learning-rate control (lr 1e-3),utk-relu_qat-after_snap-resnet-s0-1793598685,utkface,resnet,relu_qat,after_snap,0,overwrite,0.001,20,20,676.1,33.8
+learning-rate control (lr 1e-3),utk-relu_qat-after_snap-resnet-s1-1793389999,utkface,resnet,relu_qat,after_snap,1,overwrite,0.001,20,20,567.9,28.4
+learning-rate control (lr 1e-3),utk-relu_qat-after_snap-resnet-s1-1793390640,utkface,resnet,relu_qat,after_snap,0,overwrite,0.001,20,20,447.2,22.4
+learning-rate control (lr 1e-3),utk-relu_qat-after_snap-resnet-s2-1793392277,utkface,resnet,relu_qat,after_snap,1,overwrite,0.001,20,20,578.2,28.9
+learning-rate control (lr 1e-3),utk-relu_qat-after_snap-resnet-s2-1793392928,utkface,resnet,relu_qat,after_snap,0,overwrite,0.001,20,20,460.9,23.0
+learning-rate control (lr 1e-3),utk-relu_qat-after_snap-resnet-s3-1793600868,utkface,resnet,relu_qat,after_snap,1,overwrite,0.001,20,20,777.1,38.9
+learning-rate control (lr 1e-3),utk-relu_qat-after_snap-resnet-s3-1793601715,utkface,resnet,relu_qat,after_snap,0,overwrite,0.001,20,20,588.9,29.4
+learning-rate control (lr 1e-3),utk-relu_qat-after_snap-resnet-s4-1793603907,utkface,resnet,relu_qat,after_snap,1,overwrite,0.001,20,20,838.8,41.9
+learning-rate control (lr 1e-3),utk-relu_qat-after_snap-resnet-s4-1793604817,utkface,resnet,relu_qat,after_snap,0,overwrite,0.001,20,20,615.1,30.8
+learning-rate control (lr 1e-3),utk-relu_qat-after_snap-resnet-s5-1793606863,utkface,resnet,relu_qat,after_snap,1,overwrite,0.001,20,20,796.7,39.8
+learning-rate control (lr 1e-3),utk-relu_qat-after_snap-resnet-s5-1793607732,utkface,resnet,relu_qat,after_snap,0,overwrite,0.001,20,20,651.4,32.6
+learning-rate control (lr 1e-3),utk-relu_qat-after_snap-resnet-s6-1793609972,utkface,resnet,relu_qat,after_snap,1,overwrite,0.001,20,20,786.4,39.3
+learning-rate control (lr 1e-3),utk-relu_qat-after_snap-resnet-s6-1793610829,utkface,resnet,relu_qat,after_snap,0,overwrite,0.001,20,20,548.8,27.4
+learning-rate control (lr 1e-3),utk-relu_qat-after_snap-resnet-s7-1793612574,utkface,resnet,relu_qat,after_snap,1,overwrite,0.001,20,20,558.3,27.9
+learning-rate control (lr 1e-3),utk-relu_qat-after_snap-resnet-s7-1793613205,utkface,resnet,relu_qat,after_snap,0,overwrite,0.001,20,20,445.1,22.3
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-after_snap-s0-1793005531,utkface,regnety,relu_qat,after_snap,0,overwrite,0.0001,20,20,1464.5,73.2
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-after_snap-s0-1793029658,utkface,regnety,relu_qat,after_snap,5,overwrite,0.0001,20,20,1156.4,57.8
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-after_snap-s0-1793033217,utkface,regnety,relu_qat,after_snap,20,overwrite,0.0001,20,20,1136.0,56.8
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-after_snap-s0-1793111850,utkface,regnety,relu_qat,after_snap,0,overwrite,0.0001,20,20,1159.4,58.0
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-after_snap-s0-1793118469,utkface,regnety,relu_qat,after_snap,20,overwrite,0.0001,20,20,1102.4,55.1
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-after_snap-s0-1793119670,utkface,regnety,relu_qat,after_snap,20,overwrite,0.0001,20,20,641.4,32.1
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-after_snap-s1-1793018836,utkface,regnety,relu_qat,after_snap,0,overwrite,0.0001,20,20,1060.9,53.0
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-after_snap-s1-1793038259,utkface,regnety,relu_qat,after_snap,20,overwrite,0.0001,20,20,1137.3,56.9
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-after_snap-s1-1793112917,utkface,regnety,relu_qat,after_snap,20,overwrite,0.0001,20,20,1116.3,55.8
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-after_snap-s1-1793116221,utkface,regnety,relu_qat,after_snap,5,overwrite,0.0001,20,20,1127.9,56.4
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-after_snap-s1-1793372545,utkface,regnety,relu_qat,after_snap,20,overwrite,0.0001,20,20,770.2,38.5
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-after_snap-s2-1793023654,utkface,regnety,relu_qat,after_snap,0,overwrite,0.0001,20,20,1763.5,88.2
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-after_snap-s2-1793040741,utkface,regnety,relu_qat,after_snap,20,overwrite,0.0001,20,20,1129.9,56.5
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-after_snap-s2-1793113027,utkface,regnety,relu_qat,after_snap,20,overwrite,0.0001,20,20,1110.5,55.5
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-after_snap-s2-1793117387,utkface,regnety,relu_qat,after_snap,5,overwrite,0.0001,20,20,1171.7,58.6
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-after_snap-s2-1793370810,utkface,regnety,relu_qat,after_snap,20,overwrite,0.0001,20,20,811.6,40.6
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-after_snap-s3-1793114152,utkface,regnety,relu_qat,after_snap,20,overwrite,0.0001,20,20,1048.9,52.4
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-after_snap-s3-1793371701,utkface,regnety,relu_qat,after_snap,20,overwrite,0.0001,20,20,767.6,38.4
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-after_snap-s3-1793373390,utkface,regnety,relu_qat,after_snap,20,overwrite,0.0001,20,20,758.3,37.9
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-after_snap-s4-1793458331,utkface,net,relu_qat,after_snap,20,overwrite,0.0001,20,20,747.8,37.4
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-after_snap-s5-1793459173,utkface,net,relu_qat,after_snap,20,overwrite,0.0001,20,20,762.5,38.1
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-after_snap-s6-1793460031,utkface,net,relu_qat,after_snap,20,overwrite,0.0001,20,20,761.6,38.1
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-after_snap-s7-1793460887,utkface,net,relu_qat,after_snap,20,overwrite,0.0001,20,20,755.7,37.8
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-after_snap-ste-s0-1793383403,utkface,net,relu_qat,after_snap,1,ste,0.0001,20,20,1503.7,75.2
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-after_snap-ste-s1-1793384980,utkface,net,relu_qat,after_snap,1,ste,0.0001,20,20,1493.7,74.7
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-after_snap-ste-s2-1793386546,utkface,net,relu_qat,after_snap,1,ste,0.0001,20,20,1462.5,73.1
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-before_snap-s0-1793009776,utkface,regnety,relu_qat,before_snap,0,overwrite,0.0001,20,20,1446.6,72.3
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-before_snap-s0-1793028380,utkface,regnety,relu_qat,before_snap,5,overwrite,0.0001,20,20,1177.3,58.9
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-before_snap-s0-1793032011,utkface,regnety,relu_qat,before_snap,20,overwrite,0.0001,20,20,1104.1,55.2
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-before_snap-s0-1793117363,utkface,regnety,relu_qat,before_snap,20,overwrite,0.0001,20,20,1091.2,54.6
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-before_snap-s0-1793118574,utkface,regnety,relu_qat,before_snap,20,overwrite,0.0001,20,20,1077.3,53.9
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-before_snap-s1-1793037047,utkface,regnety,relu_qat,before_snap,20,overwrite,0.0001,20,20,1110.3,55.5
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-before_snap-s1-1793115073,utkface,regnety,relu_qat,before_snap,5,overwrite,0.0001,20,20,1133.6,56.7
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-before_snap-s1-1793461738,utkface,net,relu_qat,before_snap,20,overwrite,0.0001,20,20,745.9,37.3
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-before_snap-s2-1793039497,utkface,regnety,relu_qat,before_snap,20,overwrite,0.0001,20,20,1144.2,57.2
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-before_snap-s2-1793116251,utkface,regnety,relu_qat,before_snap,5,overwrite,0.0001,20,20,1117.9,55.9
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-before_snap-s2-1793462579,utkface,net,relu_qat,before_snap,20,overwrite,0.0001,20,20,752.7,37.6
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-before_snap-s3-1793463426,utkface,net,relu_qat,before_snap,20,overwrite,0.0001,20,20,759.5,38.0
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-before_snap-s4-1793464281,utkface,net,relu_qat,before_snap,20,overwrite,0.0001,20,20,761.4,38.1
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-before_snap-s5-1793465147,utkface,net,relu_qat,before_snap,20,overwrite,0.0001,20,20,809.1,40.5
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-before_snap-s6-1793466050,utkface,net,relu_qat,before_snap,20,overwrite,0.0001,20,20,828.1,41.4
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-before_snap-s7-1793466971,utkface,net,relu_qat,before_snap,20,overwrite,0.0001,20,20,837.9,41.9
+learning-rate control (lr 1e-3),utk-relu_qat-none-resnet-s0-1793596353,utkface,resnet,relu_qat,none,1,overwrite,0.001,20,20,805.8,40.3
+learning-rate control (lr 1e-3),utk-relu_qat-none-resnet-s0-1793597231,utkface,resnet,relu_qat,none,0,overwrite,0.001,20,20,528.4,26.4
+learning-rate control (lr 1e-3),utk-relu_qat-none-resnet-s1-1793388872,utkface,resnet,relu_qat,none,1,overwrite,0.001,20,20,532.9,26.6
+learning-rate control (lr 1e-3),utk-relu_qat-none-resnet-s1-1793389478,utkface,resnet,relu_qat,none,0,overwrite,0.001,20,20,449.5,22.5
+learning-rate control (lr 1e-3),utk-relu_qat-none-resnet-s2-1793391161,utkface,resnet,relu_qat,none,1,overwrite,0.001,20,20,531.3,26.6
+learning-rate control (lr 1e-3),utk-relu_qat-none-resnet-s2-1793391765,utkface,resnet,relu_qat,none,0,overwrite,0.001,20,20,439.2,22.0
+learning-rate control (lr 1e-3),utk-relu_qat-none-resnet-s3-1793599434,utkface,resnet,relu_qat,none,1,overwrite,0.001,20,20,717.2,35.9
+learning-rate control (lr 1e-3),utk-relu_qat-none-resnet-s3-1793600221,utkface,resnet,relu_qat,none,0,overwrite,0.001,20,20,577.0,28.9
+learning-rate control (lr 1e-3),utk-relu_qat-none-resnet-s4-1793602375,utkface,resnet,relu_qat,none,1,overwrite,0.001,20,20,717.0,35.9
+learning-rate control (lr 1e-3),utk-relu_qat-none-resnet-s4-1793603162,utkface,resnet,relu_qat,none,0,overwrite,0.001,20,20,633.3,31.7
+learning-rate control (lr 1e-3),utk-relu_qat-none-resnet-s5-1793605502,utkface,resnet,relu_qat,none,1,overwrite,0.001,20,20,677.7,33.9
+learning-rate control (lr 1e-3),utk-relu_qat-none-resnet-s5-1793606250,utkface,resnet,relu_qat,none,0,overwrite,0.001,20,20,542.4,27.1
+learning-rate control (lr 1e-3),utk-relu_qat-none-resnet-s6-1793608454,utkface,resnet,relu_qat,none,1,overwrite,0.001,20,20,721.0,36.0
+learning-rate control (lr 1e-3),utk-relu_qat-none-resnet-s6-1793609245,utkface,resnet,relu_qat,none,0,overwrite,0.001,20,20,656.5,32.8
+learning-rate control (lr 1e-3),utk-relu_qat-none-resnet-s7-1793611448,utkface,resnet,relu_qat,none,1,overwrite,0.001,20,20,560.8,28.0
+learning-rate control (lr 1e-3),utk-relu_qat-none-resnet-s7-1793612083,utkface,resnet,relu_qat,none,0,overwrite,0.001,20,20,418.5,20.9
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-none-s0-1793011336,utkface,regnety,relu_qat,none,0,overwrite,0.0001,20,20,1362.0,68.1
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-none-s0-1793027163,utkface,regnety,relu_qat,none,5,overwrite,0.0001,20,20,1123.9,56.2
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-none-s0-1793030915,utkface,regnety,relu_qat,none,20,overwrite,0.0001,20,20,995.0,49.8
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-none-s0-1793111850,utkface,regnety,relu_qat,none,0,overwrite,0.0001,20,20,1051.3,52.6
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-none-s1-1793440012,utkface,net,relu_qat,none,20,overwrite,0.0001,20,20,654.2,32.7
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-none-s1-1793445602,utkface,net,relu_qat,none,1,overwrite,0.0001,20,20,892.1,44.6
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-none-s1-1793452884,utkface,net,relu_qat,none,0,overwrite,0.0001,20,20,670.2,33.5
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-none-s2-1793115215,utkface,regnety,relu_qat,none,5,overwrite,0.0001,20,20,1018.9,50.9
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-none-s2-1793440765,utkface,net,relu_qat,none,20,overwrite,0.0001,20,20,737.3,36.9
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-none-s2-1793446593,utkface,net,relu_qat,none,1,overwrite,0.0001,20,20,904.6,45.2
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-none-s2-1793453651,utkface,net,relu_qat,none,0,overwrite,0.0001,20,20,659.7,33.0
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-none-s3-1793441598,utkface,net,relu_qat,none,20,overwrite,0.0001,20,20,804.8,40.2
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-none-s3-1793447591,utkface,net,relu_qat,none,1,overwrite,0.0001,20,20,983.6,49.2
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-none-s3-1793454406,utkface,net,relu_qat,none,0,overwrite,0.0001,20,20,663.0,33.1
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-none-s4-1793442496,utkface,net,relu_qat,none,20,overwrite,0.0001,20,20,677.4,33.9
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-none-s4-1793448669,utkface,net,relu_qat,none,1,overwrite,0.0001,20,20,966.2,48.3
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-none-s4-1793455163,utkface,net,relu_qat,none,0,overwrite,0.0001,20,20,666.5,33.3
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-none-s5-1793443267,utkface,net,relu_qat,none,20,overwrite,0.0001,20,20,689.4,34.5
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-none-s5-1793449730,utkface,net,relu_qat,none,1,overwrite,0.0001,20,20,952.9,47.6
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-none-s5-1793455928,utkface,net,relu_qat,none,0,overwrite,0.0001,20,20,677.3,33.9
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-none-s6-1793444050,utkface,net,relu_qat,none,20,overwrite,0.0001,20,20,681.7,34.1
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-none-s6-1793450777,utkface,net,relu_qat,none,1,overwrite,0.0001,20,20,966.2,48.3
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-none-s6-1793456701,utkface,net,relu_qat,none,0,overwrite,0.0001,20,20,745.2,37.3
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-none-s7-1793444825,utkface,net,relu_qat,none,20,overwrite,0.0001,20,20,683.2,34.2
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-none-s7-1793451837,utkface,net,relu_qat,none,1,overwrite,0.0001,20,20,952.7,47.6
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-none-s7-1793457541,utkface,net,relu_qat,none,0,overwrite,0.0001,20,20,695.3,34.8
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-none-ste-s0-1793166213,utkface,regnety,relu_qat,none,1,ste,0.0001,20,20,891.6,44.6
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-none-ste-s0-1793548926,utkface,net,relu_qat,none,1,ste,0.0001,20,20,1174.5,58.7
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-none-ste-s1-1793167125,utkface,regnety,relu_qat,none,1,ste,0.0001,20,20,874.8,43.7
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-none-ste-s1-1793467903,utkface,net,relu_qat,none,1,ste,0.0001,20,20,877.9,43.9
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-none-ste-s2-1793168098,utkface,regnety,relu_qat,none,1,ste,0.0001,20,20,1056.4,52.8
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-none-ste-s2-1793468803,utkface,net,relu_qat,none,1,ste,0.0001,20,20,896.5,44.8
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-none-ste-s3-1793469716,utkface,net,relu_qat,none,1,ste,0.0001,20,20,867.9,43.4
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-none-ste-s4-1793470599,utkface,net,relu_qat,none,1,ste,0.0001,20,20,933.8,46.7
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-none-ste-s5-1793471551,utkface,net,relu_qat,none,1,ste,0.0001,20,20,928.3,46.4
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-none-ste-s6-1793550126,utkface,net,relu_qat,none,1,ste,0.0001,20,20,1109.2,55.5
+"main sequences (UTKFace, 20 ep, lr 1e-4)",utk-relu_qat-none-ste-s7-1793552601,utkface,net,relu_qat,none,1,ste,0.0001,20,20,917.3,45.9
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-after_snap-resnet-s0-1793683007,utkface,resnet,relu_qat,after_snap,1,overwrite,0.0001,20,20,827.2,41.4
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-after_snap-resnet-s0-1793683907,utkface,resnet,relu_qat,after_snap,20,overwrite,0.0001,20,20,689.5,34.5
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-after_snap-resnet-s0-1793684672,utkface,resnet,relu_qat,after_snap,0,overwrite,0.0001,20,20,705.7,35.3
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-after_snap-resnet-s0-1793760389,utkface,resnet,relu_qat,after_snap,5,overwrite,0.0001,20,20,514.2,25.7
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-after_snap-resnet-s1-1793687948,utkface,resnet,relu_qat,after_snap,1,overwrite,0.0001,20,20,910.7,45.5
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-after_snap-resnet-s1-1793688935,utkface,resnet,relu_qat,after_snap,20,overwrite,0.0001,20,20,743.8,37.2
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-after_snap-resnet-s1-1793689755,utkface,resnet,relu_qat,after_snap,0,overwrite,0.0001,20,20,682.3,34.1
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-after_snap-resnet-s1-1793761545,utkface,resnet,relu_qat,after_snap,5,overwrite,0.0001,20,20,530.6,26.5
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-after_snap-resnet-s2-1793692409,utkface,resnet,relu_qat,after_snap,1,overwrite,0.0001,20,20,504.6,25.2
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-after_snap-resnet-s2-1793692983,utkface,resnet,relu_qat,after_snap,20,overwrite,0.0001,20,20,461.8,23.1
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-after_snap-resnet-s2-1793693529,utkface,resnet,relu_qat,after_snap,0,overwrite,0.0001,20,20,396.6,19.8
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-after_snap-resnet-s2-1793762784,utkface,resnet,relu_qat,after_snap,5,overwrite,0.0001,20,20,506.6,25.3
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-after_snap-resnet-s3-1793696299,utkface,resnet,relu_qat,after_snap,1,overwrite,0.0001,20,20,867.6,43.4
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-after_snap-resnet-s3-1793697240,utkface,resnet,relu_qat,after_snap,20,overwrite,0.0001,20,20,685.7,34.3
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-after_snap-resnet-s3-1793698000,utkface,resnet,relu_qat,after_snap,0,overwrite,0.0001,20,20,588.1,29.4
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-after_snap-resnet-s3-1793763954,utkface,resnet,relu_qat,after_snap,5,overwrite,0.0001,20,20,496.7,24.8
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-after_snap-resnet-s4-1793700479,utkface,resnet,relu_qat,after_snap,1,overwrite,0.0001,20,20,723.1,36.2
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-after_snap-resnet-s4-1793701273,utkface,resnet,relu_qat,after_snap,20,overwrite,0.0001,20,20,548.7,27.4
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-after_snap-resnet-s4-1793701893,utkface,resnet,relu_qat,after_snap,0,overwrite,0.0001,20,20,552.5,27.6
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-after_snap-resnet-s4-1793765069,utkface,resnet,relu_qat,after_snap,5,overwrite,0.0001,20,20,420.4,21.0
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-after_snap-resnet-s5-1793707979,utkface,resnet,relu_qat,after_snap,1,overwrite,0.0001,20,20,2677.4,133.9
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-after_snap-resnet-s5-1793710737,utkface,resnet,relu_qat,after_snap,20,overwrite,0.0001,20,20,684.6,34.2
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-after_snap-resnet-s5-1793711500,utkface,resnet,relu_qat,after_snap,0,overwrite,0.0001,20,20,988.6,49.4
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-after_snap-resnet-s5-1793766024,utkface,resnet,relu_qat,after_snap,5,overwrite,0.0001,20,20,406.8,20.3
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-after_snap-resnet-s6-1793714338,utkface,resnet,relu_qat,after_snap,1,overwrite,0.0001,20,20,676.9,33.8
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-after_snap-resnet-s6-1793715088,utkface,resnet,relu_qat,after_snap,20,overwrite,0.0001,20,20,506.1,25.3
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-after_snap-resnet-s6-1793715668,utkface,resnet,relu_qat,after_snap,0,overwrite,0.0001,20,20,509.3,25.5
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-after_snap-resnet-s6-1793766972,utkface,resnet,relu_qat,after_snap,5,overwrite,0.0001,20,20,435.1,21.8
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-after_snap-resnet-s7-1793717980,utkface,resnet,relu_qat,after_snap,1,overwrite,0.0001,20,20,692.5,34.6
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-after_snap-resnet-s7-1793718747,utkface,resnet,relu_qat,after_snap,20,overwrite,0.0001,20,20,520.8,26.0
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-after_snap-resnet-s7-1793719341,utkface,resnet,relu_qat,after_snap,0,overwrite,0.0001,20,20,495.5,24.8
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-after_snap-resnet-s7-1793767950,utkface,resnet,relu_qat,after_snap,5,overwrite,0.0001,20,20,411.1,20.6
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-before_snap-resnet-s0-1793768429,utkface,resnet,relu_qat,before_snap,20,overwrite,0.0001,20,20,379.4,19.0
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-before_snap-resnet-s1-1793768877,utkface,resnet,relu_qat,before_snap,20,overwrite,0.0001,20,20,404.0,20.2
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-before_snap-resnet-s2-1793769349,utkface,resnet,relu_qat,before_snap,20,overwrite,0.0001,20,20,425.2,21.3
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-before_snap-resnet-s3-1793769844,utkface,resnet,relu_qat,before_snap,20,overwrite,0.0001,20,20,427.8,21.4
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-before_snap-resnet-s4-1793770341,utkface,resnet,relu_qat,before_snap,20,overwrite,0.0001,20,20,396.0,19.8
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-before_snap-resnet-s5-1793770806,utkface,resnet,relu_qat,before_snap,20,overwrite,0.0001,20,20,390.2,19.5
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-before_snap-resnet-s6-1793771264,utkface,resnet,relu_qat,before_snap,20,overwrite,0.0001,20,20,387.1,19.4
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-before_snap-resnet-s7-1793771720,utkface,resnet,relu_qat,before_snap,20,overwrite,0.0001,20,20,390.8,19.5
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-none-resnet-s0-1793680732,utkface,resnet,relu_qat,none,1,overwrite,0.0001,20,20,774.4,38.7
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-none-resnet-s0-1793681578,utkface,resnet,relu_qat,none,20,overwrite,0.0001,20,20,634.0,31.7
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-none-resnet-s0-1793682285,utkface,resnet,relu_qat,none,0,overwrite,0.0001,20,20,647.2,32.4
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-none-resnet-s0-1793759799,utkface,resnet,relu_qat,none,5,overwrite,0.0001,20,20,512.6,25.6
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-none-resnet-s1-1793685454,utkface,resnet,relu_qat,none,1,overwrite,0.0001,20,20,858.1,42.9
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-none-resnet-s1-1793686385,utkface,resnet,relu_qat,none,20,overwrite,0.0001,20,20,692.2,34.6
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-none-resnet-s1-1793687151,utkface,resnet,relu_qat,none,0,overwrite,0.0001,20,20,724.9,36.2
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-none-resnet-s1-1793760975,utkface,resnet,relu_qat,none,5,overwrite,0.0001,20,20,498.1,24.9
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-none-resnet-s2-1793690510,utkface,resnet,relu_qat,none,1,overwrite,0.0001,20,20,777.0,38.9
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-none-resnet-s2-1793691360,utkface,resnet,relu_qat,none,20,overwrite,0.0001,20,20,492.9,24.6
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-none-resnet-s2-1793691925,utkface,resnet,relu_qat,none,0,overwrite,0.0001,20,20,416.8,20.8
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-none-resnet-s2-1793762180,utkface,resnet,relu_qat,none,5,overwrite,0.0001,20,20,525.6,26.3
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-none-resnet-s3-1793693998,utkface,resnet,relu_qat,none,1,overwrite,0.0001,20,20,730.4,36.5
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-none-resnet-s3-1793694806,utkface,resnet,relu_qat,none,20,overwrite,0.0001,20,20,651.2,32.6
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-none-resnet-s3-1793695538,utkface,resnet,relu_qat,none,0,overwrite,0.0001,20,20,686.5,34.3
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-none-resnet-s3-1793763369,utkface,resnet,relu_qat,none,5,overwrite,0.0001,20,20,486.8,24.3
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-none-resnet-s4-1793698661,utkface,resnet,relu_qat,none,1,overwrite,0.0001,20,20,629.1,31.5
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-none-resnet-s4-1793699368,utkface,resnet,relu_qat,none,20,overwrite,0.0001,20,20,529.5,26.5
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-none-resnet-s4-1793699969,utkface,resnet,relu_qat,none,0,overwrite,0.0001,20,20,436.0,21.8
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-none-resnet-s4-1793764529,utkface,resnet,relu_qat,none,5,overwrite,0.0001,20,20,469.8,23.5
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-none-resnet-s5-1793702520,utkface,resnet,relu_qat,none,1,overwrite,0.0001,20,20,743.6,37.2
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-none-resnet-s5-1793703342,utkface,resnet,relu_qat,none,20,overwrite,0.0001,20,20,1640.4,82.0
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-none-resnet-s5-1793705059,utkface,resnet,relu_qat,none,0,overwrite,0.0001,20,20,2844.4,142.2
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-none-resnet-s5-1793765559,utkface,resnet,relu_qat,none,5,overwrite,0.0001,20,20,396.0,19.8
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-none-resnet-s6-1793712567,utkface,resnet,relu_qat,none,1,overwrite,0.0001,20,20,620.7,31.0
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-none-resnet-s6-1793713260,utkface,resnet,relu_qat,none,20,overwrite,0.0001,20,20,480.8,24.0
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-none-resnet-s6-1793713815,utkface,resnet,relu_qat,none,0,overwrite,0.0001,20,20,450.3,22.5
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-none-resnet-s6-1793766500,utkface,resnet,relu_qat,none,5,overwrite,0.0001,20,20,401.5,20.1
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-none-resnet-s7-1793716251,utkface,resnet,relu_qat,none,1,overwrite,0.0001,20,20,593.8,29.7
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-none-resnet-s7-1793716918,utkface,resnet,relu_qat,none,20,overwrite,0.0001,20,20,463.7,23.2
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-none-resnet-s7-1793717455,utkface,resnet,relu_qat,none,0,overwrite,0.0001,20,20,451.2,22.6
+"architecture axis (ResNet-18, lr 1e-4)",utk-relu_qat-none-resnet-s7-1793767476,utkface,resnet,relu_qat,none,5,overwrite,0.0001,20,20,404.1,20.2
+"architecture axis (ResNet-18, lr 1e-4)",koniq-relu_qat-after_snap-s0-1793681325,koniq,net,relu_qat,after_snap,20,overwrite,0.001,20,20,464.0,23.2
+"architecture axis (ResNet-18, lr 1e-4)",koniq-relu_qat-after_snap-s1-1793682463,koniq,net,relu_qat,after_snap,20,overwrite,0.001,20,20,649.5,32.5
+"architecture axis (ResNet-18, lr 1e-4)",koniq-relu_qat-after_snap-s2-1793683812,koniq,net,relu_qat,after_snap,20,overwrite,0.001,20,20,602.4,30.1
+"architecture axis (ResNet-18, lr 1e-4)",koniq-relu_qat-after_snap-s3-1793685126,koniq,net,relu_qat,after_snap,20,overwrite,0.001,20,20,604.6,30.2
+"architecture axis (ResNet-18, lr 1e-4)",koniq-relu_qat-after_snap-s4-1793686432,koniq,net,relu_qat,after_snap,20,overwrite,0.001,20,20,669.2,33.5
+"architecture axis (ResNet-18, lr 1e-4)",koniq-relu_qat-after_snap-s5-1793687903,koniq,net,relu_qat,after_snap,20,overwrite,0.001,20,20,577.4,28.9
+"architecture axis (ResNet-18, lr 1e-4)",koniq-relu_qat-after_snap-s6-1793689161,koniq,net,relu_qat,after_snap,20,overwrite,0.001,20,20,659.0,33.0
+"architecture axis (ResNet-18, lr 1e-4)",koniq-relu_qat-after_snap-s7-1793690560,koniq,net,relu_qat,after_snap,20,overwrite,0.001,20,20,612.0,30.6
+"architecture axis (ResNet-18, lr 1e-4)",koniq-relu_qat-none-s0-1793680733,koniq,net,relu_qat,none,20,overwrite,0.001,20,20,516.7,25.8
+"architecture axis (ResNet-18, lr 1e-4)",koniq-relu_qat-none-s1-1793681862,koniq,net,relu_qat,none,20,overwrite,0.001,20,20,522.8,26.1
+"architecture axis (ResNet-18, lr 1e-4)",koniq-relu_qat-none-s2-1793683188,koniq,net,relu_qat,none,20,overwrite,0.001,20,20,547.6,27.4
+"architecture axis (ResNet-18, lr 1e-4)",koniq-relu_qat-none-s3-1793684492,koniq,net,relu_qat,none,20,overwrite,0.001,20,20,555.6,27.8
+"architecture axis (ResNet-18, lr 1e-4)",koniq-relu_qat-none-s4-1793685808,koniq,net,relu_qat,none,20,overwrite,0.001,20,20,551.6,27.6
+"architecture axis (ResNet-18, lr 1e-4)",koniq-relu_qat-none-s5-1793687175,koniq,net,relu_qat,none,20,overwrite,0.001,20,20,655.1,32.8
+"architecture axis (ResNet-18, lr 1e-4)",koniq-relu_qat-none-s6-1793688558,koniq,net,relu_qat,none,20,overwrite,0.001,20,20,524.9,26.2
+"architecture axis (ResNet-18, lr 1e-4)",koniq-relu_qat-none-s7-1793689898,koniq,net,relu_qat,none,20,overwrite,0.001,20,20,588.8,29.4
+epoch control (60 ep),utk-relu_qat-none-s0-1793485675,utkface,net,relu_qat,none,1,overwrite,0.0001,60,60,4114.6,68.6
+epoch control (60 ep),utk-relu_qat-none-s0-1793489886,utkface,net,relu_qat,none,0,overwrite,0.0001,60,60,2040.6,34.0
+epoch control (60 ep),utk-relu_qat-none-s1-1793492024,utkface,net,relu_qat,none,1,overwrite,0.0001,60,60,4841.0,80.7
+epoch control (60 ep),utk-relu_qat-none-s1-1793496960,utkface,net,relu_qat,none,0,overwrite,0.0001,60,60,2400.0,40.0
+epoch control (60 ep),utk-relu_qat-none-s2-1793499457,utkface,net,relu_qat,none,1,overwrite,0.0001,60,60,5667.1,94.5
+epoch control (60 ep),utk-relu_qat-none-s2-1793505234,utkface,net,relu_qat,none,0,overwrite,0.0001,60,60,4853.9,80.9
+epoch control (60 ep),utk-relu_qat-none-s3-1793984018,utkface,net,relu_qat,none,1,overwrite,0.0001,60,60,2130.0,35.5
+epoch control (60 ep),utk-relu_qat-none-s3-1793986229,utkface,net,relu_qat,none,0,overwrite,0.0001,60,60,1503.7,25.1
+epoch control (60 ep),utk-relu_qat-none-s4-1793989974,utkface,net,relu_qat,none,1,overwrite,0.0001,60,60,1956.9,32.6
+epoch control (60 ep),utk-relu_qat-none-s4-1793992008,utkface,net,relu_qat,none,0,overwrite,0.0001,60,60,1335.3,22.3
+epoch control (60 ep),utk-relu_qat-none-s5-1793995275,utkface,net,relu_qat,none,1,overwrite,0.0001,60,60,1794.4,29.9
+epoch control (60 ep),utk-relu_qat-none-s5-1793997148,utkface,net,relu_qat,none,0,overwrite,0.0001,60,60,1342.2,22.4
+epoch control (60 ep),utk-relu_qat-none-s6-1794000413,utkface,net,relu_qat,none,1,overwrite,0.0001,60,60,1789.2,29.8
+epoch control (60 ep),utk-relu_qat-none-s6-1794002996,utkface,net,relu_qat,none,0,overwrite,0.0001,60,60,1337.4,22.3
+epoch control (60 ep),utk-relu_qat-none-s7-1794006245,utkface,net,relu_qat,none,1,overwrite,0.0001,60,60,1785.9,29.8
+epoch control (60 ep),utk-relu_qat-none-s7-1794008108,utkface,net,relu_qat,none,0,overwrite,0.0001,60,60,1374.0,22.9
+learning-rate control (lr 3e-3),utk-relu_qat-none-s0-1793472498,utkface,net,relu_qat,none,1,overwrite,0.003,20,20,1423.2,71.2
+learning-rate control (lr 3e-3),utk-relu_qat-none-s0-1793474018,utkface,net,relu_qat,none,20,overwrite,0.003,20,20,770.0,38.5
+learning-rate control (lr 3e-3),utk-relu_qat-none-s0-1793474884,utkface,net,relu_qat,none,0,overwrite,0.003,20,20,725.0,36.2
+learning-rate control (lr 1e-3),utk-relu_qat-none-s0-1793516710,utkface,net,relu_qat,none,1,overwrite,0.001,20,20,1697.6,84.9
+learning-rate control (lr 1e-3),utk-relu_qat-none-s0-1793518513,utkface,net,relu_qat,none,20,overwrite,0.001,20,20,947.9,47.4
+learning-rate control (lr 1e-3),utk-relu_qat-none-s0-1793519563,utkface,net,relu_qat,none,0,overwrite,0.001,20,20,1105.1,55.3
+learning-rate control (lr 3e-3),utk-relu_qat-none-s1-1793475705,utkface,net,relu_qat,none,1,overwrite,0.003,20,20,1392.9,69.6
+learning-rate control (lr 3e-3),utk-relu_qat-none-s1-1793477195,utkface,net,relu_qat,none,20,overwrite,0.003,20,20,1240.8,62.0
+learning-rate control (lr 3e-3),utk-relu_qat-none-s1-1793478537,utkface,net,relu_qat,none,0,overwrite,0.003,20,20,930.1,46.5
+learning-rate control (lr 1e-3),utk-relu_qat-none-s1-1793520772,utkface,net,relu_qat,none,1,overwrite,0.001,20,20,1416.3,70.8
+learning-rate control (lr 3e-3),utk-relu_qat-none-s2-1793479561,utkface,net,relu_qat,none,1,overwrite,0.003,20,20,1658.7,82.9
+learning-rate control (lr 3e-3),utk-relu_qat-none-s2-1793481326,utkface,net,relu_qat,none,20,overwrite,0.003,20,20,1998.5,99.9
+learning-rate control (lr 3e-3),utk-relu_qat-none-s2-1793483431,utkface,net,relu_qat,none,0,overwrite,0.003,20,20,2145.7,107.3
+learning-rate control (lr 3e-3),utk-relu_qat-none-s3-1793987811,utkface,net,relu_qat,none,1,overwrite,0.003,20,20,759.9,38.0
+learning-rate control (lr 3e-3),utk-relu_qat-none-s3-1793988642,utkface,net,relu_qat,none,20,overwrite,0.003,20,20,589.8,29.5
+learning-rate control (lr 3e-3),utk-relu_qat-none-s3-1793989312,utkface,net,relu_qat,none,0,overwrite,0.003,20,20,581.6,29.1
+learning-rate control (lr 3e-3),utk-relu_qat-none-s4-1793993421,utkface,net,relu_qat,none,1,overwrite,0.003,20,20,643.5,32.2
+learning-rate control (lr 3e-3),utk-relu_qat-none-s4-1793994142,utkface,net,relu_qat,none,20,overwrite,0.003,20,20,496.2,24.8
+learning-rate control (lr 3e-3),utk-relu_qat-none-s4-1793994716,utkface,net,relu_qat,none,0,overwrite,0.003,20,20,481.3,24.1
+learning-rate control (lr 3e-3),utk-relu_qat-none-s5-1793998569,utkface,net,relu_qat,none,1,overwrite,0.003,20,20,636.0,31.8
+learning-rate control (lr 3e-3),utk-relu_qat-none-s5-1793999282,utkface,net,relu_qat,none,20,overwrite,0.003,20,20,492.0,24.6
+learning-rate control (lr 3e-3),utk-relu_qat-none-s5-1793999851,utkface,net,relu_qat,none,0,overwrite,0.003,20,20,484.7,24.2
+learning-rate control (lr 3e-3),utk-relu_qat-none-s6-1794004411,utkface,net,relu_qat,none,1,overwrite,0.003,20,20,636.1,31.8
+learning-rate control (lr 3e-3),utk-relu_qat-none-s6-1794005124,utkface,net,relu_qat,none,20,overwrite,0.003,20,20,495.6,24.8
+learning-rate control (lr 3e-3),utk-relu_qat-none-s6-1794005691,utkface,net,relu_qat,none,0,overwrite,0.003,20,20,484.8,24.2
+learning-rate control (lr 3e-3),utk-relu_qat-none-s7-1794009560,utkface,net,relu_qat,none,1,overwrite,0.003,20,20,636.4,31.8
+learning-rate control (lr 3e-3),utk-relu_qat-none-s7-1794010273,utkface,net,relu_qat,none,20,overwrite,0.003,20,20,494.5,24.7
+learning-rate control (lr 3e-3),utk-relu_qat-none-s7-1794010845,utkface,net,relu_qat,none,0,overwrite,0.003,20,20,484.9,24.2
+mechanism runs,utk-relu_qat-none-s0-1794226084,utkface,net,relu_qat,none,1,overwrite,0.0001,20,20,864.8,43.2
+mechanism runs,utk-relu_qat-none-s0-1794229946,utkface,net,relu_qat,none,5,overwrite,0.0001,20,20,674.4,33.7
+mechanism runs,utk-relu_qat-none-s0-1794232275,utkface,net,relu_qat,none,20,overwrite,0.0001,20,20,563.3,28.2
+mechanism runs,utk-relu_qat-none-s1-1794227039,utkface,net,relu_qat,none,1,overwrite,0.0001,20,20,1674.6,83.7
+mechanism runs,utk-relu_qat-none-s1-1794230712,utkface,net,relu_qat,none,5,overwrite,0.0001,20,20,744.1,37.2
+mechanism runs,utk-relu_qat-none-s1-1794232932,utkface,net,relu_qat,none,20,overwrite,0.0001,20,20,555.4,27.8
+mechanism runs,utk-relu_qat-none-s2-1794228807,utkface,net,relu_qat,none,1,overwrite,0.0001,20,20,1050.7,52.5
+mechanism runs,utk-relu_qat-none-s2-1794231545,utkface,net,relu_qat,none,5,overwrite,0.0001,20,20,642.6,32.1
+mechanism runs,utk-relu_qat-none-s2-1794233580,utkface,net,relu_qat,none,20,overwrite,0.0001,20,20,560.1,28.0
+stochastic-rounding control,utk-relu_qat-none-s0-1793510216,utkface,net,relu_qat,none,1,overwrite,0.0001,20,20,2610.1,130.5
+stochastic-rounding control,utk-relu_qat-none-s1-1793512950,utkface,net,relu_qat,none,1,overwrite,0.0001,20,20,1728.8,86.4
+stochastic-rounding control,utk-relu_qat-none-s2-1793514777,utkface,net,relu_qat,none,1,overwrite,0.0001,20,20,1838.2,91.9
+stochastic-rounding control,utk-relu_qat-none-s3-1793554855,utkface,net,relu_qat,none,1,overwrite,0.0001,20,20,2182.6,109.1
+stochastic-rounding control,utk-relu_qat-none-s4-1793557139,utkface,net,relu_qat,none,1,overwrite,0.0001,20,20,1486.6,74.3
+stochastic-rounding control,utk-relu_qat-none-s5-1793558720,utkface,net,relu_qat,none,1,overwrite,0.0001,20,20,1311.6,65.6
+stochastic-rounding control,utk-relu_qat-none-s6-1793560125,utkface,net,relu_qat,none,1,overwrite,0.0001,20,20,1334.9,66.7
+stochastic-rounding control,utk-relu_qat-none-s7-1793561553,utkface,net,relu_qat,none,1,overwrite,0.0001,20,20,1251.1,62.6
+withdrawn (deployment-table bug),utk-relu_qat-none-s0-1793008720,utkface,regnety,relu_qat,none,0,overwrite,0.0001,20,20,961.0,48.0

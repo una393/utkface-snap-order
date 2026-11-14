@@ -1,0 +1,25 @@
+# NOTICE — scope of the MIT license
+
+The MIT license in `LICENSE` covers **the source code and the text of this
+repository** (training/analysis scripts, the manuscript sources under
+`drafts/`, and the reported tables).
+
+It does **not** cover the following, which are not distributed here and remain
+under their own terms:
+
+* **UTKFace** (Zhang, Song, Qi, `https://github.com/aicip/UTKFace`). The
+  upstream dataset statement reads "available for non-commercial research
+  purposes only". Face images, the `uint8` cache, and any per-run checkpoint
+  derived from them are therefore excluded by `.gitignore`. The
+  HuggingFace mirror `py97/UTKFace-Cropped` that we downloaded from declares
+  `license: mit` in its front matter while stating that the uploader does not
+  own the dataset; we follow the stricter upstream statement.
+* **ImageNet-pretrained RegNetY-008 weights** used as the backbone
+  initialization, and **KonIQ-10k** used for the data-axis extension. Both are
+  subject to their own terms and are not redistributed.
+* **Compiled / exported model artifacts** (`*.hbm`, `*.onnx`), which embed
+  weights derived from the dataset above.
+
+What *is* distributed, and is covered by the MIT license: the per-image
+prediction arrays (`quant_runs/perimage/*.npz`) contain only predicted and
+target scalars plus row indices — no images, no file names.

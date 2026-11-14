@@ -1,0 +1,57 @@
+{
+ "cost_ratio_1_to_20": 4.046,
+ "definition": "kick_over_drift = 1 - mean(eaten_global) = mean(s/u); proj_coef = mean(proj_global)",
+ "kick_ratio_1_to_20": 32.69,
+ "per_interval": {
+  "1": {
+   "cost": 0.018687,
+   "cost_per_projection": 2.976e-06,
+   "cost_seeds": 3,
+   "events": 6280,
+   "events_per_second_basis": 1.0,
+   "kick_over_drift": 0.3891,
+   "pred_erasure": 0.018687,
+   "pred_frequency": 0.018687,
+   "proj_coef": 0.0094,
+   "ratio_erasure": 1.0,
+   "ratio_frequency": 1.0,
+   "runs": 3,
+   "u_over_delta_mean": 2.326,
+   "u_over_delta_median": 1.842
+  },
+  "20": {
+   "cost": 0.004619,
+   "cost_per_projection": 1.443e-05,
+   "cost_seeds": 3,
+   "events": 320,
+   "events_per_second_basis": 0.051,
+   "kick_over_drift": 12.7211,
+   "pred_erasure": 0.030547,
+   "pred_frequency": 0.000934,
+   "proj_coef": -4.5551,
+   "ratio_erasure": 6.61,
+   "ratio_frequency": 0.2,
+   "runs": 3,
+   "u_over_delta_mean": 2.05,
+   "u_over_delta_median": 1.592
+  },
+  "5": {
+   "cost": 0.010978,
+   "cost_per_projection": 8.713e-06,
+   "cost_seeds": 1,
+   "events": 1260,
+   "events_per_second_basis": 0.2006,
+   "kick_over_drift": 3.9661,
+   "pred_erasure": 0.038095,
+   "pred_frequency": 0.003737,
+   "proj_coef": -2.711,
+   "ratio_erasure": 3.47,
+   "ratio_frequency": 0.34,
+   "runs": 3,
+   "u_over_delta_mean": 2.157,
+   "u_over_delta_median": 1.698
+  }
+ },
+ "projection_ratio_1_to_20": 19.62,
+ "source": "results_mech/*/mech.jsonl, costs from quant_runs/heldout_eval_v3.csv (heldout_1556, mae_fp32)"
+}
