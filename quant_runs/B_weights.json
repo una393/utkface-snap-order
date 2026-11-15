@@ -1,0 +1,37 @@
+{
+  "tensors": 78,
+  "residual_mean": 0.02246396243572235,
+  "on_grid_frac": 0.9192951321601868,
+  "abs_err_mean": 1.6003847122192383e-05,
+  "worst_tensor": "pos",
+  "per_tensor": {
+    "pos": {
+      "resid": 0.2445,
+      "on_grid": 0.082
+    },
+    "backbone.stem.conv.weight": {
+      "resid": 0.0093,
+      "on_grid": 0.9711
+    },
+    "backbone.s1.b1.conv1.conv.weight": {
+      "resid": 0.0,
+      "on_grid": 1.0
+    },
+    "backbone.s1.b1.conv2.conv.weight": {
+      "resid": 0.0,
+      "on_grid": 1.0
+    },
+    "backbone.s1.b1.se.fc1.weight": {
+      "resid": 0.0016,
+      "on_grid": 0.9941
+    },
+    "backbone.s1.b1.se.fc2.weight": {
+      "resid": 0.0,
+      "on_grid": 1.0
+    }
+  },
+  "name": "B",
+  "weights": "ema",
+  "val_mae_live": 0.07183765149116517,
+  "val_mae_ema": 0.07185025429725647
+}

@@ -1,0 +1,17 @@
+seed,endpoint(N),mae_fp32,mae_int8,delta,n_images,status,note
+0,inf,0.053659,0.057684,+0.004025,200,ok,ckpt=utk-relu_qat-none-s0-1793111850; snap_every=0; weights=live; int8 n_ok=200/200; fp32 n=200
+0,1,0.075129,0.077378,+0.002249,200,ok,ckpt=utk-relu_qat-none-s0-1793011336; snap_every=1; weights=live; int8 n_ok=200/200; fp32 n=200
+1,inf,0.056845,0.056948,+0.000103,200,ok,ckpt=utk-relu_qat-none-s1-1793452884; snap_every=0; weights=live; int8 n_ok=200/200; fp32 n=200
+1,1,0.078621,0.081440,+0.002819,200,ok,ckpt=utk-relu_qat-none-s1-1793445602; snap_every=1; weights=live; int8 n_ok=200/200; fp32 n=200
+2,inf,0.057538,0.060367,+0.002829,200,ok,ckpt=utk-relu_qat-none-s2-1793453651; snap_every=0; weights=live; int8 n_ok=200/200; fp32 n=200
+2,1,0.073124,0.075985,+0.002861,200,ok,ckpt=utk-relu_qat-none-s2-1793446593; snap_every=1; weights=live; int8 n_ok=200/200; fp32 n=200
+3,inf,0.057191,0.056706,-0.000485,200,ok,ckpt=utk-relu_qat-none-s3-1793454406; snap_every=0; weights=live; int8 n_ok=200/200; fp32 n=200
+3,1,0.074694,0.077382,+0.002689,200,ok,ckpt=utk-relu_qat-none-s3-1793447591; snap_every=1; weights=live; int8 n_ok=200/200; fp32 n=200
+4,inf,0.059360,0.060346,+0.000986,200,ok,ckpt=utk-relu_qat-none-s4-1793455163; snap_every=0; weights=live; int8 n_ok=200/200; fp32 n=200
+4,1,0.079736,0.083303,+0.003567,200,ok,ckpt=utk-relu_qat-none-s4-1793448669; snap_every=1; weights=live; int8 n_ok=200/200; fp32 n=200
+5,inf,0.057808,0.056129,-0.001679,200,ok,ckpt=utk-relu_qat-none-s5-1793455928; snap_every=0; weights=live; int8 n_ok=200/200; fp32 n=200
+5,1,0.076087,0.079267,+0.003180,200,ok,ckpt=utk-relu_qat-none-s5-1793449730; snap_every=1; weights=live; int8 n_ok=200/200; fp32 n=200
+6,inf,0.057246,0.058347,+0.001100,200,ok,ckpt=utk-relu_qat-none-s6-1793456701; snap_every=0; weights=live; int8 n_ok=200/200; fp32 n=200
+6,1,0.078409,0.084022,+0.005613,200,ok,ckpt=utk-relu_qat-none-s6-1793450777; snap_every=1; weights=live; int8 n_ok=200/200; fp32 n=200
+7,inf,0.059181,0.061627,+0.002446,200,ok,ckpt=utk-relu_qat-none-s7-1793457541; snap_every=0; weights=live; int8 n_ok=200/200; fp32 n=200
+7,1,0.079277,0.079628,+0.000351,200,ok,ckpt=utk-relu_qat-none-s7-1793451837; snap_every=1; weights=live; int8 n_ok=200/200; fp32 n=200

@@ -1,0 +1,27 @@
+{
+  "basis": "common first400 of split_random(seed 0) val",
+  "common_rows_sha1": "4c65b8b1e3c95bc8d97a9c0c018b9462b26348fe",
+  "n_rows": 66,
+  "recomputed": 50,
+  "kept_csv": [],
+  "dropped": [
+    "utk-relu_qat-after_snap-s1-1793018836",
+    "utk-relu_qat-after_snap-s1-1793038259",
+    "utk-relu_qat-after_snap-s1-1793116221",
+    "utk-relu_qat-after_snap-s1-1793372545",
+    "utk-relu_qat-after_snap-s2-1793023654",
+    "utk-relu_qat-after_snap-s2-1793040741",
+    "utk-relu_qat-after_snap-s2-1793117387",
+    "utk-relu_qat-after_snap-s2-1793370810",
+    "utk-relu_qat-after_snap-s3-1793371701",
+    "utk-relu_qat-after_snap-s3-1793373390",
+    "utk-relu_qat-before_snap-s1-1793037047",
+    "utk-relu_qat-before_snap-s1-1793115073",
+    "utk-relu_qat-before_snap-s2-1793039497",
+    "utk-relu_qat-before_snap-s2-1793116251",
+    "utk-relu_qat-none-s2-1793115215",
+    "utk-relu_qat-none-s1-1793114048"
+  ],
+  "cells_changed": 124,
+  "max_abs_change": 0.0054
+}

@@ -1,0 +1,10 @@
+split_seed,seed,run,source,val_mae_train,mae_fp32,mae_8,mae_6,mae_4
+0,1,utk-relu_qat-after_snap-s1-1793112917,from_deploy_table_v2,0.0555,0.0582,0.0583,0.0599,0.0953
+0,2,utk-relu_qat-after_snap-s2-1793113027,from_deploy_table_v2,0.0596,0.0593,0.0606,0.0619,0.1452
+0,3,utk-relu_qat-after_snap-s3-1793114152,from_deploy_table_v2,0.058,0.0588,0.0588,0.0613,0.1295
+1,1,utk-relu_qat-after_snap-s1-1793038259,from_deploy_table_v2,0.0579,0.0593,0.0593,0.0639,0.1267
+1,2,utk-relu_qat-after_snap-s2-1793370810,new_run,0.0586,0.0598,0.0601,0.0655,0.185
+1,3,utk-relu_qat-after_snap-s3-1793371701,new_run,0.0554,0.0574,0.0578,0.0623,0.1656
+2,1,utk-relu_qat-after_snap-s1-1793372545,new_run,0.0579,0.0569,0.0587,0.0623,0.1299
+2,2,utk-relu_qat-after_snap-s2-1793040741,from_deploy_table_v2,0.0586,0.057,0.0572,0.0664,0.203
+2,3,utk-relu_qat-after_snap-s3-1793373390,new_run,0.057,0.0576,0.0575,0.0649,0.2252

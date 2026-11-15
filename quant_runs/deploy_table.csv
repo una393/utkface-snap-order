@@ -1,0 +1,16 @@
+snap_every,mode,seed,run,val_mae_train,mae_fp32,mae_8,mae_6,mae_4
+1,after_snap,0,utk-relu_qat-after_snap-s0-1793005531,0.072,0.0748,0.0748,0.0794,0.091
+5,after_snap,0,utk-relu_qat-after_snap-s0-1793029658,0.0638,0.0657,0.0657,0.0671,0.0864
+20,after_snap,0,utk-relu_qat-after_snap-s0-1793033217,0.0591,0.0594,0.0593,0.0631,0.0849
+1,after_snap,1,utk-relu_qat-after_snap-s1-1793018836,0.0739,0.0773,0.0773,0.0838,0.1076
+20,after_snap,1,utk-relu_qat-after_snap-s1-1793038259,0.0579,0.0593,0.0593,0.0639,0.1267
+1,after_snap,2,utk-relu_qat-after_snap-s2-1793023654,0.0718,0.0712,0.0712,0.079,0.2337
+20,after_snap,2,utk-relu_qat-after_snap-s2-1793040741,0.0586,0.057,0.0572,0.0664,0.203
+1,before_snap,0,utk-relu_qat-before_snap-s0-1793009776,0.0718,0.0741,0.0741,0.0776,0.0899
+5,before_snap,0,utk-relu_qat-before_snap-s0-1793028380,0.0638,0.0658,0.0658,0.0674,0.088
+20,before_snap,0,utk-relu_qat-before_snap-s0-1793032011,0.0586,0.0607,0.0608,0.0643,0.0866
+20,before_snap,1,utk-relu_qat-before_snap-s1-1793037047,0.0574,0.0594,0.0595,0.0639,0.1557
+20,before_snap,2,utk-relu_qat-before_snap-s2-1793039497,0.0587,0.0562,0.0563,0.0666,0.1749
+1,none,0,utk-relu_qat-none-s0-1793011336,0.0716,0.0741,0.0741,0.0785,0.09
+5,none,0,utk-relu_qat-none-s0-1793027163,0.0639,0.066,0.0662,0.0672,0.0857
+20,none,0,utk-relu_qat-none-s0-1793030915,0.0591,0.0619,0.062,0.0642,0.0888

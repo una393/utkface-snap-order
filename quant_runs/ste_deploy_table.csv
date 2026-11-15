@@ -1,0 +1,7 @@
+arm,protocol,seed,mae_fp32,mae_8,mae_6,mae_4,n_val,run
+in_place_overwrite,projection_interval_1,0,0.0741,0.0741,0.0785,0.0900,400,results/utk-relu_qat-none-s0-1793011336
+ste,ste,0,0.0586,0.0579,0.0582,0.1265,400,results/utk-relu_qat-none-ste-s0-1793166213
+ste,ste,1,0.0574,0.0568,0.0593,0.1035,400,results/utk-relu_qat-none-ste-s1-1793167125
+ste,ste,2,0.0521,0.0522,0.0537,0.1323,400,results/utk-relu_qat-none-ste-s2-1793168098
+ste_mean,ste_mean,-1,0.0560,0.0556,0.0571,0.1208,400,results/utk-relu_qat-none-ste-s0-1793166213;results/utk-relu_qat-none-ste-s1-1793167125;results/utk-relu_qat-none-ste-s2-1793168098
+no_projection,N_inf,0,0.0552,0.0548,0.0575,0.1535,400,results/utk-relu_qat-none-s0-1793111850

@@ -1,0 +1,36 @@
+{
+  "threads": 1,
+  "images": 200,
+  "bench": {
+    "none_N1/s0": {
+      "latency_ms_fp32_single_thread": 28.502085499931127,
+      "arms": {
+        "full": {
+          "latency_ms_int8_single_thread": 43.92968150001252,
+          "mae_int8": 0.2814635518211406,
+          "cosine_centered": 0.4852382832950954
+        },
+        "conv": {
+          "latency_ms_int8_single_thread": 45.23591300006956,
+          "mae_int8": 0.0832982551291585,
+          "cosine_centered": 0.978760001931031
+        }
+      }
+    },
+    "none_Ninf/s0": {
+      "latency_ms_fp32_single_thread": 29.933523499930743,
+      "arms": {
+        "full": {
+          "latency_ms_int8_single_thread": 42.84259699983522,
+          "mae_int8": 0.08016512797935867,
+          "cosine_centered": 0.9379078960957488
+        },
+        "conv": {
+          "latency_ms_int8_single_thread": 42.53301749995444,
+          "mae_int8": 0.06496821470409632,
+          "cosine_centered": 0.9798507813989195
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,4 @@
+run,dataset,subset,arch,head,mode,N,split_seed,seed,n,mae_p32,mae_8,mae_6,mae_4,source
+utk-relu_qat-after_snap-ste-s0-1793383403,utkface,first400,net,relu_qat,after_snap,1,0,0,400,0.057338,0.05734,0.05946,0.093136,computed
+utk-relu_qat-after_snap-ste-s1-1793384980,utkface,first400,net,relu_qat,after_snap,1,1,1,400,0.056028,0.056096,0.058799,0.085708,computed
+utk-relu_qat-after_snap-ste-s2-1793386546,utkface,first400,net,relu_qat,after_snap,1,2,2,400,0.053024,0.052933,0.055861,0.152497,computed

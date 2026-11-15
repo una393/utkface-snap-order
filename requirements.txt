@@ -1,0 +1,19 @@
+# Verified versions in this file; newer versions are untested.
+# Training / evaluation
+torch==2.12.0
+torchvision
+numpy==2.4.6
+timm
+pillow
+# Deployment-side quantizers and runtimes
+onnx
+onnxruntime==1.26.0
+openvino==2026.4.1
+nncf==3.4.0
+# Analysis / figures
+scipy
+matplotlib
+# Manuscript build (optional; needs a local Word install for PDF export)
+python-docx
+latex2mathml
+pymupdf

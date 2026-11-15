@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "utkface-snap-order"
+version = "1.0.0"
+description = "Run-level evaluation protocol for in-place weight projection in 8-bit quantization-aware training"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = ["torch", "numpy"]
+
+[project.scripts]
+fidelity-check = "scripts.fidelity_check:main"
+
+[tool.setuptools]
+packages = ["scripts"]

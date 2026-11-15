@@ -1,0 +1,7 @@
+contrast,definition,n,estimate,signs,d_z,p_paired_t,p_wilcoxon_exact,boot_lo,boot_hi
+a,interval 1 minus projection off,8,0.018457,8/8 positive,16.097,6.44e-10,0.00781,0.01771,0.019205
+b,interval 20 minus projection off,8,0.004723,8/8 positive,5.683,8.77e-07,0.00781,0.004223,0.005292
+c,ema_after minus live at interval 20,8,-0.001377,0/8 positive,-2.739,0.000112,0.00781,-0.001705,-0.001054
+d,ema_before minus ema_after at interval 20,8,2.9e-05,5/8 positive,0.087,0.813,0.945,-0.000178,0.000253
+e,STE minus in-place overwriting,8,-0.018441,0/8 positive,-13.638,2.05e-09,0.00781,-0.019358,-0.017611
+f,STE minus projection off,8,-9.7e-05,4/8 positive,-0.112,0.76,0.742,-0.000642,0.000458

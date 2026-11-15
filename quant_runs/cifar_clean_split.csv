@@ -1,0 +1,17 @@
+arm,seed,run,val_err_live,test_err_live
+live@1,0,cifar-bilinear_glu-none-resnet-s0-1794294767,0.155400,0.148500
+live@1,1,cifar-bilinear_glu-none-resnet-s1-1794295465,0.146800,0.157000
+live@1,2,cifar-bilinear_glu-none-resnet-s2-1794296158,0.143600,0.160200
+live@1,3,cifar-bilinear_glu-none-resnet-s3-1794296830,0.148200,0.152900
+live@1,4,cifar-bilinear_glu-none-resnet-s4-1794297515,0.152600,0.154600
+live@1,5,cifar-bilinear_glu-none-resnet-s5-1794298199,0.157000,0.153100
+live@1,6,cifar-bilinear_glu-none-resnet-s6-1794298901,0.141600,0.154800
+live@1,7,cifar-bilinear_glu-none-resnet-s7-1794299587,0.149000,0.152700
+live@inf,0,cifar-bilinear_glu-none-resnet-s0-1794300264,0.103800,0.110700
+live@inf,1,cifar-bilinear_glu-none-resnet-s1-1794300807,0.094600,0.106700
+live@inf,2,cifar-bilinear_glu-none-resnet-s2-1794301346,0.098200,0.103600
+live@inf,3,cifar-bilinear_glu-none-resnet-s3-1794301884,0.102000,0.107700
+live@inf,4,cifar-bilinear_glu-none-resnet-s4-1794302425,0.102600,0.106000
+live@inf,5,cifar-bilinear_glu-none-resnet-s5-1794302964,0.103600,0.106300
+live@inf,6,cifar-bilinear_glu-none-resnet-s6-1794303502,0.103000,0.108000
+live@inf,7,cifar-bilinear_glu-none-resnet-s7-1794304038,0.102800,0.104600

@@ -1,0 +1,2113 @@
+{
+  "meta": {
+    "script": "scripts/paper2_runlevel.py",
+    "generated_at": "2026-10-31 17:00:01",
+    "inputs": {
+      "deploy_table": "quant_runs/deploy_table_v2.csv",
+      "perimage": "quant_runs/perimage/<run>__{fp32,8,6,4}bit.npz",
+      "zero_baseline": "results/<run>/result.json 的 zero_baseline_mae",
+      "weights": "results/<run>/best.pth"
+    },
+    "n_rows_total": 30,
+    "n_rows_main": 23,
+    "n_rows_dropped": 7,
+    "dropped_rows": [
+      {
+        "run": "utk-relu_qat-after_snap-s0-1793118469",
+        "mode": "after_snap",
+        "snap_every": 20,
+        "seed": 0,
+        "ema_decay": 0.9,
+        "split_seed": 0,
+        "mae_fp32": 0.0598,
+        "mae_4": 0.0883
+      },
+      {
+        "run": "utk-relu_qat-after_snap-s0-1793119670",
+        "mode": "after_snap",
+        "snap_every": 20,
+        "seed": 0,
+        "ema_decay": 0.999,
+        "split_seed": 0,
+        "mae_fp32": 0.0598,
+        "mae_4": 0.086
+      },
+      {
+        "run": "utk-relu_qat-after_snap-s1-1793112917",
+        "mode": "after_snap",
+        "snap_every": 20,
+        "seed": 1,
+        "ema_decay": 0.99,
+        "split_seed": 0,
+        "mae_fp32": 0.0582,
+        "mae_4": 0.0953
+      },
+      {
+        "run": "utk-relu_qat-after_snap-s2-1793113027",
+        "mode": "after_snap",
+        "snap_every": 20,
+        "seed": 2,
+        "ema_decay": 0.99,
+        "split_seed": 0,
+        "mae_fp32": 0.0593,
+        "mae_4": 0.1452
+      },
+      {
+        "run": "utk-relu_qat-after_snap-s3-1793114152",
+        "mode": "after_snap",
+        "snap_every": 20,
+        "seed": 3,
+        "ema_decay": 0.99,
+        "split_seed": 0,
+        "mae_fp32": 0.0588,
+        "mae_4": 0.1295
+      },
+      {
+        "run": "utk-relu_qat-before_snap-s0-1793117363",
+        "mode": "before_snap",
+        "snap_every": 20,
+        "seed": 0,
+        "ema_decay": 0.9,
+        "split_seed": 0,
+        "mae_fp32": 0.0612,
+        "mae_4": 0.0857
+      },
+      {
+        "run": "utk-relu_qat-before_snap-s0-1793118574",
+        "mode": "before_snap",
+        "snap_every": 20,
+        "seed": 0,
+        "ema_decay": 0.999,
+        "split_seed": 0,
+        "mae_fp32": 0.0598,
+        "mae_4": 0.1142
+      }
+    ],
+    "n_runs_with_perimage": 30,
+    "runs_missing_results_dir": [
+      "utk-relu_qat-none-s1-1793114048"
+    ],
+    "runtime_sec": 5.71,
+    "zero_baseline_mean": 0.15449070159575928
+  },
+  "conventions": {
+    "pairing_unit": "seed（每个 seed 同时决定数据划分与参数初始化）",
+    "run_statistic": "该 run 在 400 张 first400 部署子集上的 MAE，取自 perimage/<run>__fp32.npz 的逐图 |pred-y| 均值（全精度）；与 deploy_table_v2.csv 的 mae_fp32 列一致到 4 位小数，逐对差值见 §1.0 的 max|Δcsv−Δnpz|",
+    "delta_definition": "left_MAE - right_MAE；负值 = 左侧更准",
+    "paired_t": "df = n-1，n = 两侧都有 run 的同 seed 配对数",
+    "bootstrap": "两级：先整 run(=seed) 有放回重采样 n 个，再在每个被抽中的 run 内对 400 张图有放回重采样；10000 次；百分位法 2.5/97.5；rng seed=20261031",
+    "merged_se": "sqrt(sigma_I^2/M + sigma_R^2/n)，M=400，df 用 Satterthwaite",
+    "tost": "配对 t 的双单侧检验，df=n-1，alpha=0.05；判定 = p_tost < alpha",
+    "tost_margin_preset": "0.0016 为预设值（零基线 0.1553 的 1% = 0.001553，取整到 0.0016），不是从本数据反推",
+    "mde": "MDE = (t_{1-alpha/2,df} + t_{0.8,df}) * SE，df=n-1",
+    "main_config_filter": "ema_decay==0.99 且 split_seed==seed（沿用 scripts/paper2_figs_add.py:66-68 的 is_main_config）"
+  },
+  "contrasts": {
+    "g1a_interval_N20_vs_Ninf_none": {
+      "label": "间隔效应：none, N=20 − N=∞",
+      "group": "1a",
+      "core": true,
+      "left": "none@N=20",
+      "right": "none@N=0",
+      "delta_definition": "left_MAE - right_MAE（负值 = 左侧更准）",
+      "n_seeds": 1,
+      "seeds": [
+        0
+      ],
+      "delta_source": "perimage（全精度逐图 |pred-y|）",
+      "point_estimate": 0.006690293913707138,
+      "point_estimate_csv": 0.006699999999999998,
+      "point_estimate_perimage": 0.006690293913707138,
+      "max_abs_csv_minus_perimage": 9.706086292859961e-06,
+      "paired_t": {
+        "mean": 0.006690293913707138,
+        "n": 1,
+        "sd": null,
+        "se": null,
+        "df": 0,
+        "t_crit": null,
+        "ci95": null,
+        "note": "n=1：配对 t 的 df=0，区间不可估"
+      },
+      "sign_test": {
+        "k": 1,
+        "n": 1,
+        "p_two_sided": 1.0,
+        "p_greater": 0.5,
+        "p_less": 1.0
+      },
+      "n_positive": 1,
+      "per_seed": [
+        {
+          "seed": 0,
+          "left_run": "utk-relu_qat-none-s0-1793030915",
+          "right_run": "utk-relu_qat-none-s0-1793111850",
+          "left_mae_csv": 0.0619,
+          "right_mae_csv": 0.0552,
+          "delta_csv": 0.006699999999999998,
+          "left_mae_perimage": 0.06190593920648098,
+          "right_mae_perimage": 0.05521564529277384,
+          "delta_perimage": 0.006690293913707138,
+          "n_images": 400
+        }
+      ],
+      "bootstrap_2level": {
+        "n_boot": 10000,
+        "n_seeds": 1,
+        "n_images": 400,
+        "ci95": [
+          0.0035318962396122516,
+          0.009863690412370488
+        ],
+        "mean": 0.006696789759848267,
+        "sd": 0.0016253173443314768,
+        "excludes_zero": true,
+        "image_only": true
+      },
+      "n_images_per_run": [
+        400
+      ]
+    },
+    "g1b_interval_N1_vs_Ninf_none": {
+      "label": "间隔效应：none, N=1 − N=∞",
+      "group": "1b",
+      "core": true,
+      "left": "none@N=1",
+      "right": "none@N=0",
+      "delta_definition": "left_MAE - right_MAE（负值 = 左侧更准）",
+      "n_seeds": 1,
+      "seeds": [
+        0
+      ],
+      "delta_source": "perimage（全精度逐图 |pred-y|）",
+      "point_estimate": 0.01885177811607719,
+      "point_estimate_csv": 0.0189,
+      "point_estimate_perimage": 0.01885177811607719,
+      "max_abs_csv_minus_perimage": 4.8221883922811015e-05,
+      "paired_t": {
+        "mean": 0.01885177811607719,
+        "n": 1,
+        "sd": null,
+        "se": null,
+        "df": 0,
+        "t_crit": null,
+        "ci95": null,
+        "note": "n=1：配对 t 的 df=0，区间不可估"
+      },
+      "sign_test": {
+        "k": 1,
+        "n": 1,
+        "p_two_sided": 1.0,
+        "p_greater": 0.5,
+        "p_less": 1.0
+      },
+      "n_positive": 1,
+      "per_seed": [
+        {
+          "seed": 0,
+          "left_run": "utk-relu_qat-none-s0-1793011336",
+          "right_run": "utk-relu_qat-none-s0-1793111850",
+          "left_mae_csv": 0.0741,
+          "right_mae_csv": 0.0552,
+          "delta_csv": 0.0189,
+          "left_mae_perimage": 0.07406742340885103,
+          "right_mae_perimage": 0.05521564529277384,
+          "delta_perimage": 0.01885177811607719,
+          "n_images": 400
+        }
+      ],
+      "bootstrap_2level": {
+        "n_boot": 10000,
+        "n_seeds": 1,
+        "n_images": 400,
+        "ci95": [
+          0.013531215281924233,
+          0.024092337981797753
+        ],
+        "mean": 0.018865320521417074,
+        "sd": 0.0026844437054024377,
+        "excludes_zero": true,
+        "image_only": true
+      },
+      "n_images_per_run": [
+        400
+      ]
+    },
+    "g1c_shadow_after_vs_none_N20": {
+      "label": "影子有无：N=20, after_snap − none",
+      "group": "1c",
+      "core": true,
+      "left": "after_snap@N=20",
+      "right": "none@N=20",
+      "delta_definition": "left_MAE - right_MAE（负值 = 左侧更准）",
+      "n_seeds": 1,
+      "seeds": [
+        0
+      ],
+      "delta_source": "perimage（全精度逐图 |pred-y|）",
+      "point_estimate": -0.0025418582651764166,
+      "point_estimate_csv": -0.0024999999999999953,
+      "point_estimate_perimage": -0.0025418582651764166,
+      "max_abs_csv_minus_perimage": 4.185826517642127e-05,
+      "paired_t": {
+        "mean": -0.0025418582651764166,
+        "n": 1,
+        "sd": null,
+        "se": null,
+        "df": 0,
+        "t_crit": null,
+        "ci95": null,
+        "note": "n=1：配对 t 的 df=0，区间不可估"
+      },
+      "sign_test": {
+        "k": 0,
+        "n": 1,
+        "p_two_sided": 1.0,
+        "p_greater": 1.0,
+        "p_less": 0.5
+      },
+      "n_positive": 0,
+      "per_seed": [
+        {
+          "seed": 0,
+          "left_run": "utk-relu_qat-after_snap-s0-1793033217",
+          "right_run": "utk-relu_qat-none-s0-1793030915",
+          "left_mae_csv": 0.0594,
+          "right_mae_csv": 0.0619,
+          "delta_csv": -0.0024999999999999953,
+          "left_mae_perimage": 0.05936408094130456,
+          "right_mae_perimage": 0.06190593920648098,
+          "delta_perimage": -0.0025418582651764166,
+          "n_images": 400
+        }
+      ],
+      "bootstrap_2level": {
+        "n_boot": 10000,
+        "n_seeds": 1,
+        "n_images": 400,
+        "ci95": [
+          -0.0046616971839684995,
+          -0.0004286790888290855
+        ],
+        "mean": -0.002529561509993859,
+        "sd": 0.0010779505600583504,
+        "excludes_zero": true,
+        "image_only": true
+      },
+      "n_images_per_run": [
+        400
+      ]
+    },
+    "g1d_order_before_vs_after_N20": {
+      "label": "顺序效应：N=20, before_snap − after_snap",
+      "group": "1d",
+      "core": true,
+      "left": "before_snap@N=20",
+      "right": "after_snap@N=20",
+      "delta_definition": "left_MAE - right_MAE（负值 = 左侧更准）",
+      "n_seeds": 3,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "delta_source": "perimage（全精度逐图 |pred-y|）",
+      "point_estimate": 0.00021395419103403812,
+      "point_estimate_csv": 0.0001999999999999988,
+      "point_estimate_perimage": 0.00021395419103403812,
+      "max_abs_csv_minus_perimage": 6.376699320971568e-05,
+      "paired_t": {
+        "mean": 0.00021395419103403812,
+        "n": 3,
+        "sd": 0.0010824031689591661,
+        "se": 0.0006249257609702786,
+        "df": 2,
+        "t_crit": 4.302652729749335,
+        "ci95": [
+          -0.0024748843402954113,
+          0.0029027927223634876
+        ]
+      },
+      "sign_test": {
+        "k": 2,
+        "n": 3,
+        "p_two_sided": 1.0,
+        "p_greater": 0.5,
+        "p_less": 0.875
+      },
+      "n_positive": 2,
+      "per_seed": [
+        {
+          "seed": 0,
+          "left_run": "utk-relu_qat-before_snap-s0-1793032011",
+          "right_run": "utk-relu_qat-after_snap-s0-1793033217",
+          "left_mae_csv": 0.0607,
+          "right_mae_csv": 0.0594,
+          "delta_csv": 0.0012999999999999956,
+          "left_mae_perimage": 0.06068465892225504,
+          "right_mae_perimage": 0.05936408094130456,
+          "delta_perimage": 0.001320577980950477,
+          "n_images": 400
+        },
+        {
+          "seed": 1,
+          "left_run": "utk-relu_qat-before_snap-s1-1793037047",
+          "right_run": "utk-relu_qat-after_snap-s1-1793038259",
+          "left_mae_csv": 0.0594,
+          "right_mae_csv": 0.0593,
+          "delta_csv": 0.00010000000000000286,
+          "left_mae_perimage": 0.059414539774879815,
+          "right_mae_perimage": 0.0592507727816701,
+          "delta_perimage": 0.00016376699320971855,
+          "n_images": 400
+        },
+        {
+          "seed": 2,
+          "left_run": "utk-relu_qat-before_snap-s2-1793039497",
+          "right_run": "utk-relu_qat-after_snap-s2-1793040741",
+          "left_mae_csv": 0.0562,
+          "right_mae_csv": 0.057,
+          "delta_csv": -0.0008000000000000021,
+          "left_mae_perimage": 0.0561912940395996,
+          "right_mae_perimage": 0.05703377644065768,
+          "delta_perimage": -0.0008424824010580811,
+          "n_images": 400
+        }
+      ],
+      "bootstrap_2level": {
+        "n_boot": 10000,
+        "n_seeds": 3,
+        "n_images": 400,
+        "ci95": [
+          -0.0010659209082368763,
+          0.0016706608010766397
+        ],
+        "mean": 0.00020287027180893348,
+        "sd": 0.0006922292225559871,
+        "excludes_zero": false,
+        "image_only": false
+      },
+      "n_images_per_run": [
+        400,
+        400,
+        400
+      ]
+    },
+    "supp_interval_N1_vs_N20_after_snap": {
+      "label": "间隔效应：after_snap, N=1 − N=20",
+      "group": "S",
+      "core": false,
+      "left": "after_snap@N=1",
+      "right": "after_snap@N=20",
+      "delta_definition": "left_MAE - right_MAE（负值 = 左侧更准）",
+      "n_seeds": 3,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "delta_source": "perimage（全精度逐图 |pred-y|）",
+      "point_estimate": 0.015898087965324523,
+      "point_estimate_csv": 0.015866666666666664,
+      "point_estimate_perimage": 0.015898087965324523,
+      "max_abs_csv_minus_perimage": 6.309068575501703e-05,
+      "paired_t": {
+        "mean": 0.015898087965324523,
+        "n": 3,
+        "sd": 0.0019799666014823332,
+        "se": 0.0011431342503522937,
+        "df": 2,
+        "t_crit": 4.302652729749335,
+        "ci95": [
+          0.010979578262576267,
+          0.02081659766807278
+        ]
+      },
+      "sign_test": {
+        "k": 3,
+        "n": 3,
+        "p_two_sided": 0.25,
+        "p_greater": 0.125,
+        "p_less": 1.0
+      },
+      "n_positive": 3,
+      "per_seed": [
+        {
+          "seed": 0,
+          "left_run": "utk-relu_qat-after_snap-s0-1793005531",
+          "right_run": "utk-relu_qat-after_snap-s0-1793033217",
+          "left_mae_csv": 0.0748,
+          "right_mae_csv": 0.0594,
+          "delta_csv": 0.015400000000000004,
+          "left_mae_perimage": 0.07481593805365265,
+          "right_mae_perimage": 0.05936408094130456,
+          "delta_perimage": 0.015451857112348089,
+          "n_images": 400
+        },
+        {
+          "seed": 1,
+          "left_run": "utk-relu_qat-after_snap-s1-1793018836",
+          "right_run": "utk-relu_qat-after_snap-s1-1793038259",
+          "left_mae_csv": 0.0773,
+          "right_mae_csv": 0.0593,
+          "delta_csv": 0.017999999999999995,
+          "left_mae_perimage": 0.07731386346742511,
+          "right_mae_perimage": 0.0592507727816701,
+          "delta_perimage": 0.018063090685755012,
+          "n_images": 400
+        },
+        {
+          "seed": 2,
+          "left_run": "utk-relu_qat-after_snap-s2-1793023654",
+          "right_run": "utk-relu_qat-after_snap-s2-1793040741",
+          "left_mae_csv": 0.0712,
+          "right_mae_csv": 0.057,
+          "delta_csv": 0.014199999999999997,
+          "left_mae_perimage": 0.07121309253852814,
+          "right_mae_perimage": 0.05703377644065768,
+          "delta_perimage": 0.014179316097870466,
+          "n_images": 400
+        }
+      ],
+      "bootstrap_2level": {
+        "n_boot": 10000,
+        "n_seeds": 3,
+        "n_images": 400,
+        "ci95": [
+          0.011701515008617814,
+          0.01998156438325532
+        ],
+        "mean": 0.015868625493909078,
+        "sd": 0.0021098915558852415,
+        "excludes_zero": true,
+        "image_only": false
+      },
+      "n_images_per_run": [
+        400,
+        400,
+        400
+      ]
+    },
+    "supp_interval_N5_vs_N20_after_snap": {
+      "label": "间隔效应：after_snap, N=5 − N=20",
+      "group": "S",
+      "core": false,
+      "left": "after_snap@N=5",
+      "right": "after_snap@N=20",
+      "delta_definition": "left_MAE - right_MAE（负值 = 左侧更准）",
+      "n_seeds": 3,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "delta_source": "perimage（全精度逐图 |pred-y|）",
+      "point_estimate": 0.006058633096205693,
+      "point_estimate_csv": 0.006066666666666662,
+      "point_estimate_perimage": 0.006058633096205693,
+      "max_abs_csv_minus_perimage": 3.241231068969175e-05,
+      "paired_t": {
+        "mean": 0.006058633096205693,
+        "n": 3,
+        "sd": 0.0004775700907415761,
+        "se": 0.000275725220446563,
+        "df": 2,
+        "t_crit": 4.302652729749335,
+        "ci95": [
+          0.004872283223790551,
+          0.007244982968620834
+        ]
+      },
+      "sign_test": {
+        "k": 3,
+        "n": 3,
+        "p_two_sided": 0.25,
+        "p_greater": 0.125,
+        "p_less": 1.0
+      },
+      "n_positive": 3,
+      "per_seed": [
+        {
+          "seed": 0,
+          "left_run": "utk-relu_qat-after_snap-s0-1793029658",
+          "right_run": "utk-relu_qat-after_snap-s0-1793033217",
+          "left_mae_csv": 0.0657,
+          "right_mae_csv": 0.0594,
+          "delta_csv": 0.006299999999999993,
+          "left_mae_perimage": 0.06566381667740644,
+          "right_mae_perimage": 0.05936408094130456,
+          "delta_perimage": 0.006299735736101875,
+          "n_images": 400
+        },
+        {
+          "seed": 1,
+          "left_run": "utk-relu_qat-after_snap-s1-1793116221",
+          "right_run": "utk-relu_qat-after_snap-s1-1793038259",
+          "left_mae_csv": 0.0648,
+          "right_mae_csv": 0.0593,
+          "delta_csv": 0.005499999999999998,
+          "left_mae_perimage": 0.064759348644875,
+          "right_mae_perimage": 0.0592507727816701,
+          "delta_perimage": 0.005508575863204898,
+          "n_images": 400
+        },
+        {
+          "seed": 2,
+          "left_run": "utk-relu_qat-after_snap-s2-1793117387",
+          "right_run": "utk-relu_qat-after_snap-s2-1793040741",
+          "left_mae_csv": 0.0634,
+          "right_mae_csv": 0.057,
+          "delta_csv": 0.006399999999999996,
+          "left_mae_perimage": 0.06340136412996798,
+          "right_mae_perimage": 0.05703377644065768,
+          "delta_perimage": 0.006367587689310304,
+          "n_images": 400
+        }
+      ],
+      "bootstrap_2level": {
+        "n_boot": 10000,
+        "n_seeds": 3,
+        "n_images": 400,
+        "ci95": [
+          0.0029421233533260724,
+          0.00922611298842821
+        ],
+        "mean": 0.006040425724091009,
+        "sd": 0.0015869857162343595,
+        "excludes_zero": true,
+        "image_only": false
+      },
+      "n_images_per_run": [
+        400,
+        400,
+        400
+      ]
+    },
+    "supp_interval_N5_vs_N20_before_snap": {
+      "label": "间隔效应：before_snap, N=5 − N=20",
+      "group": "S",
+      "core": false,
+      "left": "before_snap@N=5",
+      "right": "before_snap@N=20",
+      "delta_definition": "left_MAE - right_MAE（负值 = 左侧更准）",
+      "n_seeds": 3,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "delta_source": "perimage（全精度逐图 |pred-y|）",
+      "point_estimate": 0.005778920405233902,
+      "point_estimate_csv": 0.005766666666666666,
+      "point_estimate_perimage": 0.005778920405233902,
+      "max_abs_csv_minus_perimage": 2.6448636874558396e-05,
+      "paired_t": {
+        "mean": 0.005778920405233902,
+        "n": 3,
+        "sd": 0.0013358043088564134,
+        "se": 0.0007712269773029124,
+        "df": 2,
+        "t_crit": 4.302652729749335,
+        "ci95": [
+          0.0024605985460851975,
+          0.009097242264382606
+        ]
+      },
+      "sign_test": {
+        "k": 3,
+        "n": 3,
+        "p_two_sided": 0.25,
+        "p_greater": 0.125,
+        "p_less": 1.0
+      },
+      "n_positive": 3,
+      "per_seed": [
+        {
+          "seed": 0,
+          "left_run": "utk-relu_qat-before_snap-s0-1793028380",
+          "right_run": "utk-relu_qat-before_snap-s0-1793032011",
+          "left_mae_csv": 0.0658,
+          "right_mae_csv": 0.0607,
+          "delta_csv": 0.0051,
+          "left_mae_perimage": 0.0658111075591296,
+          "right_mae_perimage": 0.06068465892225504,
+          "delta_perimage": 0.005126448636874559,
+          "n_images": 400
+        },
+        {
+          "seed": 1,
+          "left_run": "utk-relu_qat-before_snap-s1-1793115073",
+          "right_run": "utk-relu_qat-before_snap-s1-1793037047",
+          "left_mae_csv": 0.0643,
+          "right_mae_csv": 0.0594,
+          "delta_csv": 0.004899999999999995,
+          "left_mae_perimage": 0.06430928968824447,
+          "right_mae_perimage": 0.059414539774879815,
+          "delta_perimage": 0.004894749913364652,
+          "n_images": 400
+        },
+        {
+          "seed": 2,
+          "left_run": "utk-relu_qat-before_snap-s2-1793116251",
+          "right_run": "utk-relu_qat-before_snap-s2-1793039497",
+          "left_mae_csv": 0.0635,
+          "right_mae_csv": 0.0562,
+          "delta_csv": 0.007300000000000001,
+          "left_mae_perimage": 0.06350685670506209,
+          "right_mae_perimage": 0.0561912940395996,
+          "delta_perimage": 0.007315562665462495,
+          "n_images": 400
+        }
+      ],
+      "bootstrap_2level": {
+        "n_boot": 10000,
+        "n_seeds": 3,
+        "n_images": 400,
+        "ci95": [
+          0.0024693806202461324,
+          0.009205142464799185
+        ],
+        "mean": 0.005795926957275874,
+        "sd": 0.0016906862035539756,
+        "excludes_zero": true,
+        "image_only": false
+      },
+      "n_images_per_run": [
+        400,
+        400,
+        400
+      ]
+    },
+    "supp_interval_N1_vs_N20_before_snap": {
+      "label": "间隔效应：before_snap, N=1 − N=20",
+      "group": "S",
+      "core": false,
+      "left": "before_snap@N=1",
+      "right": "before_snap@N=20",
+      "delta_definition": "left_MAE - right_MAE（负值 = 左侧更准）",
+      "n_seeds": 1,
+      "seeds": [
+        0
+      ],
+      "delta_source": "perimage（全精度逐图 |pred-y|）",
+      "point_estimate": 0.013427998591214421,
+      "point_estimate_csv": 0.013400000000000002,
+      "point_estimate_perimage": 0.013427998591214421,
+      "max_abs_csv_minus_perimage": 2.7998591214419e-05,
+      "paired_t": {
+        "mean": 0.013427998591214421,
+        "n": 1,
+        "sd": null,
+        "se": null,
+        "df": 0,
+        "t_crit": null,
+        "ci95": null,
+        "note": "n=1：配对 t 的 df=0，区间不可估"
+      },
+      "sign_test": {
+        "k": 1,
+        "n": 1,
+        "p_two_sided": 1.0,
+        "p_greater": 0.5,
+        "p_less": 1.0
+      },
+      "n_positive": 1,
+      "per_seed": [
+        {
+          "seed": 0,
+          "left_run": "utk-relu_qat-before_snap-s0-1793009776",
+          "right_run": "utk-relu_qat-before_snap-s0-1793032011",
+          "left_mae_csv": 0.0741,
+          "right_mae_csv": 0.0607,
+          "delta_csv": 0.013400000000000002,
+          "left_mae_perimage": 0.07411265751346946,
+          "right_mae_perimage": 0.06068465892225504,
+          "delta_perimage": 0.013427998591214421,
+          "n_images": 400
+        }
+      ],
+      "bootstrap_2level": {
+        "n_boot": 10000,
+        "n_seeds": 1,
+        "n_images": 400,
+        "ci95": [
+          0.008016622236464172,
+          0.01853355467063374
+        ],
+        "mean": 0.013340905958628281,
+        "sd": 0.0026761584486997233,
+        "excludes_zero": true,
+        "image_only": true
+      },
+      "n_images_per_run": [
+        400
+      ]
+    },
+    "supp_interval_N1_vs_N5_none": {
+      "label": "间隔效应：none, N=1 − N=5",
+      "group": "S",
+      "core": false,
+      "left": "none@N=1",
+      "right": "none@N=5",
+      "delta_definition": "left_MAE - right_MAE（负值 = 左侧更准）",
+      "n_seeds": 1,
+      "seeds": [
+        0
+      ],
+      "delta_source": "perimage（全精度逐图 |pred-y|）",
+      "point_estimate": 0.008045792961493131,
+      "point_estimate_csv": 0.008099999999999996,
+      "point_estimate_perimage": 0.008045792961493131,
+      "max_abs_csv_minus_perimage": 5.4207038506864924e-05,
+      "paired_t": {
+        "mean": 0.008045792961493131,
+        "n": 1,
+        "sd": null,
+        "se": null,
+        "df": 0,
+        "t_crit": null,
+        "ci95": null,
+        "note": "n=1：配对 t 的 df=0，区间不可估"
+      },
+      "sign_test": {
+        "k": 1,
+        "n": 1,
+        "p_two_sided": 1.0,
+        "p_greater": 0.5,
+        "p_less": 1.0
+      },
+      "n_positive": 1,
+      "per_seed": [
+        {
+          "seed": 0,
+          "left_run": "utk-relu_qat-none-s0-1793011336",
+          "right_run": "utk-relu_qat-none-s0-1793027163",
+          "left_mae_csv": 0.0741,
+          "right_mae_csv": 0.066,
+          "delta_csv": 0.008099999999999996,
+          "left_mae_perimage": 0.07406742340885103,
+          "right_mae_perimage": 0.0660216304473579,
+          "delta_perimage": 0.008045792961493131,
+          "n_images": 400
+        }
+      ],
+      "bootstrap_2level": {
+        "n_boot": 10000,
+        "n_seeds": 1,
+        "n_images": 400,
+        "ci95": [
+          0.005061348891351372,
+          0.011076834052801132
+        ],
+        "mean": 0.008036448511363939,
+        "sd": 0.001538234308800723,
+        "excludes_zero": true,
+        "image_only": true
+      },
+      "n_images_per_run": [
+        400
+      ]
+    },
+    "supp_interval_N5_vs_N20_none": {
+      "label": "间隔效应：none, N=5 − N=20",
+      "group": "S",
+      "core": false,
+      "left": "none@N=5",
+      "right": "none@N=20",
+      "delta_definition": "left_MAE - right_MAE（负值 = 左侧更准）",
+      "n_seeds": 1,
+      "seeds": [
+        0
+      ],
+      "delta_source": "perimage（全精度逐图 |pred-y|）",
+      "point_estimate": 0.00411569124087692,
+      "point_estimate_csv": 0.004100000000000006,
+      "point_estimate_perimage": 0.00411569124087692,
+      "max_abs_csv_minus_perimage": 1.569124087691387e-05,
+      "paired_t": {
+        "mean": 0.00411569124087692,
+        "n": 1,
+        "sd": null,
+        "se": null,
+        "df": 0,
+        "t_crit": null,
+        "ci95": null,
+        "note": "n=1：配对 t 的 df=0，区间不可估"
+      },
+      "sign_test": {
+        "k": 1,
+        "n": 1,
+        "p_two_sided": 1.0,
+        "p_greater": 0.5,
+        "p_less": 1.0
+      },
+      "n_positive": 1,
+      "per_seed": [
+        {
+          "seed": 0,
+          "left_run": "utk-relu_qat-none-s0-1793027163",
+          "right_run": "utk-relu_qat-none-s0-1793030915",
+          "left_mae_csv": 0.066,
+          "right_mae_csv": 0.0619,
+          "delta_csv": 0.004100000000000006,
+          "left_mae_perimage": 0.0660216304473579,
+          "right_mae_perimage": 0.06190593920648098,
+          "delta_perimage": 0.00411569124087692,
+          "n_images": 400
+        }
+      ],
+      "bootstrap_2level": {
+        "n_boot": 10000,
+        "n_seeds": 1,
+        "n_images": 400,
+        "ci95": [
+          -0.0008949280730448663,
+          0.00903439221018925
+        ],
+        "mean": 0.004113939683724195,
+        "sd": 0.0025318517365774886,
+        "excludes_zero": false,
+        "image_only": true
+      },
+      "n_images_per_run": [
+        400
+      ]
+    },
+    "supp_shadow_after_vs_none_N5": {
+      "label": "影子有无：N=5, after_snap − none",
+      "group": "S",
+      "core": false,
+      "left": "after_snap@N=5",
+      "right": "none@N=5",
+      "delta_definition": "left_MAE - right_MAE（负值 = 左侧更准）",
+      "n_seeds": 3,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "delta_source": "perimage（全精度逐图 |pred-y|）",
+      "point_estimate": -0.00027429065822312987,
+      "point_estimate_csv": -0.0002333333333333354,
+      "point_estimate_perimage": -0.00027429065822312987,
+      "max_abs_csv_minus_perimage": 5.899710338562458e-05,
+      "paired_t": {
+        "mean": -0.00027429065822312987,
+        "n": 3,
+        "sd": 0.00028293433355982086,
+        "se": 0.00016335221364374995,
+        "df": 2,
+        "t_crit": 4.302652729749335,
+        "ci95": [
+          -0.0009771385061680073,
+          0.00042855718972174746
+        ]
+      },
+      "sign_test": {
+        "k": 1,
+        "n": 3,
+        "p_two_sided": 1.0,
+        "p_greater": 0.875,
+        "p_less": 0.5
+      },
+      "n_positive": 1,
+      "per_seed": [
+        {
+          "seed": 0,
+          "left_run": "utk-relu_qat-after_snap-s0-1793029658",
+          "right_run": "utk-relu_qat-none-s0-1793027163",
+          "left_mae_csv": 0.0657,
+          "right_mae_csv": 0.066,
+          "delta_csv": -0.0003000000000000086,
+          "left_mae_perimage": 0.06566381667740644,
+          "right_mae_perimage": 0.0660216304473579,
+          "delta_perimage": -0.0003578137699514622,
+          "n_images": 400
+        },
+        {
+          "seed": 1,
+          "left_run": "utk-relu_qat-after_snap-s1-1793116221",
+          "right_run": "utk-relu_qat-none-s1-1793114048",
+          "left_mae_csv": 0.0648,
+          "right_mae_csv": 0.0647,
+          "delta_csv": 0.00010000000000000286,
+          "left_mae_perimage": 0.064759348644875,
+          "right_mae_perimage": 0.06471834574826062,
+          "delta_perimage": 4.100289661437828e-05,
+          "n_images": 400
+        },
+        {
+          "seed": 2,
+          "left_run": "utk-relu_qat-after_snap-s2-1793117387",
+          "right_run": "utk-relu_qat-none-s2-1793115215",
+          "left_mae_csv": 0.0634,
+          "right_mae_csv": 0.0639,
+          "delta_csv": -0.0005000000000000004,
+          "left_mae_perimage": 0.06340136412996798,
+          "right_mae_perimage": 0.06390742523130029,
+          "delta_perimage": -0.0005060611013323058,
+          "n_images": 400
+        }
+      ],
+      "bootstrap_2level": {
+        "n_boot": 10000,
+        "n_seeds": 3,
+        "n_images": 400,
+        "ci95": [
+          -0.001295996065173919,
+          0.000893620405734206
+        ],
+        "mean": -0.000287282843692073,
+        "sd": 0.0005491488748679564,
+        "excludes_zero": false,
+        "image_only": false
+      },
+      "n_images_per_run": [
+        400,
+        400,
+        400
+      ]
+    },
+    "supp_shadow_before_vs_none_N20": {
+      "label": "影子有无：N=20, before_snap − none",
+      "group": "S",
+      "core": false,
+      "left": "before_snap@N=20",
+      "right": "none@N=20",
+      "delta_definition": "left_MAE - right_MAE（负值 = 左侧更准）",
+      "n_seeds": 1,
+      "seeds": [
+        0
+      ],
+      "delta_source": "perimage（全精度逐图 |pred-y|）",
+      "point_estimate": -0.0012212802842259396,
+      "point_estimate_csv": -0.0011999999999999997,
+      "point_estimate_perimage": -0.0012212802842259396,
+      "max_abs_csv_minus_perimage": 2.1280284225939916e-05,
+      "paired_t": {
+        "mean": -0.0012212802842259396,
+        "n": 1,
+        "sd": null,
+        "se": null,
+        "df": 0,
+        "t_crit": null,
+        "ci95": null,
+        "note": "n=1：配对 t 的 df=0，区间不可估"
+      },
+      "sign_test": {
+        "k": 0,
+        "n": 1,
+        "p_two_sided": 1.0,
+        "p_greater": 1.0,
+        "p_less": 0.5
+      },
+      "n_positive": 0,
+      "per_seed": [
+        {
+          "seed": 0,
+          "left_run": "utk-relu_qat-before_snap-s0-1793032011",
+          "right_run": "utk-relu_qat-none-s0-1793030915",
+          "left_mae_csv": 0.0607,
+          "right_mae_csv": 0.0619,
+          "delta_csv": -0.0011999999999999997,
+          "left_mae_perimage": 0.06068465892225504,
+          "right_mae_perimage": 0.06190593920648098,
+          "delta_perimage": -0.0012212802842259396,
+          "n_images": 400
+        }
+      ],
+      "bootstrap_2level": {
+        "n_boot": 10000,
+        "n_seeds": 1,
+        "n_images": 400,
+        "ci95": [
+          -0.0031264019450172784,
+          0.0006246395076159382
+        ],
+        "mean": -0.0012323579435516148,
+        "sd": 0.0009592981215400597,
+        "excludes_zero": false,
+        "image_only": true
+      },
+      "n_images_per_run": [
+        400
+      ]
+    },
+    "supp_shadow_before_vs_none_N5": {
+      "label": "影子有无：N=5, before_snap − none",
+      "group": "S",
+      "core": false,
+      "left": "before_snap@N=5",
+      "right": "none@N=5",
+      "delta_definition": "left_MAE - right_MAE（负值 = 左侧更准）",
+      "n_seeds": 3,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "delta_source": "perimage（全精度逐图 |pred-y|）",
+      "point_estimate": -0.0003400491581608822,
+      "point_estimate_csv": -0.00033333333333333365,
+      "point_estimate_perimage": -0.0003400491581608822,
+      "max_abs_csv_minus_perimage": 1.052288822829539e-05,
+      "paired_t": {
+        "mean": -0.0003400491581608822,
+        "n": 3,
+        "sd": 0.00011225328729883091,
+        "se": 6.480946563940043e-05,
+        "df": 2,
+        "t_crit": 4.302652729749335,
+        "ci95": [
+          -0.0006189017824078443,
+          -6.11965339139202e-05
+        ]
+      },
+      "sign_test": {
+        "k": 0,
+        "n": 3,
+        "p_two_sided": 0.25,
+        "p_greater": 1.0,
+        "p_less": 0.125
+      },
+      "n_positive": 0,
+      "per_seed": [
+        {
+          "seed": 0,
+          "left_run": "utk-relu_qat-before_snap-s0-1793028380",
+          "right_run": "utk-relu_qat-none-s0-1793027163",
+          "left_mae_csv": 0.0658,
+          "right_mae_csv": 0.066,
+          "delta_csv": -0.00020000000000000573,
+          "left_mae_perimage": 0.0658111075591296,
+          "right_mae_perimage": 0.0660216304473579,
+          "delta_perimage": -0.00021052288822830112,
+          "n_images": 400
+        },
+        {
+          "seed": 1,
+          "left_run": "utk-relu_qat-before_snap-s1-1793115073",
+          "right_run": "utk-relu_qat-none-s1-1793114048",
+          "left_mae_csv": 0.0643,
+          "right_mae_csv": 0.0647,
+          "delta_csv": -0.0003999999999999976,
+          "left_mae_perimage": 0.06430928968824447,
+          "right_mae_perimage": 0.06471834574826062,
+          "delta_perimage": -0.0004090560600161497,
+          "n_images": 400
+        },
+        {
+          "seed": 2,
+          "left_run": "utk-relu_qat-before_snap-s2-1793116251",
+          "right_run": "utk-relu_qat-none-s2-1793115215",
+          "left_mae_csv": 0.0635,
+          "right_mae_csv": 0.0639,
+          "delta_csv": -0.0003999999999999976,
+          "left_mae_perimage": 0.06350685670506209,
+          "right_mae_perimage": 0.06390742523130029,
+          "delta_perimage": -0.00040056852623819583,
+          "n_images": 400
+        }
+      ],
+      "bootstrap_2level": {
+        "n_boot": 10000,
+        "n_seeds": 3,
+        "n_images": 400,
+        "ci95": [
+          -0.0015556879592283318,
+          0.0008632696783170102
+        ],
+        "mean": -0.00034850672130255653,
+        "sd": 0.0006062608380911073,
+        "excludes_zero": false,
+        "image_only": false
+      },
+      "n_images_per_run": [
+        400,
+        400,
+        400
+      ]
+    }
+  },
+  "inference_unit_comparison": [
+    {
+      "contrast": "影子有无：N=20, after_snap − none",
+      "contrast_key": "g1c_shadow_after_vs_none_N20",
+      "image_level": {
+        "n_images": 400,
+        "mean": -0.0025418582651764153,
+        "se": 0.0010659171410054675,
+        "df": 399,
+        "ci95": [
+          -0.004637373867868888,
+          -0.00044634266248394245
+        ],
+        "excludes_zero": true,
+        "source": "quant_runs/perimage/<run>__fp32.npz 的 400 张逐图 |pred-y|，取 seed 0 那一对（= 稿件现行口径）"
+      },
+      "run_level": {
+        "n": 1,
+        "mean": -0.0025418582651764166,
+        "se": null,
+        "df": 0,
+        "ci95": null,
+        "excludes_zero": null,
+        "note": "n=1：sd 不可估，run 层标准误不存在"
+      },
+      "merged": {
+        "formula": "SE_merged = sqrt(sigma_I^2/M + sigma_R^2/n)，M=400 张/run，n=seed 数",
+        "sigma_R_source": "supp_shadow_after_vs_none_N5",
+        "sigma_R_self": false,
+        "sigma_R_value": 0.00028293433355982086,
+        "sigma_R_note": "n=1 无法自估 sigma_R，借用 supp_shadow_after_vs_none_N5 的跨 seed sd（df=2）",
+        "se": 0.0011028287213326509,
+        "df_satterthwaite": 229.71027923283296,
+        "ci95": [
+          -0.004714811231128305,
+          -0.00036890529922452547
+        ],
+        "excludes_zero": true,
+        "inflation_vs_image": 1.034628939630678
+      }
+    },
+    {
+      "contrast": "间隔效应：none, N=1 − N=∞",
+      "contrast_key": "g1b_interval_N1_vs_Ninf_none",
+      "image_level": {
+        "n_images": 400,
+        "mean": 0.018851778116077186,
+        "se": 0.002697333541077587,
+        "df": 399,
+        "ci95": [
+          0.01354901648147014,
+          0.024154539750684233
+        ],
+        "excludes_zero": true,
+        "source": "quant_runs/perimage/<run>__fp32.npz 的 400 张逐图 |pred-y|，取 seed 0 那一对（= 稿件现行口径）"
+      },
+      "run_level": {
+        "n": 1,
+        "mean": 0.01885177811607719,
+        "se": null,
+        "df": 0,
+        "ci95": null,
+        "excludes_zero": null,
+        "note": "n=1：sd 不可估，run 层标准误不存在"
+      },
+      "merged": {
+        "formula": "SE_merged = sqrt(sigma_I^2/M + sigma_R^2/n)，M=400 张/run，n=seed 数",
+        "sigma_R_source": "supp_interval_N1_vs_N20_after_snap",
+        "sigma_R_self": false,
+        "sigma_R_value": 0.0019799666014823332,
+        "sigma_R_note": "n=1 无法自估 sigma_R，借用 supp_interval_N1_vs_N20_after_snap 的跨 seed sd（df=2）",
+        "se": 0.0033460239052953067,
+        "df_satterthwaite": 16.03543080909252,
+        "ci95": [
+          0.011759797863559789,
+          0.025943758368594583
+        ],
+        "excludes_zero": true,
+        "inflation_vs_image": 1.2404931960911914
+      }
+    },
+    {
+      "contrast": "顺序效应：N=20, before_snap − after_snap",
+      "contrast_key": "g1d_order_before_vs_after_N20",
+      "image_level": {
+        "n_images": 400,
+        "mean": 0.0013205779809504748,
+        "se": 0.000662200476455152,
+        "df": 399,
+        "ci95": [
+          1.8739988915554735e-05,
+          0.002622415972985395
+        ],
+        "excludes_zero": true,
+        "source": "quant_runs/perimage/<run>__fp32.npz 的 400 张逐图 |pred-y|，取 seed 0 那一对（= 稿件现行口径）"
+      },
+      "run_level": {
+        "n": 3,
+        "mean": 0.00021395419103403812,
+        "se": 0.0006249257609702786,
+        "df": 2,
+        "ci95": [
+          -0.0024748843402954113,
+          0.0029027927223634876
+        ],
+        "excludes_zero": false
+      },
+      "merged": {
+        "formula": "SE_merged = sqrt(sigma_I^2/M + sigma_R^2/n)，M=400 张/run，n=seed 数",
+        "sigma_R_source": "g1d_order_before_vs_after_N20",
+        "sigma_R_self": true,
+        "sigma_R_value": 0.0006249257609702786,
+        "sigma_R_note": "自估：该对比本身 n=3，sigma_R 由自身跨 seed sd 给出",
+        "se": 0.0009105172583436911,
+        "df_satterthwaite": 8.956390230410394,
+        "ci95": [
+          -0.0007406849612384904,
+          0.00338184092313944
+        ],
+        "excludes_zero": false,
+        "inflation_vs_image": 1.3749873198790374
+      }
+    }
+  ],
+  "margin_sensitivity_tost": {
+    "contrast": "顺序效应：N=20, before_snap − after_snap",
+    "delta_per_seed": {
+      "0": 0.0012999999999999956,
+      "1": 0.00010000000000000286,
+      "2": -0.0008000000000000021
+    },
+    "preset_margin": 0.0016,
+    "preset_margin_provenance": "预设：稿件所用零基线 0.1553（= seed 0 划分的 zero_baseline_mae 0.155267；三 seed 均值 0.154011）的 1% = 0.001553，取 0.0016。该 margin 在本次分析前已确定（沿用稿件既有设定），不是从观测到的顺序效应反推",
+    "rows": [
+      {
+        "margin": 0.001,
+        "n": 3,
+        "mean": 0.00021395419103403812,
+        "se": 0.0006249257609702786,
+        "df": 2,
+        "p_lower": 0.09577498743029687,
+        "p_upper": 0.16770830106350818,
+        "p_tost": 0.16770830106350818,
+        "equivalent": false,
+        "ci90": [
+          -0.0016108200197908224,
+          0.0020387284018588987
+        ]
+      },
+      {
+        "margin": 0.0016,
+        "n": 3,
+        "mean": 0.00021395419103403812,
+        "se": 0.0006249257609702786,
+        "df": 2,
+        "p_lower": 0.050510647789223616,
+        "p_upper": 0.07841043177028297,
+        "p_tost": 0.07841043177028297,
+        "equivalent": false,
+        "ci90": [
+          -0.0016108200197908224,
+          0.0020387284018588987
+        ]
+      },
+      {
+        "margin": 0.0018,
+        "n": 3,
+        "mean": 0.00021395419103403812,
+        "se": 0.0006249257609702786,
+        "df": 2,
+        "p_lower": 0.042144810096260824,
+        "p_upper": 0.06323057704300256,
+        "p_tost": 0.06323057704300256,
+        "equivalent": false,
+        "ci90": [
+          -0.0016108200197908224,
+          0.0020387284018588987
+        ]
+      },
+      {
+        "margin": 0.005,
+        "n": 3,
+        "mean": 0.00021395419103403812,
+        "se": 0.0006249257609702786,
+        "df": 2,
+        "p_lower": 0.0070316159444520675,
+        "p_upper": 0.008312593077541118,
+        "p_tost": 0.008312593077541118,
+        "equivalent": true,
+        "ci90": [
+          -0.0016108200197908224,
+          0.0020387284018588987
+        ]
+      }
+    ],
+    "mde_80pct_power": {
+      "se": 0.0006249257609702786,
+      "df": 2,
+      "power": 0.8,
+      "t_alpha": 4.302652729749335,
+      "t_power": 1.0606601717796926,
+      "mde": 0.0033516723963097407,
+      "formula": "MDE = (t_{1-alpha/2, df} + t_{power, df}) * SE, df = n-1"
+    },
+    "n3_ci_halfwidth": 0.0026888385313294494
+  },
+  "mae_normalization_mae0": {
+    "definition": "ratio = mae_fp32 / zero_baseline_mae（同一 run 自己划分上的恒预测均值基线）",
+    "rows": [
+      {
+        "run": "utk-relu_qat-after_snap-s0-1793005531",
+        "mode": "after_snap",
+        "N": 1,
+        "seed": 0,
+        "mae_fp32": 0.0748,
+        "mae_4": 0.091,
+        "zero_baseline_mae": 0.15526728379987373,
+        "ratio": 0.48174991002232526
+      },
+      {
+        "run": "utk-relu_qat-after_snap-s0-1793029658",
+        "mode": "after_snap",
+        "N": 5,
+        "seed": 0,
+        "mae_fp32": 0.0657,
+        "mae_4": 0.0864,
+        "zero_baseline_mae": 0.15526728379987373,
+        "ratio": 0.42314129797415456
+      },
+      {
+        "run": "utk-relu_qat-after_snap-s0-1793033217",
+        "mode": "after_snap",
+        "N": 20,
+        "seed": 0,
+        "mae_fp32": 0.0594,
+        "mae_4": 0.0849,
+        "zero_baseline_mae": 0.15526728379987373,
+        "ratio": 0.38256610501772886
+      },
+      {
+        "run": "utk-relu_qat-after_snap-s0-1793111850",
+        "mode": "after_snap",
+        "N": 0,
+        "seed": 0,
+        "mae_fp32": 0.0556,
+        "mae_4": 0.104,
+        "zero_baseline_mae": 0.15526728379987373,
+        "ratio": 0.35809217910750374
+      },
+      {
+        "run": "utk-relu_qat-after_snap-s1-1793018836",
+        "mode": "after_snap",
+        "N": 1,
+        "seed": 1,
+        "mae_fp32": 0.0773,
+        "mae_4": 0.1076,
+        "zero_baseline_mae": 0.15517695657840297,
+        "ratio": 0.49814097211620634
+      },
+      {
+        "run": "utk-relu_qat-after_snap-s1-1793038259",
+        "mode": "after_snap",
+        "N": 20,
+        "seed": 1,
+        "mae_fp32": 0.0593,
+        "mae_4": 0.1267,
+        "zero_baseline_mae": 0.15517695657840297,
+        "ratio": 0.38214436800117774
+      },
+      {
+        "run": "utk-relu_qat-after_snap-s1-1793116221",
+        "mode": "after_snap",
+        "N": 5,
+        "seed": 1,
+        "mae_fp32": 0.0648,
+        "mae_4": 0.0969,
+        "zero_baseline_mae": 0.15517695657840297,
+        "ratio": 0.41758777481410314
+      },
+      {
+        "run": "utk-relu_qat-after_snap-s2-1793023654",
+        "mode": "after_snap",
+        "N": 1,
+        "seed": 2,
+        "mae_fp32": 0.0712,
+        "mae_4": 0.2337,
+        "zero_baseline_mae": 0.1515890758312129,
+        "ratio": 0.46969083761205693
+      },
+      {
+        "run": "utk-relu_qat-after_snap-s2-1793040741",
+        "mode": "after_snap",
+        "N": 20,
+        "seed": 2,
+        "mae_fp32": 0.057,
+        "mae_4": 0.203,
+        "zero_baseline_mae": 0.1515890758312129,
+        "ratio": 0.37601654134673096
+      },
+      {
+        "run": "utk-relu_qat-after_snap-s2-1793117387",
+        "mode": "after_snap",
+        "N": 5,
+        "seed": 2,
+        "mae_fp32": 0.0634,
+        "mae_4": 0.2117,
+        "zero_baseline_mae": 0.1515890758312129,
+        "ratio": 0.418235942480399
+      },
+      {
+        "run": "utk-relu_qat-before_snap-s0-1793009776",
+        "mode": "before_snap",
+        "N": 1,
+        "seed": 0,
+        "mae_fp32": 0.0741,
+        "mae_4": 0.0899,
+        "zero_baseline_mae": 0.15526728379987373,
+        "ratio": 0.477241555249389
+      },
+      {
+        "run": "utk-relu_qat-before_snap-s0-1793028380",
+        "mode": "before_snap",
+        "N": 5,
+        "seed": 0,
+        "mae_fp32": 0.0658,
+        "mae_4": 0.088,
+        "zero_baseline_mae": 0.15526728379987373,
+        "ratio": 0.42378534865600265
+      },
+      {
+        "run": "utk-relu_qat-before_snap-s0-1793032011",
+        "mode": "before_snap",
+        "N": 20,
+        "seed": 0,
+        "mae_fp32": 0.0607,
+        "mae_4": 0.0866,
+        "zero_baseline_mae": 0.15526728379987373,
+        "ratio": 0.3909387638817532
+      },
+      {
+        "run": "utk-relu_qat-before_snap-s1-1793037047",
+        "mode": "before_snap",
+        "N": 20,
+        "seed": 1,
+        "mae_fp32": 0.0594,
+        "mae_4": 0.1557,
+        "zero_baseline_mae": 0.15517695657840297,
+        "ratio": 0.38278879357959456
+      },
+      {
+        "run": "utk-relu_qat-before_snap-s1-1793115073",
+        "mode": "before_snap",
+        "N": 5,
+        "seed": 1,
+        "mae_fp32": 0.0643,
+        "mae_4": 0.1027,
+        "zero_baseline_mae": 0.15517695657840297,
+        "ratio": 0.414365646922019
+      },
+      {
+        "run": "utk-relu_qat-before_snap-s2-1793039497",
+        "mode": "before_snap",
+        "N": 20,
+        "seed": 2,
+        "mae_fp32": 0.0562,
+        "mae_4": 0.1749,
+        "zero_baseline_mae": 0.1515890758312129,
+        "ratio": 0.3707391162050225
+      },
+      {
+        "run": "utk-relu_qat-before_snap-s2-1793116251",
+        "mode": "before_snap",
+        "N": 5,
+        "seed": 2,
+        "mae_fp32": 0.0635,
+        "mae_4": 0.1816,
+        "zero_baseline_mae": 0.1515890758312129,
+        "ratio": 0.4188956206231126
+      },
+      {
+        "run": "utk-relu_qat-none-s0-1793011336",
+        "mode": "none",
+        "N": 1,
+        "seed": 0,
+        "mae_fp32": 0.0741,
+        "mae_4": 0.09,
+        "zero_baseline_mae": 0.15526728379987373,
+        "ratio": 0.477241555249389
+      },
+      {
+        "run": "utk-relu_qat-none-s0-1793027163",
+        "mode": "none",
+        "N": 5,
+        "seed": 0,
+        "mae_fp32": 0.066,
+        "mae_4": 0.0857,
+        "zero_baseline_mae": 0.15526728379987373,
+        "ratio": 0.4250734500196987
+      },
+      {
+        "run": "utk-relu_qat-none-s0-1793030915",
+        "mode": "none",
+        "N": 20,
+        "seed": 0,
+        "mae_fp32": 0.0619,
+        "mae_4": 0.0888,
+        "zero_baseline_mae": 0.15526728379987373,
+        "ratio": 0.39866737206392955
+      },
+      {
+        "run": "utk-relu_qat-none-s0-1793111850",
+        "mode": "none",
+        "N": 0,
+        "seed": 0,
+        "mae_fp32": 0.0552,
+        "mae_4": 0.1535,
+        "zero_baseline_mae": 0.15526728379987373,
+        "ratio": 0.3555159763801116
+      },
+      {
+        "run": "utk-relu_qat-none-s1-1793114048",
+        "mode": "none",
+        "N": 5,
+        "seed": 1,
+        "mae_fp32": 0.0647,
+        "mae_4": 0.0894,
+        "zero_baseline_mae": null,
+        "ratio": null
+      },
+      {
+        "run": "utk-relu_qat-none-s2-1793115215",
+        "mode": "none",
+        "N": 5,
+        "seed": 2,
+        "mae_fp32": 0.0639,
+        "mae_4": 0.1807,
+        "zero_baseline_mae": 0.1515890758312129,
+        "ratio": 0.4215343331939668
+      }
+    ],
+    "ratio_median": 0.4179118586472511,
+    "ratio_min": 0.3555159763801116,
+    "ratio_max": 0.49814097211620634,
+    "seed_zero_baseline": {
+      "per_seed": {
+        "0": 0.1552672837998737,
+        "1": 0.15517695657840297,
+        "2": 0.15158907583121287
+      },
+      "n_seeds": 3,
+      "range": 0.003678207968660835,
+      "mean": 0.15401110540316318,
+      "range_pct_of_mean": 2.3882745072390668,
+      "source": "results/<run>/result.json 的 zero_baseline_mae；每个 seed 取其主配置 run 的共同值"
+    }
+  },
+  "sign_test_exact": {
+    "definition": "精确二项检验，p0=0.5；双侧 = 2*min(单侧) 截到 1；单侧给 p_greater",
+    "cases": {
+      "4of4": {
+        "k": 4,
+        "n": 4,
+        "p_two_sided": 0.125,
+        "p_greater": 0.0625,
+        "p_less": 1.0
+      },
+      "3of4": {
+        "k": 3,
+        "n": 4,
+        "p_two_sided": 0.625,
+        "p_greater": 0.3125,
+        "p_less": 0.9375
+      },
+      "3of3": {
+        "k": 3,
+        "n": 3,
+        "p_two_sided": 0.25,
+        "p_greater": 0.125,
+        "p_less": 1.0
+      },
+      "2of3": {
+        "k": 2,
+        "n": 3,
+        "p_two_sided": 1.0,
+        "p_greater": 0.5,
+        "p_less": 0.875
+      },
+      "1of1": {
+        "k": 1,
+        "n": 1,
+        "p_two_sided": 1.0,
+        "p_greater": 0.5,
+        "p_less": 1.0
+      }
+    }
+  },
+  "bit4_attribution": {
+    "scope": "主配置 23 个 run（deploy_table_v2.csv 的 mae_4 列）",
+    "n_runs": 23,
+    "n_worse_than_own_baseline": 7,
+    "n_with_baseline": 22,
+    "n_have_ckpt": 22,
+    "median_mae_4": 0.1027,
+    "mean_mae_4": 0.1266695652173913,
+    "sd_mae_4": 0.048436297760166,
+    "min_mae_4": 0.0849,
+    "max_mae_4": 0.2337,
+    "median_degrade_vs_fp32": 1.4953703703703705,
+    "max_degrade_vs_fp32": 3.56140350877193,
+    "min_degrade_vs_fp32": 1.213225371120108,
+    "median_by_mode": {
+      "after_snap": 0.1058,
+      "before_snap": 0.1027,
+      "none": 0.0897
+    },
+    "median_by_N": {
+      "0": 0.12875,
+      "1": 0.091,
+      "5": 0.0969,
+      "20": 0.1267
+    },
+    "spearman_mae4_vs_chan_max": -0.13050849540497717,
+    "spearman_mae4_vs_chan_p95": 0.07284020327498589,
+    "n_for_spearman": 22,
+    "spearman_mae4_vs_tensor_extreme": 0.19386465914042583,
+    "tensor_extreme_definition": "对每个 run、每个参数张量取逐输出通道 max/mean 的最大值，再除以该张量在全部 run 上的中位数，取全部张量里的最大者；=1 表示与同张量的典型 run 一样，>1 表示该 run 在这个张量上更极端",
+    "rows": [
+      {
+        "run": "utk-relu_qat-after_snap-s0-1793005531",
+        "mode": "after_snap",
+        "N": 1,
+        "seed": 0,
+        "mae_fp32": 0.0748,
+        "mae_4": 0.091,
+        "zero_baseline_mae": 0.15526728379987373,
+        "worse_than_baseline": false,
+        "degrade_vs_fp32": 1.2165775401069518,
+        "chan_ratio_p50": 4.486761569976807,
+        "chan_ratio_p95": 12.381771087646484,
+        "chan_ratio_p99": 27.26294708251953,
+        "chan_ratio_max": 78.75968933105469,
+        "chan_ratio_max_tensor": "backbone.s3.b3.se.fc1.weight",
+        "n_channels": 18890,
+        "tensor_extreme_ratio": 2.48818841234198,
+        "tensor_extreme_name": "backbone.s1.b1.se.fc1.weight"
+      },
+      {
+        "run": "utk-relu_qat-after_snap-s0-1793029658",
+        "mode": "after_snap",
+        "N": 5,
+        "seed": 0,
+        "mae_fp32": 0.0657,
+        "mae_4": 0.0864,
+        "zero_baseline_mae": 0.15526728379987373,
+        "worse_than_baseline": false,
+        "degrade_vs_fp32": 1.315068493150685,
+        "chan_ratio_p50": 4.29939079284668,
+        "chan_ratio_p95": 11.913999557495117,
+        "chan_ratio_p99": 24.067882537841797,
+        "chan_ratio_max": 74.1603012084961,
+        "chan_ratio_max_tensor": "backbone.s3.b3.se.fc1.weight",
+        "n_channels": 18890,
+        "tensor_extreme_ratio": 1.2683275252151973,
+        "tensor_extreme_name": "temporal.layers.0.self_attn.in_proj_weight"
+      },
+      {
+        "run": "utk-relu_qat-after_snap-s0-1793033217",
+        "mode": "after_snap",
+        "N": 20,
+        "seed": 0,
+        "mae_fp32": 0.0594,
+        "mae_4": 0.0849,
+        "zero_baseline_mae": 0.15526728379987373,
+        "worse_than_baseline": false,
+        "degrade_vs_fp32": 1.4292929292929293,
+        "chan_ratio_p50": 4.350923538208008,
+        "chan_ratio_p95": 11.788900375366211,
+        "chan_ratio_p99": 22.918088912963867,
+        "chan_ratio_max": 72.55452728271484,
+        "chan_ratio_max_tensor": "backbone.s3.b3.se.fc1.weight",
+        "n_channels": 18890,
+        "tensor_extreme_ratio": 1.1446021526299353,
+        "tensor_extreme_name": "temporal.layers.0.linear2.weight"
+      },
+      {
+        "run": "utk-relu_qat-after_snap-s0-1793111850",
+        "mode": "after_snap",
+        "N": 0,
+        "seed": 0,
+        "mae_fp32": 0.0556,
+        "mae_4": 0.104,
+        "zero_baseline_mae": 0.15526728379987373,
+        "worse_than_baseline": false,
+        "degrade_vs_fp32": 1.870503597122302,
+        "chan_ratio_p50": 4.382104873657227,
+        "chan_ratio_p95": 11.659244537353516,
+        "chan_ratio_p99": 22.183107376098633,
+        "chan_ratio_max": 53.82830810546875,
+        "chan_ratio_max_tensor": "backbone.s3.b4.se.fc1.weight",
+        "n_channels": 18890,
+        "tensor_extreme_ratio": 1.3719101028027105,
+        "tensor_extreme_name": "temporal.layers.0.linear2.weight"
+      },
+      {
+        "run": "utk-relu_qat-after_snap-s1-1793018836",
+        "mode": "after_snap",
+        "N": 1,
+        "seed": 1,
+        "mae_fp32": 0.0773,
+        "mae_4": 0.1076,
+        "zero_baseline_mae": 0.15517695657840297,
+        "worse_than_baseline": false,
+        "degrade_vs_fp32": 1.3919793014230273,
+        "chan_ratio_p50": 4.492178916931152,
+        "chan_ratio_p95": 12.39544677734375,
+        "chan_ratio_p99": 27.575353622436523,
+        "chan_ratio_max": 78.74021911621094,
+        "chan_ratio_max_tensor": "backbone.s3.b4.se.fc1.weight",
+        "n_channels": 18890,
+        "tensor_extreme_ratio": 2.48818841234198,
+        "tensor_extreme_name": "backbone.s1.b1.se.fc1.weight"
+      },
+      {
+        "run": "utk-relu_qat-after_snap-s1-1793038259",
+        "mode": "after_snap",
+        "N": 20,
+        "seed": 1,
+        "mae_fp32": 0.0593,
+        "mae_4": 0.1267,
+        "zero_baseline_mae": 0.15517695657840297,
+        "worse_than_baseline": false,
+        "degrade_vs_fp32": 2.136593591905565,
+        "chan_ratio_p50": 4.363140106201172,
+        "chan_ratio_p95": 11.852018356323242,
+        "chan_ratio_p99": 22.447338104248047,
+        "chan_ratio_max": 71.71592712402344,
+        "chan_ratio_max_tensor": "backbone.s3.b3.se.fc1.weight",
+        "n_channels": 18890,
+        "tensor_extreme_ratio": 1.8661407531030028,
+        "tensor_extreme_name": "backbone.s1.b1.se.fc1.weight"
+      },
+      {
+        "run": "utk-relu_qat-after_snap-s1-1793116221",
+        "mode": "after_snap",
+        "N": 5,
+        "seed": 1,
+        "mae_fp32": 0.0648,
+        "mae_4": 0.0969,
+        "zero_baseline_mae": 0.15517695657840297,
+        "worse_than_baseline": false,
+        "degrade_vs_fp32": 1.4953703703703705,
+        "chan_ratio_p50": 4.306641578674316,
+        "chan_ratio_p95": 11.853949546813965,
+        "chan_ratio_p99": 23.55990219116211,
+        "chan_ratio_max": 72.03572082519531,
+        "chan_ratio_max_tensor": "backbone.s3.b3.se.fc1.weight",
+        "n_channels": 18890,
+        "tensor_extreme_ratio": 1.0472838033185032,
+        "tensor_extreme_name": "frame_token.weight"
+      },
+      {
+        "run": "utk-relu_qat-after_snap-s2-1793023654",
+        "mode": "after_snap",
+        "N": 1,
+        "seed": 2,
+        "mae_fp32": 0.0712,
+        "mae_4": 0.2337,
+        "zero_baseline_mae": 0.1515890758312129,
+        "worse_than_baseline": true,
+        "degrade_vs_fp32": 3.282303370786517,
+        "chan_ratio_p50": 4.479057788848877,
+        "chan_ratio_p95": 12.377503395080566,
+        "chan_ratio_p99": 27.149614334106445,
+        "chan_ratio_max": 78.74021911621094,
+        "chan_ratio_max_tensor": "backbone.s3.b4.se.fc1.weight",
+        "n_channels": 18890,
+        "tensor_extreme_ratio": 2.48818841234198,
+        "tensor_extreme_name": "backbone.s1.b1.se.fc1.weight"
+      },
+      {
+        "run": "utk-relu_qat-after_snap-s2-1793040741",
+        "mode": "after_snap",
+        "N": 20,
+        "seed": 2,
+        "mae_fp32": 0.057,
+        "mae_4": 0.203,
+        "zero_baseline_mae": 0.1515890758312129,
+        "worse_than_baseline": true,
+        "degrade_vs_fp32": 3.56140350877193,
+        "chan_ratio_p50": 4.362698554992676,
+        "chan_ratio_p95": 11.84239387512207,
+        "chan_ratio_p99": 22.70813751220703,
+        "chan_ratio_max": 72.25792694091797,
+        "chan_ratio_max_tensor": "backbone.s3.b3.se.fc1.weight",
+        "n_channels": 18890,
+        "tensor_extreme_ratio": 1.1737703631912149,
+        "tensor_extreme_name": "pos"
+      },
+      {
+        "run": "utk-relu_qat-after_snap-s2-1793117387",
+        "mode": "after_snap",
+        "N": 5,
+        "seed": 2,
+        "mae_fp32": 0.0634,
+        "mae_4": 0.2117,
+        "zero_baseline_mae": 0.1515890758312129,
+        "worse_than_baseline": true,
+        "degrade_vs_fp32": 3.3391167192429023,
+        "chan_ratio_p50": 4.3028106689453125,
+        "chan_ratio_p95": 11.909334182739258,
+        "chan_ratio_p99": 23.92924690246582,
+        "chan_ratio_max": 73.22502136230469,
+        "chan_ratio_max_tensor": "backbone.s3.b3.se.fc1.weight",
+        "n_channels": 18890,
+        "tensor_extreme_ratio": 1.347686762552926,
+        "tensor_extreme_name": "temporal.layers.0.self_attn.in_proj_weight"
+      },
+      {
+        "run": "utk-relu_qat-before_snap-s0-1793009776",
+        "mode": "before_snap",
+        "N": 1,
+        "seed": 0,
+        "mae_fp32": 0.0741,
+        "mae_4": 0.0899,
+        "zero_baseline_mae": 0.15526728379987373,
+        "worse_than_baseline": false,
+        "degrade_vs_fp32": 1.213225371120108,
+        "chan_ratio_p50": 4.482682228088379,
+        "chan_ratio_p95": 12.378931999206543,
+        "chan_ratio_p99": 27.246604919433594,
+        "chan_ratio_max": 78.7569351196289,
+        "chan_ratio_max_tensor": "backbone.s3.b3.se.fc1.weight",
+        "n_channels": 18890,
+        "tensor_extreme_ratio": 2.48818841234198,
+        "tensor_extreme_name": "backbone.s1.b1.se.fc1.weight"
+      },
+      {
+        "run": "utk-relu_qat-before_snap-s0-1793028380",
+        "mode": "before_snap",
+        "N": 5,
+        "seed": 0,
+        "mae_fp32": 0.0658,
+        "mae_4": 0.088,
+        "zero_baseline_mae": 0.15526728379987373,
+        "worse_than_baseline": false,
+        "degrade_vs_fp32": 1.337386018237082,
+        "chan_ratio_p50": 4.301553726196289,
+        "chan_ratio_p95": 11.890446662902832,
+        "chan_ratio_p99": 24.0521240234375,
+        "chan_ratio_max": 74.16008758544922,
+        "chan_ratio_max_tensor": "backbone.s3.b3.se.fc1.weight",
+        "n_channels": 18890,
+        "tensor_extreme_ratio": 1.153358131736624,
+        "tensor_extreme_name": "temporal.layers.0.self_attn.in_proj_weight"
+      },
+      {
+        "run": "utk-relu_qat-before_snap-s0-1793032011",
+        "mode": "before_snap",
+        "N": 20,
+        "seed": 0,
+        "mae_fp32": 0.0607,
+        "mae_4": 0.0866,
+        "zero_baseline_mae": 0.15526728379987373,
+        "worse_than_baseline": false,
+        "degrade_vs_fp32": 1.42668863261944,
+        "chan_ratio_p50": 4.3385138511657715,
+        "chan_ratio_p95": 11.717493057250977,
+        "chan_ratio_p99": 22.962263107299805,
+        "chan_ratio_max": 72.54959869384766,
+        "chan_ratio_max_tensor": "backbone.s3.b3.se.fc1.weight",
+        "n_channels": 18890,
+        "tensor_extreme_ratio": 1.4999968707626774,
+        "tensor_extreme_name": "backbone.s2.b2.se.fc1.weight"
+      },
+      {
+        "run": "utk-relu_qat-before_snap-s1-1793037047",
+        "mode": "before_snap",
+        "N": 20,
+        "seed": 1,
+        "mae_fp32": 0.0594,
+        "mae_4": 0.1557,
+        "zero_baseline_mae": 0.15517695657840297,
+        "worse_than_baseline": true,
+        "degrade_vs_fp32": 2.621212121212121,
+        "chan_ratio_p50": 4.3558197021484375,
+        "chan_ratio_p95": 11.851222038269043,
+        "chan_ratio_p99": 22.351835250854492,
+        "chan_ratio_max": 78.73951721191406,
+        "chan_ratio_max_tensor": "backbone.s2.b2.se.fc1.weight",
+        "n_channels": 18890,
+        "tensor_extreme_ratio": 1.845453584738048,
+        "tensor_extreme_name": "backbone.s2.b2.se.fc1.weight"
+      },
+      {
+        "run": "utk-relu_qat-before_snap-s1-1793115073",
+        "mode": "before_snap",
+        "N": 5,
+        "seed": 1,
+        "mae_fp32": 0.0643,
+        "mae_4": 0.1027,
+        "zero_baseline_mae": 0.15517695657840297,
+        "worse_than_baseline": false,
+        "degrade_vs_fp32": 1.5972006220839814,
+        "chan_ratio_p50": 4.295998573303223,
+        "chan_ratio_p95": 11.833524703979492,
+        "chan_ratio_p99": 23.55902671813965,
+        "chan_ratio_max": 71.90094757080078,
+        "chan_ratio_max_tensor": "backbone.s3.b3.se.fc1.weight",
+        "n_channels": 18890,
+        "tensor_extreme_ratio": 1.046291784956438,
+        "tensor_extreme_name": "frame_token.weight"
+      },
+      {
+        "run": "utk-relu_qat-before_snap-s2-1793039497",
+        "mode": "before_snap",
+        "N": 20,
+        "seed": 2,
+        "mae_fp32": 0.0562,
+        "mae_4": 0.1749,
+        "zero_baseline_mae": 0.1515890758312129,
+        "worse_than_baseline": true,
+        "degrade_vs_fp32": 3.1120996441281137,
+        "chan_ratio_p50": 4.365921497344971,
+        "chan_ratio_p95": 11.84512996673584,
+        "chan_ratio_p99": 22.89704132080078,
+        "chan_ratio_max": 72.231201171875,
+        "chan_ratio_max_tensor": "backbone.s3.b3.se.fc1.weight",
+        "n_channels": 18890,
+        "tensor_extreme_ratio": 1.129478886177189,
+        "tensor_extreme_name": "temporal.layers.1.linear2.weight"
+      },
+      {
+        "run": "utk-relu_qat-before_snap-s2-1793116251",
+        "mode": "before_snap",
+        "N": 5,
+        "seed": 2,
+        "mae_fp32": 0.0635,
+        "mae_4": 0.1816,
+        "zero_baseline_mae": 0.1515890758312129,
+        "worse_than_baseline": true,
+        "degrade_vs_fp32": 2.8598425196850394,
+        "chan_ratio_p50": 4.3032732009887695,
+        "chan_ratio_p95": 11.914225578308105,
+        "chan_ratio_p99": 23.71739959716797,
+        "chan_ratio_max": 73.33901977539062,
+        "chan_ratio_max_tensor": "backbone.s3.b3.se.fc1.weight",
+        "n_channels": 18890,
+        "tensor_extreme_ratio": 2.4881058791652,
+        "tensor_extreme_name": "backbone.s1.b1.se.fc1.weight"
+      },
+      {
+        "run": "utk-relu_qat-none-s0-1793011336",
+        "mode": "none",
+        "N": 1,
+        "seed": 0,
+        "mae_fp32": 0.0741,
+        "mae_4": 0.09,
+        "zero_baseline_mae": 0.15526728379987373,
+        "worse_than_baseline": false,
+        "degrade_vs_fp32": 1.214574898785425,
+        "chan_ratio_p50": 4.484358787536621,
+        "chan_ratio_p95": 12.36649227142334,
+        "chan_ratio_p99": 27.246660232543945,
+        "chan_ratio_max": 78.75968933105469,
+        "chan_ratio_max_tensor": "backbone.s3.b3.se.fc1.weight",
+        "n_channels": 18890,
+        "tensor_extreme_ratio": 2.488188634803373,
+        "tensor_extreme_name": "backbone.s1.b1.se.fc1.weight"
+      },
+      {
+        "run": "utk-relu_qat-none-s0-1793027163",
+        "mode": "none",
+        "N": 5,
+        "seed": 0,
+        "mae_fp32": 0.066,
+        "mae_4": 0.0857,
+        "zero_baseline_mae": 0.15526728379987373,
+        "worse_than_baseline": false,
+        "degrade_vs_fp32": 1.2984848484848484,
+        "chan_ratio_p50": 4.302204132080078,
+        "chan_ratio_p95": 11.918974876403809,
+        "chan_ratio_p99": 24.386842727661133,
+        "chan_ratio_max": 74.13633728027344,
+        "chan_ratio_max_tensor": "backbone.s3.b3.se.fc1.weight",
+        "n_channels": 18890,
+        "tensor_extreme_ratio": 1.4999968707626774,
+        "tensor_extreme_name": "backbone.s2.b2.se.fc1.weight"
+      },
+      {
+        "run": "utk-relu_qat-none-s0-1793030915",
+        "mode": "none",
+        "N": 20,
+        "seed": 0,
+        "mae_fp32": 0.0619,
+        "mae_4": 0.0888,
+        "zero_baseline_mae": 0.15526728379987373,
+        "worse_than_baseline": false,
+        "degrade_vs_fp32": 1.4345718901453959,
+        "chan_ratio_p50": 4.319704055786133,
+        "chan_ratio_p95": 11.646858215332031,
+        "chan_ratio_p99": 22.89696502685547,
+        "chan_ratio_max": 72.963623046875,
+        "chan_ratio_max_tensor": "backbone.s3.b3.se.fc1.weight",
+        "n_channels": 18890,
+        "tensor_extreme_ratio": 1.4999968707626774,
+        "tensor_extreme_name": "backbone.s2.b2.se.fc1.weight"
+      },
+      {
+        "run": "utk-relu_qat-none-s0-1793111850",
+        "mode": "none",
+        "N": 0,
+        "seed": 0,
+        "mae_fp32": 0.0552,
+        "mae_4": 0.1535,
+        "zero_baseline_mae": 0.15526728379987373,
+        "worse_than_baseline": false,
+        "degrade_vs_fp32": 2.7807971014492754,
+        "chan_ratio_p50": 4.380831718444824,
+        "chan_ratio_p95": 11.649965286254883,
+        "chan_ratio_p99": 22.257091522216797,
+        "chan_ratio_max": 55.83190155029297,
+        "chan_ratio_max_tensor": "backbone.s3.b4.se.fc1.weight",
+        "n_channels": 18890,
+        "tensor_extreme_ratio": 1.5523107265588048,
+        "tensor_extreme_name": "temporal.layers.1.linear2.weight"
+      },
+      {
+        "run": "utk-relu_qat-none-s1-1793114048",
+        "mode": "none",
+        "N": 5,
+        "seed": 1,
+        "mae_fp32": 0.0647,
+        "mae_4": 0.0894,
+        "zero_baseline_mae": null,
+        "worse_than_baseline": null,
+        "degrade_vs_fp32": 1.3817619783616693
+      },
+      {
+        "run": "utk-relu_qat-none-s2-1793115215",
+        "mode": "none",
+        "N": 5,
+        "seed": 2,
+        "mae_fp32": 0.0639,
+        "mae_4": 0.1807,
+        "zero_baseline_mae": 0.1515890758312129,
+        "worse_than_baseline": true,
+        "degrade_vs_fp32": 2.827856025039124,
+        "chan_ratio_p50": 4.305868148803711,
+        "chan_ratio_p95": 11.912688255310059,
+        "chan_ratio_p99": 24.051158905029297,
+        "chan_ratio_max": 73.09019470214844,
+        "chan_ratio_max_tensor": "backbone.s3.b3.se.fc1.weight",
+        "n_channels": 18890,
+        "tensor_extreme_ratio": 2.48818841234198,
+        "tensor_extreme_name": "backbone.s1.b1.se.fc1.weight"
+      }
+    ],
+    "weight_source": "results/<run>/best.pth，ema_state_dict（mode!=none）或 model_state_dict（none），与 scripts/deploy_table.py:148 一致",
+    "chan_ratio_definition": "每个 Conv2d/Linear 权重按输出通道取 max|w| / mean|w|；全模型所有通道汇成分位数"
+  },
+  "perimage_head_inventory": {
+    "n_files": 120,
+    "n_runs": 30,
+    "bits_present": [
+      "4bit",
+      "6bit",
+      "8bit",
+      "fp32"
+    ],
+    "head_counts": {
+      "relu_qat": 120
+    },
+    "has_gelu": false,
+    "has_bilinear_glu": false,
+    "has_relu_qat": true,
+    "missing_requested": [
+      "gelu",
+      "bilinear_glu"
+    ],
+    "note": "只报告 quant_runs/perimage/ 里有无；未跑任何推理"
+  }
+}

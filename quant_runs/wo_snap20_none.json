@@ -1,0 +1,36 @@
+{
+  "name": "snap20_none",
+  "weights": "live",
+  "rows": [
+    {
+      "bits": 8,
+      "cos": 1.0,
+      "cos_centered": 1.0,
+      "relL2": 0.0052,
+      "mae": 0.002,
+      "maxdiff": 0.0031,
+      "resid_mean": 0.0017,
+      "on_grid": 1.0
+    },
+    {
+      "bits": 6,
+      "cos": 0.9955,
+      "cos_centered": 0.982,
+      "relL2": 0.104,
+      "mae": 0.0282,
+      "maxdiff": 0.1776,
+      "resid_mean": 0.2474,
+      "on_grid": 0.1229
+    },
+    {
+      "bits": 4,
+      "cos": 0.975,
+      "cos_centered": 0.8994,
+      "relL2": 0.2518,
+      "mae": 0.0741,
+      "maxdiff": 0.3086,
+      "resid_mean": 0.245,
+      "on_grid": 0.1064
+    }
+  ]
+}

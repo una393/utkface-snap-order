@@ -1,0 +1,9 @@
+{
+  "n_images": 23708,
+  "n_duplicate_groups": 375,
+  "n_redundant_copies": 390,
+  "max_group": 4,
+  "held_images_in_any_dup_group": 48,
+  "val_images_with_train_twin": 91,
+  "n_held": 1556
+}

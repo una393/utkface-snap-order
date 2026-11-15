@@ -1,0 +1,3 @@
+bilinear_glu_s0_N1: n_ok=200/200 MAE=0.080258 RMSE=0.115484 max=0.769889
+wrote /work/npu_quant/out/mae_runtime_bilinear_glu_s0_N1.json
+exit=0

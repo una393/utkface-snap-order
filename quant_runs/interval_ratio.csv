@@ -1,0 +1,6 @@
+setting,task,n_seeds,off_error,interval1_error,cost,ratio,ratio_ci_lo,ratio_ci_hi,seeds_ratio_positive
+"UTKFace, RegNetY-008 (main sequence)",age regression (MAE),8,0.054757,0.073213,0.018456,0.3373,0.3175,0.357,8
+"UTKFace, ResNet-18 (architecture axis, 1e-3)",age regression (MAE),8,0.049156,0.056984,0.007828,0.1598,0.1303,0.1894,8
+"UTKFace, ResNet-18 (architecture axis, 1e-4)",age regression (MAE),8,0.056439,0.129014,0.072574,1.2864,1.0332,1.5395,8
+KonIQ-10k (data axis),image quality (MAE),8,0.001958,0.00263,0.000672,0.3379,0.0004,0.6755,8
+"CIFAR-10, ResNet-18 (task axis)",10-class (top-1 error),8,0.1067,0.154225,0.047525,0.4464,0.3986,0.4941,8

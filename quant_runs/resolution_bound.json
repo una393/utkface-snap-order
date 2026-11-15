@@ -1,0 +1,249 @@
+{
+ "decimals": 4,
+ "rows": [
+  {
+   "label": "live@1",
+   "bits": 8,
+   "eps": 8.09073286211455e-09,
+   "kappa": 0.9998970250303821,
+   "cos_centered": 1.0000000000002605,
+   "bound": 0.9999999999999999,
+   "slack": 2.6056934387952424e-13,
+   "within_resolution": true,
+   "limit_eps": 0.007070339668872383
+  },
+  {
+   "label": "live@20",
+   "bits": 8,
+   "eps": 3.5240393553167534e-05,
+   "kappa": 0.9998966014456332,
+   "cos_centered": 0.9999999993794414,
+   "bound": 0.9999999975157156,
+   "slack": 1.863725840323127e-09,
+   "within_resolution": true,
+   "limit_eps": 0.007070336673675899
+  },
+  {
+   "label": "ema_before@20",
+   "bits": 8,
+   "eps": 0.0032160004492176385,
+   "kappa": 0.9998897770071777,
+   "cos_centered": 0.99999482759553,
+   "bound": 0.999979310121472,
+   "slack": 1.5517474058035496e-05,
+   "within_resolution": true,
+   "limit_eps": 0.007070288417608803
+  },
+  {
+   "label": "ema_after@20",
+   "bits": 8,
+   "eps": 0.0034929301656951264,
+   "kappa": 0.9998833779703948,
+   "cos_centered": 0.9999938983111369,
+   "bound": 0.9999755931853026,
+   "slack": 1.8305125834339186e-05,
+   "within_resolution": true,
+   "limit_eps": 0.00707024316958578
+  },
+  {
+   "label": "projection off",
+   "bits": 8,
+   "eps": 0.01017738370451997,
+   "kappa": 0.9998546710086745,
+   "cos_centered": 0.999948200150683,
+   "bound": 0.9997927814965263,
+   "slack": 0.00015541865415669154,
+   "within_resolution": false,
+   "limit_eps": 0.007070040180712783
+  },
+  {
+   "label": "4 bit export",
+   "bits": 4,
+   "eps": 0.17582173391953643,
+   "kappa": 0.9998897770071777,
+   "cos_centered": 0.98473736019353,
+   "bound": 0.9381598040914192,
+   "slack": 0.046577556102110784,
+   "within_resolution": false,
+   "limit_eps": 0.007070288417608803
+  }
+ ],
+ "shadow_sweep": [
+  {
+   "label": "before_snap@20 s0",
+   "bits": 8,
+   "eps": 0.0032160004492176385,
+   "kappa": 0.9998897770071777,
+   "cos_centered": 0.99999482759553,
+   "bound": 0.999979310121472,
+   "slack": 1.5517474058035496e-05,
+   "within_resolution": true,
+   "limit_eps": 0.007070288417608803
+  },
+  {
+   "label": "before_snap@20 s1",
+   "bits": 8,
+   "eps": 0.0033214305786266715,
+   "kappa": 0.9998680502979196,
+   "cos_centered": 0.9999944825870277,
+   "bound": 0.9999779303740458,
+   "slack": 1.6552212981912895e-05,
+   "within_resolution": true,
+   "limit_eps": 0.00707013478657431
+  },
+  {
+   "label": "before_snap@20 s2",
+   "bits": 8,
+   "eps": 0.00365139948562529,
+   "kappa": 0.9998617914419706,
+   "cos_centered": 0.9999933318317036,
+   "bound": 0.9999733271912814,
+   "slack": 2.0004640422177644e-05,
+   "within_resolution": true,
+   "limit_eps": 0.00707009052977947
+  },
+  {
+   "label": "before_snap@20 s3",
+   "bits": 8,
+   "eps": 0.0036475531206891045,
+   "kappa": 0.9998738515802954,
+   "cos_centered": 0.9999933460399935,
+   "bound": 0.9999733839977538,
+   "slack": 1.996204223964071e-05,
+   "within_resolution": true,
+   "limit_eps": 0.007070175807835384
+  },
+  {
+   "label": "before_snap@20 s4",
+   "bits": 8,
+   "eps": 0.003406435072592939,
+   "kappa": 0.9998907020783586,
+   "cos_centered": 0.9999941968602694,
+   "bound": 0.9999767873262757,
+   "slack": 1.740953399365086e-05,
+   "within_resolution": true,
+   "limit_eps": 0.007070294958849853
+  },
+  {
+   "label": "before_snap@20 s5",
+   "bits": 8,
+   "eps": 0.003692768975700604,
+   "kappa": 0.9998679178553526,
+   "cos_centered": 0.9999931801749107,
+   "bound": 0.9999727197085814,
+   "slack": 2.0460466329308424e-05,
+   "within_resolution": true,
+   "limit_eps": 0.007070133850063937
+  },
+  {
+   "label": "before_snap@20 s6",
+   "bits": 8,
+   "eps": 0.0029544087046576377,
+   "kappa": 0.9998826339976375,
+   "cos_centered": 0.9999956348154737,
+   "bound": 0.9999825388399591,
+   "slack": 1.309597551457653e-05,
+   "within_resolution": true,
+   "limit_eps": 0.0070702379089039626
+  },
+  {
+   "label": "before_snap@20 s7",
+   "bits": 8,
+   "eps": 0.0032593903393027526,
+   "kappa": 0.9998788167749996,
+   "cos_centered": 0.9999946869403579,
+   "bound": 0.9999787475986751,
+   "slack": 1.5939341682758013e-05,
+   "within_resolution": true,
+   "limit_eps": 0.007070210917063837
+  },
+  {
+   "label": "after_snap@20 s0",
+   "bits": 8,
+   "eps": 0.0034929301656951264,
+   "kappa": 0.9998833779703948,
+   "cos_centered": 0.9999938983111369,
+   "bound": 0.9999755931853026,
+   "slack": 1.8305125834339186e-05,
+   "within_resolution": true,
+   "limit_eps": 0.00707024316958578
+  },
+  {
+   "label": "after_snap@20 s1",
+   "bits": 8,
+   "eps": 0.0033611497819378785,
+   "kappa": 0.9998653487726867,
+   "cos_centered": 0.9999943498371252,
+   "bound": 0.9999773992582613,
+   "slack": 1.695057886386131e-05,
+   "within_resolution": true,
+   "limit_eps": 0.007070115683906192
+  },
+  {
+   "label": "after_snap@20 s2",
+   "bits": 8,
+   "eps": 0.003604607299522231,
+   "kappa": 0.9998648106298245,
+   "cos_centered": 0.9999935016697383,
+   "bound": 0.9999740065848407,
+   "slack": 1.949508489762497e-05,
+   "within_resolution": true,
+   "limit_eps": 0.007070111878661521
+  },
+  {
+   "label": "after_snap@20 s3",
+   "bits": 8,
+   "eps": 0.003642502004329217,
+   "kappa": 0.9998766896558267,
+   "cos_centered": 0.9999933645049632,
+   "bound": 0.9999734578128481,
+   "slack": 1.9906692115156943e-05,
+   "within_resolution": true,
+   "limit_eps": 0.007070195876059921
+  },
+  {
+   "label": "after_snap@20 s4",
+   "bits": 8,
+   "eps": 0.0033765414895332514,
+   "kappa": 0.9998899810650721,
+   "cos_centered": 0.9999942982427052,
+   "bound": 0.999977192916993,
+   "slack": 1.7105325712196695e-05,
+   "within_resolution": true,
+   "limit_eps": 0.007070289860516011
+  },
+  {
+   "label": "after_snap@20 s5",
+   "bits": 8,
+   "eps": 0.0036670463300974296,
+   "kappa": 0.9998702939307651,
+   "cos_centered": 0.9999932747701674,
+   "bound": 0.9999730985643195,
+   "slack": 2.017620584793267e-05,
+   "within_resolution": true,
+   "limit_eps": 0.0070701506514543044
+  },
+  {
+   "label": "after_snap@20 s6",
+   "bits": 8,
+   "eps": 0.0029313005732473194,
+   "kappa": 0.9998847226866805,
+   "cos_centered": 0.9999957028344704,
+   "bound": 0.9999828109911214,
+   "slack": 1.2891843348961096e-05,
+   "within_resolution": true,
+   "limit_eps": 0.007070252678165824
+  },
+  {
+   "label": "after_snap@20 s7",
+   "bits": 8,
+   "eps": 0.003563850699600561,
+   "kappa": 0.9998765793330631,
+   "cos_centered": 0.9999936479484797,
+   "bound": 0.9999745916649416,
+   "slack": 1.9056283538043672e-05,
+   "within_resolution": true,
+   "limit_eps": 0.007070195095960179
+  }
+ ]
+}
